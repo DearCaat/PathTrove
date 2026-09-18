@@ -16,7 +16,7 @@
 
 <p align="center">
   <a href="https://www.pathtrove.cn"><img alt="Website" src="https://img.shields.io/badge/Website-pathtrove.cn-2597b7?style=flat-square"></a>
-  <a href="https://aicarrier.feishu.cn/base/SNtNbp0wTaML2xsH9CMclNrrnth?table=tblknwImsVXlTfJA&view=vewLEEtCvC"><img alt="Resources and reports" src="https://img.shields.io/badge/Resources_%26_reports-Feishu_table-4b5563?style=flat-square"></a>
+  <a href="https://aicarrier.feishu.cn/base/Ab7tb1c4VaxYIesGpnCchZkKn98?table=tblg0z31jVeg7WIh&view=vewLEEtCvC"><img alt="Resources and reports" src="https://img.shields.io/badge/Resources_%26_reports-Feishu_table-4b5563?style=flat-square"></a>
   <a href="https://www.pathtrove.cn/ask.html"><img alt="Natural-language search demo" src="https://img.shields.io/badge/Natural--language_search-demo-c9588a?style=flat-square"></a>
   <a href="https://www.pathtrove.cn/atlas.html"><img alt="Data atlas" src="https://img.shields.io/badge/Data_atlas-explore-2597b7?style=flat-square"></a>
 </p>
@@ -45,7 +45,7 @@ Every entry is checked against its sources, from what was studied and what was m
 
 Five kinds of material take you from understanding a dataset to preparing an experiment.
 
-> **Access Note**: The complete resource table and detailed reports currently require a simple access request via the [Feishu table](https://aicarrier.feishu.cn/base/SNtNbp0wTaML2xsH9CMclNrrnth?table=tblknwImsVXlTfJA&view=vewLEEtCvC). They will be made fully and openly accessible once our technical report is officially released.
+> **Access Note**: The complete resource table and detailed reports currently require a simple access request via the [Feishu table](https://aicarrier.feishu.cn/base/Ab7tb1c4VaxYIesGpnCchZkKn98?table=tblg0z31jVeg7WIh&view=vewLEEtCvC). They will be made fully and openly accessible once our technical report is officially released.
 
 | Material | What it records | Example |
 | --- | --- | --- |

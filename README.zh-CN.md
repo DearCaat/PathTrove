@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="https://www.pathtrove.cn"><img alt="网站" src="https://img.shields.io/badge/%E7%BD%91%E7%AB%99-pathtrove.cn-2597b7?style=flat-square"></a>
-  <a href="https://aicarrier.feishu.cn/base/SNtNbp0wTaML2xsH9CMclNrrnth?table=tblknwImsVXlTfJA&view=vewLEEtCvC"><img alt="资源与报告" src="https://img.shields.io/badge/%E8%B5%84%E6%BA%90%E4%B8%8E%E6%8A%A5%E5%91%8A-%E9%A3%9E%E4%B9%A6%E8%A1%A8%E6%A0%BC-4b5563?style=flat-square"></a>
+  <a href="https://aicarrier.feishu.cn/base/Ab7tb1c4VaxYIesGpnCchZkKn98?table=tblCXoFxHiyF3fUm&view=vewLEEtCvC"><img alt="资源与报告" src="https://img.shields.io/badge/%E8%B5%84%E6%BA%90%E4%B8%8E%E6%8A%A5%E5%91%8A-%E9%A3%9E%E4%B9%A6%E8%A1%A8%E6%A0%BC-4b5563?style=flat-square"></a>
   <a href="https://www.pathtrove.cn/ask.html"><img alt="自然语言检索 DEMO" src="https://img.shields.io/badge/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E6%A3%80%E7%B4%A2-DEMO-c9588a?style=flat-square"></a>
   <a href="https://www.pathtrove.cn/atlas.html"><img alt="数据版图" src="https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E7%89%88%E5%9B%BE-%E6%8E%A2%E7%B4%A2-2597b7?style=flat-square"></a>
 </p>
@@ -44,7 +44,7 @@
 
 五类材料，从读懂数据，到准备实验。
 
-> **访问说明**：目前完整的资源表格与详细报告需通过[飞书表格](https://aicarrier.feishu.cn/base/SNtNbp0wTaML2xsH9CMclNrrnth?table=tblknwImsVXlTfJA&view=vewLEEtCvC)进行简单申请以获取访问权限；待后续技术报告正式发布（Release）后，将全面无门槛开放。
+> **访问说明**：目前完整的资源表格与详细报告需通过[飞书表格](https://aicarrier.feishu.cn/base/Ab7tb1c4VaxYIesGpnCchZkKn98?table=tblCXoFxHiyF3fUm&view=vewLEEtCvC)进行简单申请以获取访问权限；待后续技术报告正式发布（Release）后，将全面无门槛开放。
 
 | 材料 | 记录什么 | 示例 |
 | --- | --- | --- |
