@@ -1,0 +1,46 @@
+PathTrove Repository Documentation License
+
+Copyright (c) 2026 PathTrove Contributors
+
+Unless otherwise indicated, original documentation and website material
+authored for this repository are licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0).
+
+Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+
+SPDX-License-Identifier: CC-BY-4.0
+
+Scope and exclusions
+--------------------
+
+This license applies only to material for which the PathTrove Contributors
+have the authority to grant a license. It does not apply to:
+
+- the PathTrove table or dataset reports merely linked from this repository,
+  unless those resources separately state that this license applies;
+- underlying pathology data, annotations, or files distributed by external
+  providers;
+- third-party papers, quotations, names, trademarks, logos, screenshots,
+  software, or other external material; or
+- material that carries its own license or rights notice.
+
+Those materials remain subject to their original licenses, terms of use,
+data-use agreements, access restrictions, and other applicable rights.
+
+PathTrove-curated tables, dataset reports, paper reports, and other resources
+that identify the PathTrove Research Use Terms are governed by
+TERMS_OF_USE.md rather than this documentation license.
+
+Attribution
+-----------
+
+When reusing licensed repository material, provide appropriate credit to
+"PathTrove Contributors", link to this repository and to the CC BY 4.0
+license, and indicate whether changes were made.
+
+No additional warranties
+------------------------
+
+The disclaimer of warranties and limitation of liability in the CC BY 4.0
+legal code apply to the extent permitted by applicable law. Nothing in this
+file grants rights that the PathTrove Contributors do not hold.

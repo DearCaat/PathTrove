@@ -1,0 +1,3220 @@
+{
+  "schema_version": "1.0",
+  "dataset_name": "Ovarian-Bevacizumab-Response",
+  "tasks": {
+    "bevacizumab_treatment_effectiveness": {
+      "task_type": "classification",
+      "level": "wsi",
+      "schema": {
+        "official_task_name": "Classification of bevacizumab treatment effectiveness from H&E whole-slide images",
+        "variant": "binary",
+        "class_names": [
+          "effective",
+          "invalid"
+        ],
+        "class_id_map": {
+          "effective": 0,
+          "invalid": 1
+        },
+        "class_id_rule": "Class IDs follow the current official spreadsheet worksheet order: effective=0, invalid=1.",
+        "label_source_column": "Treatment effect",
+        "sample_id_source_column": "Image No."
+      }
+    }
+  },
+  "notes": "Representative demonstration label schema and split file (not the final complete release). Derived from the PathTrove label file for TCIA Version 2 (286 slides). Each slide is linked to the official slide manifest (Ovarian Bevacizumab Response_05-28-2024.csv); image_name is the manifest slide_id plus .svs. 5 label-table names differ from the manifest only in spaces, hyphens, extension case or a trailing dot and were matched with the same patient ID. Slides whose patient ID differs between the two official tables, and patients carrying both response labels, are listed in excluded.csv. The split is a patient-level demonstration split (about 70/15/15 within each response class, seed pathtrove-bev-demo-v1); it is not an official split.",
+  "label_statistics": {
+    "total": 265,
+    "split": {
+      "train": 217,
+      "val": 31,
+      "test": 17
+    },
+    "class_distribution": {
+      "effective": 157,
+      "invalid": 108
+    }
+  },
+  "samples": [
+    {
+      "sample_id": "1612595C.svs",
+      "image_name": "1612595C.svs",
+      "patient_id": "2909711",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1702510F.svs",
+      "image_name": "1702510F.svs",
+      "patient_id": "2959832",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1717035D.svs",
+      "image_name": "1717035D.svs",
+      "patient_id": "2983362",
+      "split": "test",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "500203D.svs",
+      "image_name": "500203D.svs",
+      "patient_id": "801250",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1832548A.svs",
+      "image_name": "1832548A.svs",
+      "patient_id": "2188987",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "P001832850D.svs",
+      "image_name": "P001832850D.svs",
+      "patient_id": "1038407",
+      "split": "test",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1832850C.svs",
+      "image_name": "1832850C.svs",
+      "patient_id": "1038407",
+      "split": "test",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1832850D.svs",
+      "image_name": "1832850D.svs",
+      "patient_id": "1038407",
+      "split": "test",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1828187C.svs",
+      "image_name": "1828187C.svs",
+      "patient_id": "3072738",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "3mainttenance4-P001828187A.svs",
+      "image_name": "3mainttenance4-P001828187A.svs",
+      "patient_id": "3072738",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1828187A.svs",
+      "image_name": "1828187A.svs",
+      "patient_id": "3072738",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1828187B.svs",
+      "image_name": "1828187B.svs",
+      "patient_id": "3072738",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1809923A.svs",
+      "image_name": "1809923A.svs",
+      "patient_id": "3033080",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1809923B.svs",
+      "image_name": "1809923B.svs",
+      "patient_id": "3033080",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "3maintenance8 P001809923A.svs",
+      "image_name": "3maintenance8-P001809923A.svs",
+      "patient_id": "3033080",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "2-P001809923A.svs",
+      "image_name": "2-P001809923A.svs",
+      "patient_id": "3033080",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1628757C.svs",
+      "image_name": "1628757C.svs",
+      "patient_id": "2692286",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1628757D.svs",
+      "image_name": "1628757D.svs",
+      "patient_id": "2692286",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1628757F.svs",
+      "image_name": "1628757F.svs",
+      "patient_id": "2692286",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "2-P001628757C.svs",
+      "image_name": "2-P001628757C.svs",
+      "patient_id": "2692286",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "3-maintenance3-P001628757B.svs",
+      "image_name": "3-maintenance3-P001628757B.svs",
+      "patient_id": "2692286",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1628757G.svs",
+      "image_name": "1628757G.svs",
+      "patient_id": "2692286",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1736414F.svs",
+      "image_name": "1736414F.svs",
+      "patient_id": "1969370",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1739558A.svs",
+      "image_name": "1739558A.svs",
+      "patient_id": "3020537",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1739558C.svs",
+      "image_name": "1739558C.svs",
+      "patient_id": "3020537",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1739558D.svs",
+      "image_name": "1739558D.svs",
+      "patient_id": "3020537",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1739558E.svs",
+      "image_name": "1739558E.svs",
+      "patient_id": "3020537",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1739558F.svs",
+      "image_name": "1739558F.svs",
+      "patient_id": "3020537",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1739558G.svs",
+      "image_name": "1739558G.svs",
+      "patient_id": "3020537",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1739558H.svs",
+      "image_name": "1739558H.svs",
+      "patient_id": "3020537",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "3-maintenance9-P001739558B.svs",
+      "image_name": "3-maintenance9-P001739558B.svs",
+      "patient_id": "3020537",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1805427D.svs",
+      "image_name": "1805427D.svs",
+      "patient_id": "1971642",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1805427E.svs",
+      "image_name": "1805427E.svs",
+      "patient_id": "1971642",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1805427F.svs",
+      "image_name": "1805427F.svs",
+      "patient_id": "1971642",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1805427G.svs",
+      "image_name": "1805427G.svs",
+      "patient_id": "1971642",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1805427H.svs",
+      "image_name": "1805427H.svs",
+      "patient_id": "1971642",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "3maintenance2-P001805427B.svs",
+      "image_name": "3maintenance2-P001805427B.svs",
+      "patient_id": "1971642",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1813206C.svs",
+      "image_name": "1813206C.svs",
+      "patient_id": "2223946",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1813206F.svs",
+      "image_name": "1813206F.svs",
+      "patient_id": "2223946",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1813206G.svs",
+      "image_name": "1813206G.svs",
+      "patient_id": "2223946",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1813206H.svs",
+      "image_name": "1813206H.svs",
+      "patient_id": "2223946",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1813206I.svs",
+      "image_name": "1813206I.svs",
+      "patient_id": "2223946",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "3-maintenance1-P001813206B.svs",
+      "image_name": "3-maintenance1-P001813206B.svs",
+      "patient_id": "2223946",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1813872A.svs",
+      "image_name": "1813872A.svs",
+      "patient_id": "1647314",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1813872B.svs",
+      "image_name": "1813872B.svs",
+      "patient_id": "1647314",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1813872C.svs",
+      "image_name": "1813872C.svs",
+      "patient_id": "1647314",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1813872D.svs",
+      "image_name": "1813872D.svs",
+      "patient_id": "1647314",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1813872E.svs",
+      "image_name": "1813872E.svs",
+      "patient_id": "1647314",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "3maintenance10-P001813872B.svs",
+      "image_name": "3maintenance10-P001813872B.svs",
+      "patient_id": "1647314",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1814971B.svs",
+      "image_name": "1814971B.svs",
+      "patient_id": "1966013",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1814971C.svs",
+      "image_name": "1814971C.svs",
+      "patient_id": "1966013",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1814971G.svs",
+      "image_name": "1814971G.svs",
+      "patient_id": "1966013",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1814971H.svs",
+      "image_name": "1814971H.svs",
+      "patient_id": "1966013",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1814971I.svs",
+      "image_name": "1814971I.svs",
+      "patient_id": "1966013",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "3-maintenance5-P001814971B.svs",
+      "image_name": "3-maintenance5-P001814971B.svs",
+      "patient_id": "1966013",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "2-P001814971B.svs",
+      "image_name": "2-P001814971B.svs",
+      "patient_id": "1966013",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "2 1609002G.svs",
+      "image_name": "21609002G.svs",
+      "patient_id": "2902162",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1609002I.svs",
+      "image_name": "1609002I.svs",
+      "patient_id": "2902162",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1609002A.svs",
+      "image_name": "1609002A.svs",
+      "patient_id": "2902162",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1609002B.svs",
+      "image_name": "1609002B.svs",
+      "patient_id": "2902162",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1609002D.svs",
+      "image_name": "1609002D.svs",
+      "patient_id": "2902162",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1609002E.svs",
+      "image_name": "1609002E.svs",
+      "patient_id": "2902162",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1609002F.svs",
+      "image_name": "1609002F.svs",
+      "patient_id": "2902162",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1609002H.svs",
+      "image_name": "1609002H.svs",
+      "patient_id": "2902162",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1609002J.svs",
+      "image_name": "1609002J.svs",
+      "patient_id": "2902162",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1609002K.svs",
+      "image_name": "1609002K.svs",
+      "patient_id": "2902162",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1609002L.svs",
+      "image_name": "1609002L.svs",
+      "patient_id": "2902162",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1609002M.svs",
+      "image_name": "1609002M.svs",
+      "patient_id": "2902162",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1609002N.svs",
+      "image_name": "1609002N.svs",
+      "patient_id": "2902162",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1609002O.svs",
+      "image_name": "1609002O.svs",
+      "patient_id": "2902162",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1609002P.svs",
+      "image_name": "1609002P.svs",
+      "patient_id": "2902162",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1609002P1.svs",
+      "image_name": "1609002P1.svs",
+      "patient_id": "2902162",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1609002Y.svs",
+      "image_name": "1609002Y.svs",
+      "patient_id": "2902162",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "2-1613704B.svs",
+      "image_name": "2-1613704B.svs",
+      "patient_id": "2888017",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800A.svs",
+      "image_name": "224800A.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800C.svs",
+      "image_name": "224800C.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800D.svs",
+      "image_name": "224800D.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800E.svs",
+      "image_name": "224800E.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800F.svs",
+      "image_name": "224800F.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800H.svs",
+      "image_name": "224800H.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800I.svs",
+      "image_name": "224800I.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800J.svs",
+      "image_name": "224800J.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800K.svs",
+      "image_name": "224800K.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800L.svs",
+      "image_name": "224800L.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800M.svs",
+      "image_name": "224800M.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800N.svs",
+      "image_name": "224800N.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800O.svs",
+      "image_name": "224800O.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800P.svs",
+      "image_name": "224800P.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800Q.svs",
+      "image_name": "224800Q.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800R.svs",
+      "image_name": "224800R.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800S.svs",
+      "image_name": "224800S.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800T.svs",
+      "image_name": "224800T.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800U.svs",
+      "image_name": "224800U.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800V.svs",
+      "image_name": "224800V.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800W.svs",
+      "image_name": "224800W.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800X.svs",
+      "image_name": "224800X.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "224800Y.svs",
+      "image_name": "224800Y.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "3-maintenance6-P001224800K.svs",
+      "image_name": "3-maintenance6-P001224800K.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "2-P001224800L.svs",
+      "image_name": "2-P001224800L.svs",
+      "patient_id": "2640644",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "227953A.svs",
+      "image_name": "227953A.svs",
+      "patient_id": "2649818",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "227953B.svs",
+      "image_name": "227953B.svs",
+      "patient_id": "2649818",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "227953C.svs",
+      "image_name": "227953C.svs",
+      "patient_id": "2649818",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "227953D.svs",
+      "image_name": "227953D.svs",
+      "patient_id": "2649818",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "227953H.svs",
+      "image_name": "227953H.svs",
+      "patient_id": "2649818",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "227953I.svs",
+      "image_name": "227953I.svs",
+      "patient_id": "2649818",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "P001227953B.svs",
+      "image_name": "P001227953B.svs",
+      "patient_id": "2649818",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "421183F.svs.",
+      "image_name": "421183F.svs",
+      "patient_id": "2775474",
+      "split": "test",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "P001823176F.svs",
+      "image_name": "P001823176F.svs",
+      "patient_id": "1945633",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "3mainttenance7 P001731444E.svs",
+      "image_name": "3mainttenance7-P001731444E.svs",
+      "patient_id": "3007488",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "120099.svs",
+      "image_name": "120099.svs",
+      "patient_id": "2572851",
+      "split": "test",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1735362J-Y.svs",
+      "image_name": "1735362J-Y.svs",
+      "patient_id": "3014307",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "200099-H-Y.svs",
+      "image_name": "200099-H-Y.svs",
+      "patient_id": "2572851",
+      "split": "test",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "200099-O-Y.svs",
+      "image_name": "200099-O-Y.svs",
+      "patient_id": "2572851",
+      "split": "test",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1623931C-Y.svs",
+      "image_name": "1623931C-Y.svs",
+      "patient_id": "2583872",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1610648I-Y.svs",
+      "image_name": "1610648I-Y.svs",
+      "patient_id": "2906407",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "500203-F-Y.svs",
+      "image_name": "500203-F-Y.svs",
+      "patient_id": "801250",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "500203-D-Y.svs",
+      "image_name": "500203-D-Y.svs",
+      "patient_id": "801250",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1941494-F-Y.svs",
+      "image_name": "1941494-F-Y.svs",
+      "patient_id": "1374299",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1941494-C-Y.svs",
+      "image_name": "1941494-C-Y.svs",
+      "patient_id": "1374299",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1941494-D-Y.svs",
+      "image_name": "1941494-D-Y.svs",
+      "patient_id": "1374299",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1941494-G-Y.svs",
+      "image_name": "1941494-G-Y.svs",
+      "patient_id": "1374299",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1941494-H-Y.svs",
+      "image_name": "1941494-H-Y.svs",
+      "patient_id": "1374299",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1739259-G-Y.svs",
+      "image_name": "1739259-G-Y.svs",
+      "patient_id": "1150997",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1739259-E-Y.svs",
+      "image_name": "1739259-E-Y.svs",
+      "patient_id": "1150997",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1610403-B-Y.svs",
+      "image_name": "1610403-B-Y.svs",
+      "patient_id": "2787472",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1610403A-Y.SVS",
+      "image_name": "1610403A-Y.svs",
+      "patient_id": "2787472",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1924942C-Y.svs",
+      "image_name": "1924942C-Y.svs",
+      "patient_id": "2692286",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1920531A-Y.svs",
+      "image_name": "1920531A-Y.svs",
+      "patient_id": "3124696",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1920532A-Y.svs",
+      "image_name": "1920532A-Y.svs",
+      "patient_id": "3124696",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1839956B-Y.svs",
+      "image_name": "1839956B-Y.svs",
+      "patient_id": "2193607",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "2014353A-Y.svs",
+      "image_name": "2014353A-Y.svs",
+      "patient_id": "2977380",
+      "split": "test",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1802840A-Y.svs",
+      "image_name": "1802840A-Y.svs",
+      "patient_id": "2485132",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1946957B-Y.svs",
+      "image_name": "1946957B-Y.svs",
+      "patient_id": "1996566",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "2004610B-Y.svs",
+      "image_name": "2004610B-Y.svs",
+      "patient_id": "1746731",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "2010109A-Y.svs",
+      "image_name": "2010109A-Y.svs",
+      "patient_id": "8003188",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1908223B-Y.svs",
+      "image_name": "1908223B-Y.svs",
+      "patient_id": "2243345",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1805428F-Y.svs",
+      "image_name": "1805428F-Y.svs",
+      "patient_id": "1971642",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1929771-A-Y.svs",
+      "image_name": "1929771-A-Y.svs",
+      "patient_id": "3136455",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1935769C-Y.svs",
+      "image_name": "1935769C-Y.svs",
+      "patient_id": "3145706",
+      "split": "test",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1922271A-Y.svs",
+      "image_name": "1922271A-Y.svs",
+      "patient_id": "3064482",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1911849B-Y.svs",
+      "image_name": "1911849B-Y.svs",
+      "patient_id": "1994866",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "420978-F-Y.svs",
+      "image_name": "420978-F-Y.svs",
+      "patient_id": "2778035",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "420978-A-Y.svs",
+      "image_name": "420978-A-Y.svs",
+      "patient_id": "2778035",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "420978-D-Y.svs",
+      "image_name": "420978-D-Y.svs",
+      "patient_id": "2778035",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "420978G-Y.svs",
+      "image_name": "420978G-Y.svs",
+      "patient_id": "2778035",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1801211-B-Y.svs",
+      "image_name": "1801211-B-Y.svs",
+      "patient_id": "3022861",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1801211 B-Y.svs",
+      "image_name": "1801211 B-Y.svs",
+      "patient_id": "3022861",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1801211-C-Y.svs",
+      "image_name": "1801211-C-Y.svs",
+      "patient_id": "3022861",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1907335B-Y.svs",
+      "image_name": "1907335B-Y.svs",
+      "patient_id": "3087924",
+      "split": "test",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "2008628A-Y.svs",
+      "image_name": "2008628A-Y.svs",
+      "patient_id": "3158296",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1950280-D-Y.svs",
+      "image_name": "1950280-D-Y.svs",
+      "patient_id": "3165600",
+      "split": "test",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1950280-E-Y.svs",
+      "image_name": "1950280-E-Y.svs",
+      "patient_id": "3165600",
+      "split": "test",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "2010717A-Y.svs",
+      "image_name": "2010717A-Y.svs",
+      "patient_id": "3180018",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1828186-B-Y.svs",
+      "image_name": "1828186-B-Y.svs",
+      "patient_id": "3072738",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "2000957A-Y.svs",
+      "image_name": "2000957A-Y.svs",
+      "patient_id": "2286314",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "2010277B-Y.svs",
+      "image_name": "2010277B-Y.svs",
+      "patient_id": "2695586",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "2013094B-Y.svs",
+      "image_name": "2013094B-Y.svs",
+      "patient_id": "2485364",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "effective",
+          "class_id": 0
+        }
+      }
+    },
+    {
+      "sample_id": "1632152C.svs",
+      "image_name": "1632152C.svs",
+      "patient_id": "2799356",
+      "split": "test",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1822186A.svs",
+      "image_name": "1822186A.svs",
+      "patient_id": "2470261",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978.svs",
+      "image_name": "1525978.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978A.svs",
+      "image_name": "1525978A.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978B.svs",
+      "image_name": "1525978B.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978C.svs",
+      "image_name": "1525978C.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978D.svs",
+      "image_name": "1525978D.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978E.svs",
+      "image_name": "1525978E.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978G.svs",
+      "image_name": "1525978G.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978O.svs",
+      "image_name": "1525978O.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978R.svs",
+      "image_name": "1525978R.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978S.svs",
+      "image_name": "1525978S.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978T.svs",
+      "image_name": "1525978T.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978U.svs",
+      "image_name": "1525978U.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978V.svs",
+      "image_name": "1525978V.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978X.svs",
+      "image_name": "1525978X.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978Z4.svs",
+      "image_name": "1525978Z4.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978Z6.svs",
+      "image_name": "1525978Z6.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978Z7.svs",
+      "image_name": "1525978Z7.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978Z8.svs",
+      "image_name": "1525978Z8.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1525978Z99.svs",
+      "image_name": "1525978Z99.svs",
+      "patient_id": "2862149",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "P00181938C.svs",
+      "image_name": "P00181938C.svs",
+      "patient_id": "3043462",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "312402Q.svs",
+      "image_name": "312402Q.svs",
+      "patient_id": "2352378",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "312402.svs",
+      "image_name": "312402.svs",
+      "patient_id": "2352378",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "312402A.svs",
+      "image_name": "312402A.svs",
+      "patient_id": "2352378",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "312402B.svs",
+      "image_name": "312402B.svs",
+      "patient_id": "2352378",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "312402C.svs",
+      "image_name": "312402C.svs",
+      "patient_id": "2352378",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "312402D.svs",
+      "image_name": "312402D.svs",
+      "patient_id": "2352378",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "312402E.svs",
+      "image_name": "312402E.svs",
+      "patient_id": "2352378",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "312402F.svs",
+      "image_name": "312402F.svs",
+      "patient_id": "2352378",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "312402G.svs",
+      "image_name": "312402G.svs",
+      "patient_id": "2352378",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "312402H.svs",
+      "image_name": "312402H.svs",
+      "patient_id": "2352378",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "312402N.svs",
+      "image_name": "312402N.svs",
+      "patient_id": "2352378",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "312402O.svs",
+      "image_name": "312402O.svs",
+      "patient_id": "2352378",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "312402P.svs",
+      "image_name": "312402P.svs",
+      "patient_id": "2352378",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "312402V.svs",
+      "image_name": "312402V.svs",
+      "patient_id": "2352378",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "312402R.svs",
+      "image_name": "312402R.svs",
+      "patient_id": "2352378",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "312402S.svs",
+      "image_name": "312402S.svs",
+      "patient_id": "2352378",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "312402T.svs",
+      "image_name": "312402T.svs",
+      "patient_id": "2352378",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1707649A.svs",
+      "image_name": "1707649A.svs",
+      "patient_id": "2655244",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1707649C.svs",
+      "image_name": "1707649C.svs",
+      "patient_id": "2655244",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1707649D.svs",
+      "image_name": "1707649D.svs",
+      "patient_id": "2655244",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1707649E.svs",
+      "image_name": "1707649E.svs",
+      "patient_id": "2655244",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1707649F.svs",
+      "image_name": "1707649F.svs",
+      "patient_id": "2655244",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1707649G.svs",
+      "image_name": "1707649G.svs",
+      "patient_id": "2655244",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "P001707649A.svs",
+      "image_name": "P001707649A.svs",
+      "patient_id": "2655244",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1713372B.svs",
+      "image_name": "1713372B.svs",
+      "patient_id": "1717872",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1713372E.svs",
+      "image_name": "1713372E.svs",
+      "patient_id": "1717872",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1713372F.svs",
+      "image_name": "1713372F.svs",
+      "patient_id": "1717872",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "P001713372B.svs",
+      "image_name": "P001713372B.svs",
+      "patient_id": "1717872",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1613742F.svs",
+      "image_name": "1613742F.svs",
+      "patient_id": "2764443",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1625960A.svs",
+      "image_name": "1625960A.svs",
+      "patient_id": "1733608",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1625960B.svs",
+      "image_name": "1625960B.svs",
+      "patient_id": "1733608",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1625960C.svs",
+      "image_name": "1625960C.svs",
+      "patient_id": "1733608",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1625960D.svs",
+      "image_name": "1625960D.svs",
+      "patient_id": "1733608",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1625960F.svs",
+      "image_name": "1625960F.svs",
+      "patient_id": "1733608",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1625960G.svs",
+      "image_name": "1625960G.svs",
+      "patient_id": "1733608",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1625960H.svs",
+      "image_name": "1625960H.svs",
+      "patient_id": "1733608",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1625960I.svs",
+      "image_name": "1625960I.svs",
+      "patient_id": "1733608",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1625960J.svs",
+      "image_name": "1625960J.svs",
+      "patient_id": "1733608",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1625960L.svs",
+      "image_name": "1625960L.svs",
+      "patient_id": "1733608",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "P001625960G.svs",
+      "image_name": "P001625960G.svs",
+      "patient_id": "1733608",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "P001210190K.svs",
+      "image_name": "P001210190K.svs",
+      "patient_id": "5102450",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "210190.svs",
+      "image_name": "210190.svs",
+      "patient_id": "5102450",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "210190A.svs",
+      "image_name": "210190A.svs",
+      "patient_id": "5102450",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "210190C.svs",
+      "image_name": "210190C.svs",
+      "patient_id": "5102450",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "210190D.svs",
+      "image_name": "210190D.svs",
+      "patient_id": "5102450",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "210190F.svs",
+      "image_name": "210190F.svs",
+      "patient_id": "5102450",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "210190G.svs",
+      "image_name": "210190G.svs",
+      "patient_id": "5102450",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "210190H.svs",
+      "image_name": "210190H.svs",
+      "patient_id": "5102450",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "210190I.svs",
+      "image_name": "210190I.svs",
+      "patient_id": "5102450",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "210190M.svs",
+      "image_name": "210190M.svs",
+      "patient_id": "5102450",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "210190N.svs",
+      "image_name": "210190N.svs",
+      "patient_id": "5102450",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "210190O.svs",
+      "image_name": "210190O.svs",
+      "patient_id": "5102450",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "210190P.svs",
+      "image_name": "210190P.svs",
+      "patient_id": "5102450",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "210190Q.svs",
+      "image_name": "210190Q.svs",
+      "patient_id": "5102450",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "210190S.svs",
+      "image_name": "210190S.svs",
+      "patient_id": "5102450",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "210190U.svs",
+      "image_name": "210190U.svs",
+      "patient_id": "5102450",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "210190V.svs",
+      "image_name": "210190V.svs",
+      "patient_id": "5102450",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "210190Y.svs",
+      "image_name": "210190Y.svs",
+      "patient_id": "5102450",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "223338G.svs",
+      "image_name": "223338G.svs",
+      "patient_id": "2003045",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "407984J.svs",
+      "image_name": "407984J.svs",
+      "patient_id": "1851333",
+      "split": "test",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "411477-A-N.svs",
+      "image_name": "411477-A-N.svs",
+      "patient_id": "1767721",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "411477-A-N-1.svs",
+      "image_name": "411477-A-N-1.svs",
+      "patient_id": "1767721",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "407984-T-N.svs",
+      "image_name": "407984-T-N.svs",
+      "patient_id": "1851333",
+      "split": "test",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "223338-F-N.svs",
+      "image_name": "223338-F-N.svs",
+      "patient_id": "2003045",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "109418-X-N.svs",
+      "image_name": "109418-X-N.svs",
+      "patient_id": "2514248",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "109418-E-N.svs",
+      "image_name": "109418-E-N.svs",
+      "patient_id": "2514248",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "109418-G-N.svs",
+      "image_name": "109418-G-N.svs",
+      "patient_id": "2514248",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1902079B-N.svs",
+      "image_name": "1902079B-N.svs",
+      "patient_id": "2552756",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "201611-F-N.svs",
+      "image_name": "201611-F-N.svs",
+      "patient_id": "2575221",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "201611G-N.svs",
+      "image_name": "201611G-N.svs",
+      "patient_id": "2575221",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1431983H-1-N.svs",
+      "image_name": "1431983H-1-N.svs",
+      "patient_id": "2761293",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1431983H-2-N.svs",
+      "image_name": "1431983H-2-N.svs",
+      "patient_id": "2761293",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1512129I-N.svs",
+      "image_name": "1512129I-N.svs",
+      "patient_id": "1503203",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1508560G-N.svs",
+      "image_name": "1508560G-N.svs",
+      "patient_id": "635019",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "225841-N-N.svs",
+      "image_name": "225841-N-N.svs",
+      "patient_id": "1717872",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "225841-L-N.svs",
+      "image_name": "225841-L-N.svs",
+      "patient_id": "1717872",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1922917A-N.svs",
+      "image_name": "1922917A-N.svs",
+      "patient_id": "3128309",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1922917B-N.svs",
+      "image_name": "1922917B-N.svs",
+      "patient_id": "3128309",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1810938E-N.svs",
+      "image_name": "1810938E-N.svs",
+      "patient_id": "3043462",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1810938D-N.svs",
+      "image_name": "1810938D-N.svs",
+      "patient_id": "3043462",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1810938E-1-N.svs",
+      "image_name": "1810938E-1-N.svs",
+      "patient_id": "3043462",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1949160-C-N.svs",
+      "image_name": "1949160-C-N.svs",
+      "patient_id": "2052070",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1949160-A-N.svs",
+      "image_name": "1949160-A-N.svs",
+      "patient_id": "2052070",
+      "split": "train",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1229332C-N.svs",
+      "image_name": "1229332C-N.svs",
+      "patient_id": "2655244",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1325470C-N.svs",
+      "image_name": "1325470C-N.svs",
+      "patient_id": "2717533",
+      "split": "val",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    },
+    {
+      "sample_id": "1902979C-N.svs",
+      "image_name": "1902979C-N.svs",
+      "patient_id": "2004960",
+      "split": "test",
+      "label": {
+        "bevacizumab_treatment_effectiveness": {
+          "class_name": "invalid",
+          "class_id": 1
+        }
+      }
+    }
+  ]
+}

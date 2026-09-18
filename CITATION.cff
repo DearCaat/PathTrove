@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: >-
+  If you use PathTrove, please cite it as below and include the access date,
+  because the table and reports are updated continuously.
+type: dataset
+title: "PathTrove: Toward Ready-to-Use Clinical Data Services for Computational Pathology"
+authors:
+  - family-names: Tang
+    given-names: Wenhao
+  - family-names: Li
+    given-names: Yu
+  - family-names: Zhang
+    given-names: Yubin
+  - family-names: Ran
+    given-names: Xiangyu
+  - family-names: Su
+    given-names: Yiyang
+  - family-names: Li
+    given-names: Jin
+  - family-names: Li
+    given-names: Xiang
+  - family-names: Yan
+    given-names: Fang
+  - family-names: Cheng
+    given-names: Ming-Ming
+  - family-names: Chen
+    given-names: Yirong
+url: "https://www.pathtrove.cn"
+repository: "https://github.com/DearCaat/PathTrove"
+abstract: >-
+  PathTrove organizes computational pathology data resources, research papers
+  and experiment-ready labels. It combines an evidence-backed database of
+  resource reports, data-source reports, paper reports, download guides and
+  label files with services that turn a clinical research need into
+  ready-to-use data.
+keywords:
+  - computational pathology
+  - pathology datasets
+  - dataset catalog
+  - data provenance
+  - data access
+references:
+  - type: database
+    title: PathTrove resource table
+    authors:
+      - name: PathTrove Team
+    year: 2026
+    url: "https://aicarrier.feishu.cn/base/SNtNbp0wTaML2xsH9CMclNrrnth?table=tblknwImsVXlTfJA&view=vewLEEtCvC"

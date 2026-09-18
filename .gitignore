@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env*
+node_modules/
+
+# Local development checks and generated scaffolding
+*.sh
