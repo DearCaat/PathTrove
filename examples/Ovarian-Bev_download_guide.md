@@ -1,6 +1,6 @@
 # PathTrove Download Guide Example: Ovarian-Bevacizumab-Response
 
-> **Download Guide / 下载指南样例**  
+> **Download Guide / 下载指南样例** · [English version](./Ovarian-Bev_download_guide.en.md)  
 > 本样例展示 PathTrove 面向公开数据源（TCIA）实测整理的合规下载与校验指南。基于中国大陆实际网络环境实测，明确各文件的获取方式与环境配置。
 > 
 > *Note: This is a representative demonstration of the schema and format, not the final complete release. / 注：本文件为展示结构与规范的代表性样例，非最终完整版本。*

@@ -49,10 +49,10 @@ Five kinds of material take you from understanding a dataset to preparing an exp
 
 | Material | What it records | Example |
 | --- | --- | --- |
-| **Resource report** · 355 | Content, labels, clinical information and the source behind each of 38 fields | [CRC-MSI (TCGA-CRC-DX)](./examples/TCGA-CRC-DX_report.md) |
-| **Data-source report** · 11 sources | How an upstream platform such as TCGA, CPTAC, HTAN or GTEx organizes projects, cases and files, and how to get access | [TCGA](./examples/TCGA_source_report.md) |
-| **Paper report** · 106 studies | How a study used its data, task by task: inputs and outputs, data roles, splits and evidence | [NePSTA (*Nature Cancer*, 2025)](./examples/NePSTA_paper_report.md) |
-| **Download guide** · 355 | Official files, access conditions and download steps | [Ovarian-Bevacizumab-Response (TCIA)](./examples/Ovarian-Bev_download_guide.md) |
+| **Resource report** · 355 | Content, labels, clinical information and the source behind each of 38 fields | [CRC-MSI (TCGA-CRC-DX)](./examples/TCGA-CRC-DX_report.en.md) |
+| **Data-source report** · 11 sources | How an upstream platform such as TCGA, CPTAC, HTAN or GTEx organizes projects, cases and files, and how to get access | [TCGA](./examples/TCGA_source_report.en.md) |
+| **Paper report** · 106 studies | How a study used its data, task by task: inputs and outputs, data roles, splits and evidence | [NePSTA (*Nature Cancer*, 2025)](./examples/NePSTA_paper_report.en.md) |
+| **Download guide** · 355 | Official files, access conditions and download steps | [Ovarian-Bevacizumab-Response (TCIA)](./examples/Ovarian-Bev_download_guide.en.md) |
 | **Label file** · 105 resources | Samples matched to task labels and experiment splits | [Ovarian bevacizumab response (JSON)](./examples/Ovarian-Bev_label.json) |
 
 > Representative examples for each material type are provided in the GitHub [`examples/`](./examples/) directory to demonstrate schema design, task framing, and provenance structure. **Please note that these are draft demonstrations rather than the final complete release**; the full, systematically verified catalog will be released alongside our forthcoming technical report and updated continuously. When primary sources disagree, PathTrove faithfully preserves both accounts and quotes the underlying evidence.

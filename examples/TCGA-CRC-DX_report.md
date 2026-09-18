@@ -1,6 +1,6 @@
 # PathTrove Full-Field Dataset Report Example: TCGA-CRC-DX
 
-> **Full-field example / 全字段样例**  
+> **Full-field example / 全字段样例** · [English version](./TCGA-CRC-DX_report.en.md)  
 > This example contains all 38 fields in the current PathTrove dataset-report contract. The authoritative report narrative is currently maintained in Chinese; structured JSON keys and many field headings retain their English terminology.  
 > 本样例包含 PathTrove 当前数据集报告契约的全部 38 个字段。权威报告正文目前以中文维护，结构化 JSON 键和主要字段标题保留英文术语。
 > 

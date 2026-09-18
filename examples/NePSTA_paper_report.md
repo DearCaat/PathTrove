@@ -1,6 +1,6 @@
 # PathTrove Paper Report Example: NePSTA (Nature Cancer, 2025)
 
-> **Paper Report / 论文报告样例**  
+> **Paper Report / 论文报告样例** · [English version](./NePSTA_paper_report.en.md)  
 > 本样例展示 PathTrove 针对顶级同行评审论文（*Nature Cancer*, 2025）的数据用法还原。围绕“以数据为中心”的原则，逐项拆解论文的 8 项任务、样本规模、标签定义、划分策略与一手出处。
 > 
 > *Note: This is a representative demonstration of the schema and format, not the final complete release. / 注：本文件为展示结构与规范的代表性样例，非最终完整版本。*

@@ -1,6 +1,6 @@
 # PathTrove Data-Source Report Example: TCGA
 
-> **Data-Source Report / 数据源报告样例**  
+> **Data-Source Report / 数据源报告样例** · [English version](./TCGA_source_report.en.md)  
 > 本样例展示 PathTrove 对上游大型综合数据平台（The Cancer Genome Atlas，TCGA）项目架构、数据分发口径、切片模态与获取条件的系统梳理。
 > 
 > *Note: This is a representative demonstration of the schema and format, not the final complete release. / 注：本文件为展示结构与规范的代表性样例，非最终完整版本。*
