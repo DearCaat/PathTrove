@@ -72,6 +72,22 @@ PathTrove bridges the gap from research needs to experiment-ready data through a
 4. **Acquisition & Ready-to-Use Label Integration** (*Download guides & Label files*)  
    Download guides provide verified acquisition paths from official repositories, detailing access permissions and tested network routing. Corresponding standardized label files then deliver sample-level targets, task definitions, and leak-free patient splits in clean, machine-readable JSON, allowing researchers to plug data directly into training pipelines.
 
+## Install the Claude Code plugin
+
+The `pathtrove` plugin lets Claude Code (and other MCP clients) query PathTrove from your terminal, in Chinese or English: table search and statistics, resource reports with their sources, download plans, and label summaries. The plugin itself is code only; on first use it downloads the data package (release `2026.09.28`: 353 resources with reports and download guides, a label index for 108 of them; ~14 MB) from the public Hugging Face repository [`Dearcat/PathTrove`](https://huggingface.co/datasets/Dearcat/PathTrove), checks its sha256 and caches it (no key, no server). Paper reports are not part of this data package.
+
+```text
+/plugin marketplace add DearCaat/PathTrove
+/plugin install pathtrove@pathtrove
+```
+
+- **Requirements**: `python3` on the PATH (the plugin uses the standard library only; tested with Python 3.10). Nothing else to install.
+- **Codex and other MCP clients**: the plugin is a stdio MCP server. After cloning this repository, register `python3 <clone>/plugin/bin/pathtrove mcp` as a server, for example `codex mcp add pathtrove -- python3 <clone>/plugin/bin/pathtrove mcp`, or in any client's MCP configuration: `{"mcpServers": {"pathtrove": {"command": "python3", "args": ["<clone>/plugin/bin/pathtrove", "mcp"]}}}`. Non-interactive Codex (`codex exec`) also needs `default_tools_approval_mode = "approve"` under `[mcp_servers.pathtrove]` in `~/.codex/config.toml`; otherwise every call is refused with "MCP tool call requires approval". The same commands work in a shell as `python3 plugin/bin/pathtrove <domain> <verb>` (`--help` lists them).
+- **Language**: every command and MCP tool takes `lang` (`zh` or `en`); the default is the environment variable `PATHTROVE_LANG`, else `zh`. The agent is told to use the language the user writes in.
+- **Data, cache and mirrors**: `pathtrove version` prints the data version. The data is cached in `~/.cache/pathtrove` (`PATHTROVE_HOME` changes it). Behind a firewall set `HF_ENDPOINT=https://hf-mirror.com`; offline, download the archive named in `plugin/data-manifest.json` elsewhere and run `pathtrove data install --file <archive>`. The sample-level label files (8.4 GB in all) are not part of the package: `pathtrove label fetch` downloads one file at a time from the same repository and checks its sha256.
+- **Recommending datasets (best-data)**: the `pathtrove-best-data` skill and the `best-data principles` command give the agent the method for going from a research need to recommended datasets with the table and report commands (analyse the need, turn hard conditions into filters on the schema, start broad, judge on report evidence, respect the requested number, search outside PathTrove only to fill coverage gaps), plus a map of the schema of the installed data. Switch (environment variable): `PATHTROVE_WEB=off` tells the agent not to search outside PathTrove (default on; the plugin states the setting, it cannot switch a client's web tools).
+- Use of the PathTrove data is governed by the [Research Use Terms](./TERMS_OF_USE.md).
+
 ## Using PathTrove responsibly
 
 1. Use the table and reports to find resources that may fit your study.

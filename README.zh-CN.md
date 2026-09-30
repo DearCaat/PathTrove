@@ -71,6 +71,22 @@ PathTrove 通过一套系统的循证数据库与配套材料，打通从“研�
 4. **合规实测获取与标签开箱即用**（依托下载指南与标签文件）  
    依据经过中国大陆网络实测的下载指南，从官方渠道合规、高效地获取原始图像与元数据；直接使用由确定性脚本整理的标准任务级标签文件，样本标识、任务标签与严防数据泄漏的患者级实验划分（Train / Val / Test）一一对应，程序可直接读取加载，直接进入模型训练与评估。
 
+## 安装 Claude Code 插件
+
+`pathtrove` 插件让 Claude Code（及其他 MCP 客户端）直接在终端里查询 PathTrove，支持中文和英文：表格检索与统计、带来源的资源报告、下载方案和标签概要。插件本身只有代码；首次使用时会从 Hugging Face 公开仓库 [`Dearcat/PathTrove`](https://huggingface.co/datasets/Dearcat/PathTrove) 下载数据包（版本 `2026.09.28`：353 个资源及其报告和下载指南，其中 108 个资源有标签索引；约 14 MB），校验 sha256 后缓存到本地（无需密钥，无需服务器）。本数据包不含论文报告。
+
+```text
+/plugin marketplace add DearCaat/PathTrove
+/plugin install pathtrove@pathtrove
+```
+
+- **依赖**：PATH 中有 `python3`（插件只用标准库，已在 Python 3.10 上测试），无需再装其他东西。
+- **Codex 与其他 MCP 客户端**：插件本身是一个 stdio MCP 服务器。克隆本仓库后，把 `python3 <克隆目录>/plugin/bin/pathtrove mcp` 注册为服务器即可，例如 `codex mcp add pathtrove -- python3 <克隆目录>/plugin/bin/pathtrove mcp`；其他客户端在 MCP 配置里写 `{"mcpServers": {"pathtrove": {"command": "python3", "args": ["<克隆目录>/plugin/bin/pathtrove", "mcp"]}}}`。非交互的 Codex（`codex exec`）还需要在 `~/.codex/config.toml` 的 `[mcp_servers.pathtrove]` 下设置 `default_tools_approval_mode = "approve"`，否则所有调用都会因“需要审批”被拒绝。同样的命令也可以在 shell 里用 `python3 plugin/bin/pathtrove <domain> <verb>` 运行（`--help` 列出全部命令）。
+- **语言**：每个命令和 MCP 工具都有 `lang` 参数（`zh` 或 `en`）；默认取环境变量 `PATHTROVE_LANG`，未设置时为 `zh`。智能体会被告知按用户书写的语言作答。
+- **数据、缓存与镜像**：`pathtrove version` 显示数据版本。数据缓存在 `~/.cache/pathtrove`（用 `PATHTROVE_HOME` 更改）。处在防火墙后可设 `HF_ENDPOINT=https://hf-mirror.com`；离线时在别处下载 `plugin/data-manifest.json` 里写明的压缩包，再运行 `pathtrove data install --file <压缩包>`。样本级标签文件（合计 8.4 GB）不在数据包里：`pathtrove label fetch` 每次从同一个仓库下载一个文件并校验 sha256。
+- **推荐数据集（best-data）**：`pathtrove-best-data` 技能及 `best-data principles` 命令给智能体一套从研究需求到推荐数据集的方法，用 table 与 report 命令完成（分析需求、把硬条件落成 schema 上的过滤、先宽后窄、在报告证据上判断、遵守所要的数量、只为补覆盖缺口才到 PathTrove 之外检索），并附本数据版本的 schema 地图。开关（环境变量）：`PATHTROVE_WEB=off` 告知智能体不在 PathTrove 之外检索（默认开；插件只声明该设置，不能关闭客户端自身的联网工具）。
+- 使用 PathTrove 数据须遵守 [PathTrove 科研使用条款](./TERMS_OF_USE.md)。
+
 ## 负责任地使用
 
 1. 用表格和报告找出可能适合研究的资源。
