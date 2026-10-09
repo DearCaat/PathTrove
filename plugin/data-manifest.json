@@ -6,17 +6,17 @@
  "repo_type": "dataset",
  "archive": {
   "name": "pathtrove-data-2026.09.28.tar.gz",
-  "path": "bundle/2026.09.28/pathtrove-data-2026.09.28.tar.gz",
-  "size": 14284398,
-  "sha256": "67aec38182866a278b08b877b4ff7f3bd0e47fb67ea32c78ac0e3ee9b6422e3f",
-  "unpacked_bytes": 50736842,
-  "files": 1417
+  "path": "2026.09.28/plugin/pathtrove-data-2026.09.28.tar.gz",
+  "size": 14247166,
+  "sha256": "d0bc8a6ca414b86fac2e07fd769d83256ea05bb93e70615fe997c202fa5ca2d7",
+  "unpacked_bytes": 50625369,
+  "files": 1413
  },
- "full_manifest_path": "bundle/2026.09.28/manifest.json",
+ "full_manifest_path": "2026.09.28/plugin/manifest.json",
  "counts": {
-  "resources": 353,
-  "resource_reports": 353,
-  "download_guides": 353,
+  "resources": 352,
+  "resource_reports": 352,
+  "download_guides": 352,
   "label_files": 302,
   "resources_with_labels": 108
  },
@@ -39,12 +39,12 @@
   "checked_with": "translate/check_translation.v3.py + translate/check_translation_v4_extra.py (URLs kept, bash blocks in English)",
   "checker_sha256": "b0bdddbe76faa98603fb4c28caa95a24d3086d7603b7ac321a5d7bd79fc79ec6",
   "reports": {
-   "bundled": 353,
-   "of": 353
+   "bundled": 352,
+   "of": 352
   },
   "guides": {
-   "bundled": 353,
-   "of": 353
+   "bundled": 352,
+   "of": 352
   },
   "not_bundled": [],
   "note": "only translations that pass the mechanical check are bundled; other resources fall back to the Chinese text, and the output says so"
@@ -57,2417 +57,2719 @@
   "files": [
    {
     "record_id": "recvohgdoFoXvS",
+    "ptd_id": "PTD-000001",
     "dataset_name": "ACROBAT",
     "name": "acrobat.wsi.ihc_to_he_registration.label.json",
-    "path": "2026.09.28/recvohgdoFoXvS/acrobat.wsi.ihc_to_he_registration.label.json",
+    "path": "2026.09.28/datasets/PTD-000001_ACROBAT/labels/acrobat.wsi.ihc_to_he_registration.label.json",
     "size": 992678,
     "sha256": "2a0529cd667dc8b54143166a91e256f033d42dec2e54427f3978bb05bc4bba40"
    },
    {
     "record_id": "recvohgdoFoXvS",
+    "ptd_id": "PTD-000001",
     "dataset_name": "ACROBAT",
     "name": "acrobat.wsi_registration.label.json",
-    "path": "2026.09.28/recvohgdoFoXvS/acrobat.wsi_registration.label.json",
+    "path": "2026.09.28/datasets/PTD-000001_ACROBAT/labels/acrobat.wsi_registration.label.json",
     "size": 1137098,
     "sha256": "b2390772cd5bd554b0fb05541a267e5a66c49f47e80aa9ad344f77b425dac649"
    },
    {
     "record_id": "recvohggzvo8ED",
+    "ptd_id": "PTD-000194",
     "dataset_name": "AI4Life Microscopy Supervised Denoising Challenge 2025",
     "name": "ai4life_microscopy_supervised_denoising_challenge_2025.2d_denoising_fmd.label.json",
-    "path": "2026.09.28/recvohggzvo8ED/ai4life_microscopy_supervised_denoising_challenge_2025.2d_denoising_fmd.label.json",
+    "path": "2026.09.28/datasets/PTD-000194_AI4Life-Microscopy-Supervised-Denoising-Challenge-2025/labels/ai4life_microscopy_supervised_denoising_challenge_2025.2d_denoising_fmd.label.json",
     "size": 18035640,
     "sha256": "cc18e7bfd077caebd77405d1dfa9d2abba12d635f06bd569a9a97490febcbc18"
    },
    {
     "record_id": "recvohggzvo8ED",
+    "ptd_id": "PTD-000194",
     "dataset_name": "AI4Life Microscopy Supervised Denoising Challenge 2025",
     "name": "ai4life_microscopy_supervised_denoising_challenge_2025.2d_denoising_nuclei.label.json",
-    "path": "2026.09.28/recvohggzvo8ED/ai4life_microscopy_supervised_denoising_challenge_2025.2d_denoising_nuclei.label.json",
+    "path": "2026.09.28/datasets/PTD-000194_AI4Life-Microscopy-Supervised-Denoising-Challenge-2025/labels/ai4life_microscopy_supervised_denoising_challenge_2025.2d_denoising_nuclei.label.json",
     "size": 727846,
     "sha256": "71d1ffc9d743977de6b51ab54a2a011d7672b17eaa8b919a7f6e2319327a30e2"
    },
    {
     "record_id": "recvohggzvo8ED",
+    "ptd_id": "PTD-000194",
     "dataset_name": "AI4Life Microscopy Supervised Denoising Challenge 2025",
     "name": "ai4life_microscopy_supervised_denoising_challenge_2025.3d_denoising_planaria.label.json",
-    "path": "2026.09.28/recvohggzvo8ED/ai4life_microscopy_supervised_denoising_challenge_2025.3d_denoising_planaria.label.json",
+    "path": "2026.09.28/datasets/PTD-000194_AI4Life-Microscopy-Supervised-Denoising-Challenge-2025/labels/ai4life_microscopy_supervised_denoising_challenge_2025.3d_denoising_planaria.label.json",
     "size": 5298002,
     "sha256": "0047fb0f314184f14eb3bcba23ffabe7b1749b098bb607371ac6aa8ac545b63e"
    },
    {
     "record_id": "recvohggzvo8ED",
+    "ptd_id": "PTD-000194",
     "dataset_name": "AI4Life Microscopy Supervised Denoising Challenge 2025",
     "name": "ai4life_microscopy_supervised_denoising_challenge_2025.3d_denoising_tribolium.label.json",
-    "path": "2026.09.28/recvohggzvo8ED/ai4life_microscopy_supervised_denoising_challenge_2025.3d_denoising_tribolium.label.json",
+    "path": "2026.09.28/datasets/PTD-000194_AI4Life-Microscopy-Supervised-Denoising-Challenge-2025/labels/ai4life_microscopy_supervised_denoising_challenge_2025.3d_denoising_tribolium.label.json",
     "size": 3941575,
     "sha256": "2fcb133ac6a9c0b07d4d3be6c4a631c1660104e2f57f07a5f91e7727e4712484"
    },
    {
     "record_id": "recvohggzvo8ED",
+    "ptd_id": "PTD-000194",
     "dataset_name": "AI4Life Microscopy Supervised Denoising Challenge 2025",
     "name": "ai4life_microscopy_supervised_denoising_challenge_2025.fmd_2d_denoising.label.json",
-    "path": "2026.09.28/recvohggzvo8ED/ai4life_microscopy_supervised_denoising_challenge_2025.fmd_2d_denoising.label.json",
+    "path": "2026.09.28/datasets/PTD-000194_AI4Life-Microscopy-Supervised-Denoising-Challenge-2025/labels/ai4life_microscopy_supervised_denoising_challenge_2025.fmd_2d_denoising.label.json",
     "size": 33099102,
     "sha256": "9902ef8a660e7737d0a740bb65e87c25ce8503a05657635ea3971d2896e8d6d1"
    },
    {
     "record_id": "recvohggzvo8ED",
+    "ptd_id": "PTD-000194",
     "dataset_name": "AI4Life Microscopy Supervised Denoising Challenge 2025",
     "name": "ai4life_microscopy_supervised_denoising_challenge_2025.nuclei_2d_denoising.label.json",
-    "path": "2026.09.28/recvohggzvo8ED/ai4life_microscopy_supervised_denoising_challenge_2025.nuclei_2d_denoising.label.json",
+    "path": "2026.09.28/datasets/PTD-000194_AI4Life-Microscopy-Supervised-Denoising-Challenge-2025/labels/ai4life_microscopy_supervised_denoising_challenge_2025.nuclei_2d_denoising.label.json",
     "size": 1007169,
     "sha256": "ca106d967c2fb22ad4092ff636439da469afc5c87a3f84e4513fc384a60fad7e"
    },
    {
     "record_id": "recvohggzvo8ED",
+    "ptd_id": "PTD-000194",
     "dataset_name": "AI4Life Microscopy Supervised Denoising Challenge 2025",
     "name": "ai4life_microscopy_supervised_denoising_challenge_2025.planaria_3d_denoising.label.json",
-    "path": "2026.09.28/recvohggzvo8ED/ai4life_microscopy_supervised_denoising_challenge_2025.planaria_3d_denoising.label.json",
+    "path": "2026.09.28/datasets/PTD-000194_AI4Life-Microscopy-Supervised-Denoising-Challenge-2025/labels/ai4life_microscopy_supervised_denoising_challenge_2025.planaria_3d_denoising.label.json",
     "size": 7307587,
     "sha256": "19b00c8eff1e470bc6235f3cf94cc6ae6097b93a264d94ec037b019ea060a7c6"
    },
    {
     "record_id": "recvohggzvo8ED",
+    "ptd_id": "PTD-000194",
     "dataset_name": "AI4Life Microscopy Supervised Denoising Challenge 2025",
     "name": "ai4life_microscopy_supervised_denoising_challenge_2025.tribolium_3d_denoising.label.json",
-    "path": "2026.09.28/recvohggzvo8ED/ai4life_microscopy_supervised_denoising_challenge_2025.tribolium_3d_denoising.label.json",
+    "path": "2026.09.28/datasets/PTD-000194_AI4Life-Microscopy-Supervised-Denoising-Challenge-2025/labels/ai4life_microscopy_supervised_denoising_challenge_2025.tribolium_3d_denoising.label.json",
     "size": 5397989,
     "sha256": "066099d1f55a1cf3d462dfe7a2c5b4c9c87bc316f58a60e647686b6742e4df50"
    },
    {
     "record_id": "recvohgjRIhm5Z",
+    "ptd_id": "PTD-000005",
     "dataset_name": "AML-Cytomorphology_LMU",
     "name": "aml-cytomorphology_lmu.cell.atypical_cell_binary_classification.label.json",
-    "path": "2026.09.28/recvohgjRIhm5Z/aml-cytomorphology_lmu.cell.atypical_cell_binary_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000005_AML-Cytomorphology_LMU/labels/aml-cytomorphology_lmu.cell.atypical_cell_binary_classification.label.json",
     "size": 4760345,
     "sha256": "91bea27ac339d1593899a659b1e1c37430e4185455d3a37eaae73d66fb145642"
    },
    {
     "record_id": "recvohgjRIhm5Z",
+    "ptd_id": "PTD-000005",
     "dataset_name": "AML-Cytomorphology_LMU",
     "name": "aml-cytomorphology_lmu.cell.blast_character_binary_classification.label.json",
-    "path": "2026.09.28/recvohgjRIhm5Z/aml-cytomorphology_lmu.cell.blast_character_binary_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000005_AML-Cytomorphology_LMU/labels/aml-cytomorphology_lmu.cell.blast_character_binary_classification.label.json",
     "size": 4796547,
     "sha256": "31bd34a0e8e932d7eede7673c24a15e6cd184614dd1590d93254baa5e694c98d"
    },
    {
     "record_id": "recvohgjRIhm5Z",
+    "ptd_id": "PTD-000005",
     "dataset_name": "AML-Cytomorphology_LMU",
     "name": "aml-cytomorphology_lmu.cell.cell_classification.label.json",
-    "path": "2026.09.28/recvohgjRIhm5Z/aml-cytomorphology_lmu.cell.cell_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000005_AML-Cytomorphology_LMU/labels/aml-cytomorphology_lmu.cell.cell_classification.label.json",
     "size": 4654493,
     "sha256": "93be474dfe3a39ef2481c946a9593d9748d76de278882b02298a0f0def536a43"
    },
    {
     "record_id": "recvohgl0VtHHD",
+    "ptd_id": "PTD-000007",
     "dataset_name": "AQuA",
     "name": "aqua.demo_fov.virtual_staining_quality_assessment.label.json",
-    "path": "2026.09.28/recvohgl0VtHHD/aqua.demo_fov.virtual_staining_quality_assessment.label.json",
+    "path": "2026.09.28/datasets/PTD-000007_AQuA/labels/aqua.demo_fov.virtual_staining_quality_assessment.label.json",
     "size": 4099,
     "sha256": "87d81386d8a8e38c88a9c4cb4346accd464d9056a6d00a5d8c7f255c7a656be8"
    },
    {
     "record_id": "recvohgl0VtHHD",
+    "ptd_id": "PTD-000007",
     "dataset_name": "AQuA",
     "name": "aqua.quality_artifact_classification.label.json",
-    "path": "2026.09.28/recvohgl0VtHHD/aqua.quality_artifact_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000007_AQuA/labels/aqua.quality_artifact_classification.label.json",
     "size": 163566,
     "sha256": "9eb80412dc637a98b94c1e516de44c04afe6d3305e011bf05bfb0af89cd6e204"
    },
    {
     "record_id": "recvohgl0VtHHD",
+    "ptd_id": "PTD-000007",
     "dataset_name": "AQuA",
     "name": "aqua.tcga_wsi.stain_quality_classification.label.json",
-    "path": "2026.09.28/recvohgl0VtHHD/aqua.tcga_wsi.stain_quality_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000007_AQuA/labels/aqua.tcga_wsi.stain_quality_classification.label.json",
     "size": 234792,
     "sha256": "9516437d6d13ff6c6a7a21bc64b2d619a391050a646efe993715be1acd2bc243"
    },
    {
     "record_id": "recvohglA3qGxf",
+    "ptd_id": "PTD-000008",
     "dataset_name": "ARCH",
     "name": "ARCH.multiple_instance_captioning.label.json",
-    "path": "2026.09.28/recvohglA3qGxf/ARCH.multiple_instance_captioning.label.json",
+    "path": "2026.09.28/datasets/PTD-000008_ARCH/labels/ARCH.multiple_instance_captioning.label.json",
     "size": 6509163,
     "sha256": "66876e3ad08b49d8d772e96c0cf381060d2cbf0e2be7a5eb409e6b1f18cc3986"
    },
    {
     "record_id": "recvohglA3qGxf",
+    "ptd_id": "PTD-000008",
     "dataset_name": "ARCH",
     "name": "arch.books_bag.multiple_instance_captioning.label.json",
-    "path": "2026.09.28/recvohglA3qGxf/arch.books_bag.multiple_instance_captioning.label.json",
+    "path": "2026.09.28/datasets/PTD-000008_ARCH/labels/arch.books_bag.multiple_instance_captioning.label.json",
     "size": 2433580,
     "sha256": "4717245c12e59174bd1cbe16c4777095f3782ac6921f936c53e00ab9bdc9a441"
    },
    {
     "record_id": "recvohglA3qGxf",
+    "ptd_id": "PTD-000008",
     "dataset_name": "ARCH",
     "name": "arch.pubmed_instance.multiple_instance_captioning.label.json",
-    "path": "2026.09.28/recvohglA3qGxf/arch.pubmed_instance.multiple_instance_captioning.label.json",
+    "path": "2026.09.28/datasets/PTD-000008_ARCH/labels/arch.pubmed_instance.multiple_instance_captioning.label.json",
     "size": 1240450,
     "sha256": "453b869bc47371b2bb4fc57e1c2eaf989b3aec175ab47468c1fef238028ccb7f"
    },
    {
     "record_id": "recvohgpWfo8uo",
+    "ptd_id": "PTD-000011",
     "dataset_name": "BACH",
     "name": "BACH.microscopy_image_classification.label.json",
-    "path": "2026.09.28/recvohgpWfo8uo/BACH.microscopy_image_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000011_BACH/labels/BACH.microscopy_image_classification.label.json",
     "size": 118108,
     "sha256": "34b8cb605952d74f66ace1db26051b6c7002895d5760bb8db08acac5a68594dc"
    },
    {
     "record_id": "recvohgpWfo8uo",
+    "ptd_id": "PTD-000011",
     "dataset_name": "BACH",
     "name": "BACH.whole_slide_pixelwise_labeling.label.json",
-    "path": "2026.09.28/recvohgpWfo8uo/BACH.whole_slide_pixelwise_labeling.label.json",
+    "path": "2026.09.28/datasets/PTD-000011_BACH/labels/BACH.whole_slide_pixelwise_labeling.label.json",
     "size": 74941,
     "sha256": "5fd37731c9d46cd648ff37c7afccf4fd501309b7740ff673d678473d41807ab3"
    },
    {
     "record_id": "recvohgpWfo8uo",
+    "ptd_id": "PTD-000011",
     "dataset_name": "BACH",
     "name": "bach.fov.microscopy_image_classification.label.json",
-    "path": "2026.09.28/recvohgpWfo8uo/bach.fov.microscopy_image_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000011_BACH/labels/bach.fov.microscopy_image_classification.label.json",
     "size": 129292,
     "sha256": "29fd1a35e79863990266ffd8185dccfbde88111993488d6bf55f0dd7b79d0d8e"
    },
    {
     "record_id": "recvohgpWfo8uo",
+    "ptd_id": "PTD-000011",
     "dataset_name": "BACH",
     "name": "bach.wsi.wsi_four_class_pixel_labeling.label.json",
-    "path": "2026.09.28/recvohgpWfo8uo/bach.wsi.wsi_four_class_pixel_labeling.label.json",
+    "path": "2026.09.28/datasets/PTD-000011_BACH/labels/bach.wsi.wsi_four_class_pixel_labeling.label.json",
     "size": 18986,
     "sha256": "b6075afb58381e5b3b9b4ac7616a093ee17791aac79b97cd60fba9cf7d55ab49"
    },
    {
     "record_id": "recvohgqvasnsH",
+    "ptd_id": "PTD-000012",
     "dataset_name": "BCData",
     "name": "bc.patch.cell_detection_and_counting.label.json",
-    "path": "2026.09.28/recvohgqvasnsH/bc.patch.cell_detection_and_counting.label.json",
+    "path": "2026.09.28/datasets/PTD-000012_BCData/labels/bc.patch.cell_detection_and_counting.label.json",
     "size": 35743714,
     "sha256": "a1eabbf29462c4827fa039c3cfeaa8521e1c2696d3bc70886fcacf3fbc3e6553"
    },
    {
     "record_id": "recvohgqvasnsH",
+    "ptd_id": "PTD-000012",
     "dataset_name": "BCData",
     "name": "bc.patch.classified_cell_segmentation.label.json",
-    "path": "2026.09.28/recvohgqvasnsH/bc.patch.classified_cell_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000012_BCData/labels/bc.patch.classified_cell_segmentation.label.json",
     "size": 228743,
     "sha256": "0652db11a43357b81f1f8da77a90aa3279d77be08ec95327c6b3769f8051dc6b"
    },
    {
     "record_id": "recvohgqvasnsH",
+    "ptd_id": "PTD-000012",
     "dataset_name": "BCData",
     "name": "bc.patch.ihc_scoring.label.json",
-    "path": "2026.09.28/recvohgqvasnsH/bc.patch.ihc_scoring.label.json",
+    "path": "2026.09.28/datasets/PTD-000012_BCData/labels/bc.patch.ihc_scoring.label.json",
     "size": 111699,
     "sha256": "fb64d4bad4e8d3164d4f34ef3b88267f447fbf605dc1fda0b2052ab6dbf91ea2"
    },
    {
     "record_id": "recvohgr1PTttR",
+    "ptd_id": "PTD-000013",
     "dataset_name": "BCCD",
     "name": "bccd.augmented_image.blood_cell_subtype_classification.label.json",
-    "path": "2026.09.28/recvohgr1PTttR/bccd.augmented_image.blood_cell_subtype_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000013_BCCD/labels/bccd.augmented_image.blood_cell_subtype_classification.label.json",
     "size": 4548153,
     "sha256": "ab50d174a26eb4a3ff1103491ceb9279e2d748f05b4483990c9fc635ef9fe903"
    },
    {
     "record_id": "recvohgr1PTttR",
+    "ptd_id": "PTD-000013",
     "dataset_name": "BCCD",
     "name": "bccd.original_image.blood_cell_detection.label.json",
-    "path": "2026.09.28/recvohgr1PTttR/bccd.original_image.blood_cell_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000013_BCCD/labels/bccd.original_image.blood_cell_detection.label.json",
     "size": 1152189,
     "sha256": "ad78844f1d9182f8c48b9c323eec8171fd5386267cd703509dc44f85b29d98fe"
    },
    {
     "record_id": "recvohgr1PTttR",
+    "ptd_id": "PTD-000013",
     "dataset_name": "BCCD",
     "name": "bccd.patch.blood_cell_detection.label.json",
-    "path": "2026.09.28/recvohgr1PTttR/bccd.patch.blood_cell_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000013_BCCD/labels/bccd.patch.blood_cell_detection.label.json",
     "size": 1153121,
     "sha256": "7a2fb2bbe4e9d59c5dc11b30e7b78a2643b19c04afe633def8f413fefb298d77"
    },
    {
     "record_id": "recvohgr1PTttR",
+    "ptd_id": "PTD-000013",
     "dataset_name": "BCCD",
     "name": "bccd.patch.wbc_subtype_classification.label.json",
-    "path": "2026.09.28/recvohgr1PTttR/bccd.patch.wbc_subtype_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000013_BCCD/labels/bccd.patch.wbc_subtype_classification.label.json",
     "size": 3773366,
     "sha256": "0f6588e98d927fdd22f7e338069ae1ebcf98faa6e72ea99a32fccbf5191e2e9b"
    },
    {
     "record_id": "recvohgt9r4z1x",
+    "ptd_id": "PTD-000015",
     "dataset_name": "BCNB",
     "name": "BCNB.aln_negative_vs_1_2_metastases.label.json",
-    "path": "2026.09.28/recvohgt9r4z1x/BCNB.aln_negative_vs_1_2_metastases.label.json",
+    "path": "2026.09.28/datasets/PTD-000015_BCNB/labels/BCNB.aln_negative_vs_1_2_metastases.label.json",
     "size": 4931938,
     "sha256": "6ba4dfc8111dbd64d8c994ebcd1713c43f8abc39845369aa60134b141ee09ccf"
    },
    {
     "record_id": "recvohgt9r4z1x",
+    "ptd_id": "PTD-000015",
     "dataset_name": "BCNB",
     "name": "BCNB.aln_negative_vs_gt2_metastases.label.json",
-    "path": "2026.09.28/recvohgt9r4z1x/BCNB.aln_negative_vs_gt2_metastases.label.json",
+    "path": "2026.09.28/datasets/PTD-000015_BCNB/labels/BCNB.aln_negative_vs_gt2_metastases.label.json",
     "size": 4899399,
     "sha256": "4ba954fd8480bf82f99a4f7341f6aef102bab0aaf976e287095883b04b99a718"
    },
    {
     "record_id": "recvohgt9r4z1x",
+    "ptd_id": "PTD-000015",
     "dataset_name": "BCNB",
     "name": "BCNB.aln_positive_low_vs_high_burden.label.json",
-    "path": "2026.09.28/recvohgt9r4z1x/BCNB.aln_positive_low_vs_high_burden.label.json",
+    "path": "2026.09.28/datasets/PTD-000015_BCNB/labels/BCNB.aln_positive_low_vs_high_burden.label.json",
     "size": 2121160,
     "sha256": "8d4009675c29fde70648e087e1c4328957751be510ca0c94117dbe08cfe02b18"
    },
    {
     "record_id": "recvohgt9r4z1x",
+    "ptd_id": "PTD-000015",
     "dataset_name": "BCNB",
     "name": "BCNB.aln_status_binary.label.json",
-    "path": "2026.09.28/recvohgt9r4z1x/BCNB.aln_status_binary.label.json",
+    "path": "2026.09.28/datasets/PTD-000015_BCNB/labels/BCNB.aln_status_binary.label.json",
     "size": 5876995,
     "sha256": "c5d2bd7ceaf7455348e3713597817b0ab52c5ef7b7b9563c91743a0f3bbae0d8"
    },
    {
     "record_id": "recvohgt9r4z1x",
+    "ptd_id": "PTD-000015",
     "dataset_name": "BCNB",
     "name": "BCNB.aln_status_three_class.label.json",
-    "path": "2026.09.28/recvohgt9r4z1x/BCNB.aln_status_three_class.label.json",
+    "path": "2026.09.28/datasets/PTD-000015_BCNB/labels/BCNB.aln_status_three_class.label.json",
     "size": 5913130,
     "sha256": "149d3a99a78070da8bd2cae765648ba7cc13c4c59c74e1ede9c27360f8891e70"
    },
    {
     "record_id": "recvohgt9r4z1x",
+    "ptd_id": "PTD-000015",
     "dataset_name": "BCNB",
     "name": "bcnb.slide.aln_metastasis_prediction.label.json",
-    "path": "2026.09.28/recvohgt9r4z1x/bcnb.slide.aln_metastasis_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000015_BCNB/labels/bcnb.slide.aln_metastasis_prediction.label.json",
     "size": 235504,
     "sha256": "fcd84ed08de24100b583b1b12bb70b5046f0e273dc494fb474cbea1a9e620fea"
    },
    {
     "record_id": "recvohgt9r4z1x",
+    "ptd_id": "PTD-000015",
     "dataset_name": "BCNB",
     "name": "bcnb.slide.er_status_prediction.label.json",
-    "path": "2026.09.28/recvohgt9r4z1x/bcnb.slide.er_status_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000015_BCNB/labels/bcnb.slide.er_status_prediction.label.json",
     "size": 234671,
     "sha256": "9d8455f5f81f14755c549c163172f1dee4afe1782347c22a90153cc0267a643a"
    },
    {
     "record_id": "recvohgt9r4z1x",
+    "ptd_id": "PTD-000015",
     "dataset_name": "BCNB",
     "name": "bcnb.slide.her2_status_prediction.label.json",
-    "path": "2026.09.28/recvohgt9r4z1x/bcnb.slide.her2_status_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000015_BCNB/labels/bcnb.slide.her2_status_prediction.label.json",
     "size": 236775,
     "sha256": "6edcca9c0787f8cfd2b8b384379e431fb14f742c091bbf6855dcf16a6668d0ce"
    },
    {
     "record_id": "recvohgt9r4z1x",
+    "ptd_id": "PTD-000015",
     "dataset_name": "BCNB",
     "name": "bcnb.slide.histological_grading_prediction.label.json",
-    "path": "2026.09.28/recvohgt9r4z1x/bcnb.slide.histological_grading_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000015_BCNB/labels/bcnb.slide.histological_grading_prediction.label.json",
     "size": 3963,
     "sha256": "e489fa5b9d48f1f1269d81dafb74e2758b4ff5a9ed573aee44551173dfe9eb81"
    },
    {
     "record_id": "recvohgt9r4z1x",
+    "ptd_id": "PTD-000015",
     "dataset_name": "BCNB",
     "name": "bcnb.slide.molecular_subtype_prediction.label.json",
-    "path": "2026.09.28/recvohgt9r4z1x/bcnb.slide.molecular_subtype_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000015_BCNB/labels/bcnb.slide.molecular_subtype_prediction.label.json",
     "size": 4056,
     "sha256": "b74f2e3f4ce62da8345347c695f8590fa467673090d10baf16e439078b0b02e6"
    },
    {
     "record_id": "recvohgt9r4z1x",
+    "ptd_id": "PTD-000015",
     "dataset_name": "BCNB",
     "name": "bcnb.slide.pr_status_prediction.label.json",
-    "path": "2026.09.28/recvohgt9r4z1x/bcnb.slide.pr_status_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000015_BCNB/labels/bcnb.slide.pr_status_prediction.label.json",
     "size": 234675,
     "sha256": "ae9e47158569a54e9f8ee2a3d9ae19879b1bff85c209b2d054a925504822ccdd"
    },
    {
     "record_id": "recvohgtFOtuzc",
+    "ptd_id": "PTD-000016",
     "dataset_name": "BCSS",
     "name": "BCSS.tissue_region_semantic_segmentation.label.json",
-    "path": "2026.09.28/recvohgtFOtuzc/BCSS.tissue_region_semantic_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000016_BCSS/labels/BCSS.tissue_region_semantic_segmentation.label.json",
     "size": 435982,
     "sha256": "a49fa712f4ec9857b6f02e6418cc0d4155fd5738f398948da84aee91840d30c6"
    },
    {
     "record_id": "recvohgtFOtuzc",
+    "ptd_id": "PTD-000016",
     "dataset_name": "BCSS",
     "name": "bcss.roi.histology_semantic_segmentation.label.json",
-    "path": "2026.09.28/recvohgtFOtuzc/bcss.roi.histology_semantic_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000016_BCSS/labels/bcss.roi.histology_semantic_segmentation.label.json",
     "size": 130996,
     "sha256": "87e0fd47f04da3149c3dcc4c619cc59f5e01ee543de6f9d61b76b0f973bc034c"
    },
    {
     "record_id": "recvohguhBez9O",
+    "ptd_id": "PTD-000186",
     "dataset_name": "BEETLE",
     "name": "BEETLE.multiclass_semantic_segmentation.label.json",
-    "path": "2026.09.28/recvohguhBez9O/BEETLE.multiclass_semantic_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000186_BEETLE/labels/BEETLE.multiclass_semantic_segmentation.label.json",
     "size": 671041,
     "sha256": "606377c3c6fde1e0f60e3e4ba6994d4fb779646a976383333b5c87e0d90ebeef"
    },
    {
     "record_id": "recvohguhBez9O",
+    "ptd_id": "PTD-000186",
     "dataset_name": "BEETLE",
     "name": "beetle.wsi.breast_tissue_segmentation.label.json",
-    "path": "2026.09.28/recvohguhBez9O/beetle.wsi.breast_tissue_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000186_BEETLE/labels/beetle.wsi.breast_tissue_segmentation.label.json",
     "size": 207219,
     "sha256": "81f29d570547b4402e3c0770cc38b7229cb5e8ebc5899fe39b1e6ec6eee9d379"
    },
    {
     "record_id": "recvohgxiSJqS5",
+    "ptd_id": "PTD-000018",
     "dataset_name": "BRCA-M2C",
     "name": "BRCA-M2C.multi_class_cell_detection.label.json",
-    "path": "2026.09.28/recvohgxiSJqS5/BRCA-M2C.multi_class_cell_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000018_BRCA-M2C/labels/BRCA-M2C.multi_class_cell_detection.label.json",
     "size": 5861665,
     "sha256": "e9f00085302b550d52ee68556ab0dd5ee02374e4b7b0a4c9159d893520438efa"
    },
    {
     "record_id": "recvohgxiSJqS5",
+    "ptd_id": "PTD-000018",
     "dataset_name": "BRCA-M2C",
     "name": "brca_m2c.patch.cell_detection.label.json",
-    "path": "2026.09.28/recvohgxiSJqS5/brca_m2c.patch.cell_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000018_BRCA-M2C/labels/brca_m2c.patch.cell_detection.label.json",
     "size": 7030688,
     "sha256": "712d75baae71cb776a1caa5c51790a445e045806db7fbb2e7bb1373c7f5085c3"
    },
    {
     "record_id": "recvohgytqqLuw",
+    "ptd_id": "PTD-000020",
     "dataset_name": "BreCaHAD",
     "name": "BreCaHAD.histological_structure_classification.label.json",
-    "path": "2026.09.28/recvohgytqqLuw/BreCaHAD.histological_structure_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000020_BreCaHAD/labels/BreCaHAD.histological_structure_classification.label.json",
     "size": 11289656,
     "sha256": "3053b3bbce3601bf200f62cb830a777c06758d6111a49ed2dffd1b712757cdec"
    },
    {
     "record_id": "recvohgytqqLuw",
+    "ptd_id": "PTD-000020",
     "dataset_name": "BreCaHAD",
     "name": "brecahad.point.histological_structure_classification.label.json",
-    "path": "2026.09.28/recvohgytqqLuw/brecahad.point.histological_structure_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000020_BreCaHAD/labels/brecahad.point.histological_structure_classification.label.json",
     "size": 6380978,
     "sha256": "c07397125c1f5264c22bb9cc2a9c67a74b9050401a795712111566798571b473"
    },
    {
     "record_id": "recvohgASnheSX",
+    "ptd_id": "PTD-000021",
     "dataset_name": "BreaKHis",
     "name": "BreakHis.benign_malignant_classification.label.json",
-    "path": "2026.09.28/recvohgASnheSX/BreakHis.benign_malignant_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000021_BreaKHis/labels/BreakHis.benign_malignant_classification.label.json",
     "size": 6084882,
     "sha256": "e0a60db49a1958908a2ae78ddeca68d51575cfd1d0164c55435ff69adeef1084"
    },
    {
     "record_id": "recvohgASnheSX",
+    "ptd_id": "PTD-000021",
     "dataset_name": "BreaKHis",
     "name": "breakhis.roi.benign_malignant_classification.label.json",
-    "path": "2026.09.28/recvohgASnheSX/breakhis.roi.benign_malignant_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000021_BreaKHis/labels/breakhis.roi.benign_malignant_classification.label.json",
     "size": 2200306,
     "sha256": "a53f31992f7cab605797451d2b83fa8cfc3179c76fe86764ea9be827f759b351"
    },
    {
     "record_id": "recvohgCrCD9yX",
+    "ptd_id": "PTD-000022",
     "dataset_name": "CAMEL",
     "name": "camel.patch.weakly_supervised_histopathology_segmentation.label.json",
-    "path": "2026.09.28/recvohgCrCD9yX/camel.patch.weakly_supervised_histopathology_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000022_CAMEL/labels/camel.patch.weakly_supervised_histopathology_segmentation.label.json",
     "size": 6001375,
     "sha256": "21ea7deea17006a8dd449585909f692762718abda4daa13311c7208906b044a9"
    },
    {
     "record_id": "recvohgEdbDM3j",
+    "ptd_id": "PTD-000024",
     "dataset_name": "CATCH",
     "name": "catch.slide.tissue_segmentation.label.json",
-    "path": "2026.09.28/recvohgEdbDM3j/catch.slide.tissue_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000024_CATCH/labels/catch.slide.tissue_segmentation.label.json",
     "size": 88791,
     "sha256": "9b613ee03b0642a87d1dd57d599af0a73216b23364aaf65257ba21459ae991e8"
    },
    {
     "record_id": "recvohgEdbDM3j",
+    "ptd_id": "PTD-000024",
     "dataset_name": "CATCH",
     "name": "catch.slide.tumor_subtype_classification.label.json",
-    "path": "2026.09.28/recvohgEdbDM3j/catch.slide.tumor_subtype_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000024_CATCH/labels/catch.slide.tumor_subtype_classification.label.json",
     "size": 95596,
     "sha256": "77cc0f8b3069de1b3f7cf6485149195c14d7a6cef97c3f8303cc8b728c4a6eef"
    },
    {
     "record_id": "recvohgEdbDM3j",
+    "ptd_id": "PTD-000024",
     "dataset_name": "CATCH",
     "name": "catch.tissue_segmentation.label.json",
-    "path": "2026.09.28/recvohgEdbDM3j/catch.tissue_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000024_CATCH/labels/catch.tissue_segmentation.label.json",
     "size": 373250,
     "sha256": "facafec5de99c56eca56d7f156cc8d406e7f41d7edcfb2b0875b76808dcc1392"
    },
    {
     "record_id": "recvohgEdbDM3j",
+    "ptd_id": "PTD-000024",
     "dataset_name": "CATCH",
     "name": "catch.tumor_subtype_classification.label.json",
-    "path": "2026.09.28/recvohgEdbDM3j/catch.tumor_subtype_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000024_CATCH/labels/catch.tumor_subtype_classification.label.json",
     "size": 104799,
     "sha256": "46c3cf94fc4fec05522639302f2b5d645f9a6df0fb4b184e7d40b44bf388f2d6"
    },
    {
     "record_id": "recvohgGB49bvx",
+    "ptd_id": "PTD-000193",
     "dataset_name": "CHIMERA",
     "name": "CHIMERA.biochemical_recurrence_prediction.label.json",
-    "path": "2026.09.28/recvohgGB49bvx/CHIMERA.biochemical_recurrence_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000193_CHIMERA/labels/CHIMERA.biochemical_recurrence_prediction.label.json",
     "size": 29228,
     "sha256": "7e2102de239bef74f8626a86203e0516ed3cc73e87d2660963735454d4314113"
    },
    {
     "record_id": "recvohgGB49bvx",
+    "ptd_id": "PTD-000193",
     "dataset_name": "CHIMERA",
     "name": "CHIMERA.brs_subtype_prediction.label.json",
-    "path": "2026.09.28/recvohgGB49bvx/CHIMERA.brs_subtype_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000193_CHIMERA/labels/CHIMERA.brs_subtype_prediction.label.json",
     "size": 50947,
     "sha256": "84138226fe67fb06010e6cbbd1778bd373805d8a7289ac8121012aeff4be5b8b"
    },
    {
     "record_id": "recvohgGB49bvx",
+    "ptd_id": "PTD-000193",
     "dataset_name": "CHIMERA",
     "name": "CHIMERA.recurrence_prediction.label.json",
-    "path": "2026.09.28/recvohgGB49bvx/CHIMERA.recurrence_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000193_CHIMERA/labels/CHIMERA.recurrence_prediction.label.json",
     "size": 53709,
     "sha256": "7adb78db0e8d8b37454758f6c643825cfcdbc7aaafb6e211543f12fea722fca5"
    },
    {
     "record_id": "recvohgGB49bvx",
+    "ptd_id": "PTD-000193",
     "dataset_name": "CHIMERA",
     "name": "chimera.patient.bcg_response_subtype_prediction.label.json",
-    "path": "2026.09.28/recvohgGB49bvx/chimera.patient.bcg_response_subtype_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000193_CHIMERA/labels/chimera.patient.bcg_response_subtype_prediction.label.json",
     "size": 57989,
     "sha256": "e13b6f3e8aa89ceccaa5f026835267b13ca9d3fed215fd84091814c3ff5aa92d"
    },
    {
     "record_id": "recvohgGB49bvx",
+    "ptd_id": "PTD-000193",
     "dataset_name": "CHIMERA",
     "name": "chimera.patient.biochemical_recurrence_prediction.label.json",
-    "path": "2026.09.28/recvohgGB49bvx/chimera.patient.biochemical_recurrence_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000193_CHIMERA/labels/chimera.patient.biochemical_recurrence_prediction.label.json",
     "size": 48895,
     "sha256": "8556ecc0983243b3e23780eff38ca1643007ec16b6aca3539a0fa7e83ba63b69"
    },
    {
     "record_id": "recvohgGB49bvx",
+    "ptd_id": "PTD-000193",
     "dataset_name": "CHIMERA",
     "name": "chimera.patient.bladder_cancer_recurrence_prediction.label.json",
-    "path": "2026.09.28/recvohgGB49bvx/chimera.patient.bladder_cancer_recurrence_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000193_CHIMERA/labels/chimera.patient.bladder_cancer_recurrence_prediction.label.json",
     "size": 53106,
     "sha256": "1b70b4ef14bc90c3b4f5adfab0e67efe804119bb6629e1701132d1c1fe6955b6"
    },
    {
     "record_id": "recvohgIf3KmRh",
+    "ptd_id": "PTD-000159",
     "dataset_name": "CPM-15",
     "name": "cpm15.roi.nuclear_instance_segmentation.label.json",
-    "path": "2026.09.28/recvohgIf3KmRh/cpm15.roi.nuclear_instance_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000159_CPM-15/labels/cpm15.roi.nuclear_instance_segmentation.label.json",
     "size": 7692,
     "sha256": "75afc1b4672c12d8ce995952b3ecdb133ba932da70d8803a01efd3b54852c928"
    },
    {
     "record_id": "recvohgINCNath",
+    "ptd_id": "PTD-000160",
     "dataset_name": "CPM-17",
     "name": "cpm-17.nuclei_instance_segmentation.label.json",
-    "path": "2026.09.28/recvohgINCNath/cpm-17.nuclei_instance_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000160_CPM-17/labels/cpm-17.nuclei_instance_segmentation.label.json",
     "size": 29732,
     "sha256": "6b0f07a06bc3d1e877e167e4db0435dc0b57deb3419e99305e2786c0a0723a17"
    },
    {
     "record_id": "recvohgINCNath",
+    "ptd_id": "PTD-000160",
     "dataset_name": "CPM-17",
     "name": "cpm-17.patch.nuclear_instance_segmentation.label.json",
-    "path": "2026.09.28/recvohgINCNath/cpm-17.patch.nuclear_instance_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000160_CPM-17/labels/cpm-17.patch.nuclear_instance_segmentation.label.json",
     "size": 29586,
     "sha256": "1d36b793bad4c4b05eede6db3e8c3cedfe778e53317c4024f2c3e096ad80e9a9"
    },
    {
     "record_id": "recvohgN0HT9TM",
+    "ptd_id": "PTD-000029",
     "dataset_name": "TCGA-CRC-DX",
     "name": "crc-msi.tile.msi_status_classification.label.json",
-    "path": "2026.09.28/recvohgN0HT9TM/crc-msi.tile.msi_status_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000029_TCGA-CRC-DX/labels/crc-msi.tile.msi_status_classification.label.json",
     "size": 20572085,
     "sha256": "e318ebce2e18399f1d980e1962808cd5a7efada831b6f2a805677baf40d0648c"
    },
    {
     "record_id": "recvohgN0HT9TM",
+    "ptd_id": "PTD-000029",
     "dataset_name": "TCGA-CRC-DX",
     "name": "tcga_crc_dx.patch.msi_status_classification.label.json",
-    "path": "2026.09.28/recvohgN0HT9TM/tcga_crc_dx.patch.msi_status_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000029_TCGA-CRC-DX/labels/tcga_crc_dx.patch.msi_status_classification.label.json",
     "size": 19717881,
     "sha256": "17b9f59fc6af0ccc701be12d2f9232395956adc7a954ebbd4da6ad754f3e1705"
    },
    {
     "record_id": "recvohgRtBIUwV",
+    "ptd_id": "PTD-000129",
     "dataset_name": "cell-niches-data",
     "name": "Cell-niches-data.cell.cell_nucleus_detection.label.json",
-    "path": "2026.09.28/recvohgRtBIUwV/Cell-niches-data.cell.cell_nucleus_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000129_cell-niches-data/labels/Cell-niches-data.cell.cell_nucleus_detection.label.json",
     "size": 72027691,
     "sha256": "d009f6ead99e1e13cd8e464c48cbf27415ac247bffffebf3774621b08d1ced98"
    },
    {
     "record_id": "recvohgRtBIUwV",
+    "ptd_id": "PTD-000129",
     "dataset_name": "cell-niches-data",
     "name": "Cell-niches-data.cell.cell_phenotype_classification.label.json",
-    "path": "2026.09.28/recvohgRtBIUwV/Cell-niches-data.cell.cell_phenotype_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000129_cell-niches-data/labels/Cell-niches-data.cell.cell_phenotype_classification.label.json",
     "size": 161599969,
     "sha256": "28e467f7313767534aae6d710add7c720b35b9bc1e2f738ed71e1274e0d3b153"
    },
    {
     "record_id": "recvohgRtBIUwV",
+    "ptd_id": "PTD-000129",
     "dataset_name": "cell-niches-data",
     "name": "Cell-niches-data.luad_overall_survival.label.json",
-    "path": "2026.09.28/recvohgRtBIUwV/Cell-niches-data.luad_overall_survival.label.json",
+    "path": "2026.09.28/datasets/PTD-000129_cell-niches-data/labels/Cell-niches-data.luad_overall_survival.label.json",
     "size": 433710,
     "sha256": "3ea74e941eda3c6fe842591eb1ab2f7ebe83970e7f5cc38a74d7d9e7dffb5f00"
    },
    {
     "record_id": "recvohgRtBIUwV",
+    "ptd_id": "PTD-000129",
     "dataset_name": "cell-niches-data",
     "name": "Cell-niches-data.lusc_overall_survival.label.json",
-    "path": "2026.09.28/recvohgRtBIUwV/Cell-niches-data.lusc_overall_survival.label.json",
+    "path": "2026.09.28/datasets/PTD-000129_cell-niches-data/labels/Cell-niches-data.lusc_overall_survival.label.json",
     "size": 315210,
     "sha256": "06da6baf5ec68fdd81414eabb08f1c9977930490d8fed899657c74ee82f79690"
    },
    {
     "record_id": "recvohgRtBIUwV",
+    "ptd_id": "PTD-000129",
     "dataset_name": "cell-niches-data",
     "name": "Cell-niches-data.patient.survival_risk_stratification.label.json",
-    "path": "2026.09.28/recvohgRtBIUwV/Cell-niches-data.patient.survival_risk_stratification.label.json",
+    "path": "2026.09.28/datasets/PTD-000129_cell-niches-data/labels/Cell-niches-data.patient.survival_risk_stratification.label.json",
     "size": 371906,
     "sha256": "cc12347aa19d345dd4fd72b87e02163100b3ed7e6255531ed118662232312633"
    },
    {
     "record_id": "recvohgRtBIUwV",
+    "ptd_id": "PTD-000129",
     "dataset_name": "cell-niches-data",
     "name": "Cell-niches-data.spot.tissue_region_segmentation.label.json",
-    "path": "2026.09.28/recvohgRtBIUwV/Cell-niches-data.spot.tissue_region_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000129_cell-niches-data/labels/Cell-niches-data.spot.tissue_region_segmentation.label.json",
     "size": 35729,
     "sha256": "3c360d8b80d43c076deb0661cc56c9b7048f75823bba819d327efe6a3fd00f77"
    },
    {
     "record_id": "recvohgRKqCKdc",
+    "ptd_id": "PTD-000161",
     "dataset_name": "Chaoyang",
     "name": "Chaoyang.histopathology_classification.label.json",
-    "path": "2026.09.28/recvohgRKqCKdc/Chaoyang.histopathology_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000161_Chaoyang/labels/Chaoyang.histopathology_classification.label.json",
     "size": 1146772,
     "sha256": "b8afa952b48f713b746f85ad5429f06c1141533869e4b16c7931a2f47195396c"
    },
    {
     "record_id": "recvohgRKqCKdc",
+    "ptd_id": "PTD-000161",
     "dataset_name": "Chaoyang",
     "name": "chaoyang.histopathology_image_classification.label.json",
-    "path": "2026.09.28/recvohgRKqCKdc/chaoyang.histopathology_image_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000161_Chaoyang/labels/chaoyang.histopathology_image_classification.label.json",
     "size": 2784077,
     "sha256": "22fd04b7b6055b59e70b7a748b8cb88c25d6dc660f545b3b28904647acf44225"
    },
    {
     "record_id": "recvohgSTLhqXz",
+    "ptd_id": "PTD-000163",
     "dataset_name": "CoCaHis",
     "name": "cocahis.pixel_wise_cancer_diagnosis.label.json",
-    "path": "2026.09.28/recvohgSTLhqXz/cocahis.pixel_wise_cancer_diagnosis.label.json",
+    "path": "2026.09.28/datasets/PTD-000163_CoCaHis/labels/cocahis.pixel_wise_cancer_diagnosis.label.json",
     "size": 74665,
     "sha256": "f55077ed0ad74077ac533e9dff26c20784f0e117fcdf61114461f11042699ec7"
    },
    {
     "record_id": "recvohgSTLhqXz",
+    "ptd_id": "PTD-000163",
     "dataset_name": "CoCaHis",
     "name": "cocahis.roi.cancer_segmentation.label.json",
-    "path": "2026.09.28/recvohgSTLhqXz/cocahis.roi.cancer_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000163_CoCaHis/labels/cocahis.roi.cancer_segmentation.label.json",
     "size": 39974,
     "sha256": "66e8f16cc4c45f41b5462e06970b289fac634057720e6654794b61807bad0cf3"
    },
    {
     "record_id": "recvohgV5XDKMw",
+    "ptd_id": "PTD-000034",
     "dataset_name": "CryoNuSeg",
     "name": "CryoNuSeg.nuclei_instance_segmentation.label.json",
-    "path": "2026.09.28/recvohgV5XDKMw/CryoNuSeg.nuclei_instance_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000034_CryoNuSeg/labels/CryoNuSeg.nuclei_instance_segmentation.label.json",
     "size": 40297,
     "sha256": "4c4a1adc40c4a7426e9dd5a0dbfe247ebd80def81c499f5918ea58be48011a1f"
    },
    {
     "record_id": "recvohgV5XDKMw",
+    "ptd_id": "PTD-000034",
     "dataset_name": "CryoNuSeg",
     "name": "cryonuseg.patch.nuclei_instance_segmentation.label.json",
-    "path": "2026.09.28/recvohgV5XDKMw/cryonuseg.patch.nuclei_instance_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000034_CryoNuSeg/labels/cryonuseg.patch.nuclei_instance_segmentation.label.json",
     "size": 18819,
     "sha256": "ea4c77b672b91131a06260ccac8cc2bf9aba555e29ff67ba7d745861bcb1502d"
    },
    {
     "record_id": "recvohgYK7ZaxZ",
+    "ptd_id": "PTD-000037",
     "dataset_name": "DLBCL-Morph",
     "name": "DLBCL-Morphology.overall_survival_prediction.label.json",
-    "path": "2026.09.28/recvohgYK7ZaxZ/DLBCL-Morphology.overall_survival_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000037_DLBCL-Morph/labels/DLBCL-Morphology.overall_survival_prediction.label.json",
     "size": 78045,
     "sha256": "0c7d21e3258cec093b2763e3c95e064d66d1a3e48c2d0e699acf5db1ff051d2e"
    },
    {
     "record_id": "recvohgYK7ZaxZ",
+    "ptd_id": "PTD-000037",
     "dataset_name": "DLBCL-Morph",
     "name": "dlbcl-morph.patient.survival_regression.label.json",
-    "path": "2026.09.28/recvohgYK7ZaxZ/dlbcl-morph.patient.survival_regression.label.json",
+    "path": "2026.09.28/datasets/PTD-000037_DLBCL-Morph/labels/dlbcl-morph.patient.survival_regression.label.json",
     "size": 44727,
     "sha256": "4370f79ada96941625e62e022b9817b8b34f9dc60b9355ed9aa1805bfaa61ce2"
    },
    {
     "record_id": "recvohh2HRLbeB",
+    "ptd_id": "PTD-000042",
     "dataset_name": "FocusPath",
     "name": "FocusPath.focus_quality_assessment.label.json",
-    "path": "2026.09.28/recvohh2HRLbeB/FocusPath.focus_quality_assessment.label.json",
+    "path": "2026.09.28/datasets/PTD-000042_FocusPath/labels/FocusPath.focus_quality_assessment.label.json",
     "size": 1650593,
     "sha256": "17a3349fbaf7bff5f249404c6876b8fb1d3807fc5379822e111c656f3a92be6a"
    },
    {
     "record_id": "recvohh2HRLbeB",
+    "ptd_id": "PTD-000042",
     "dataset_name": "FocusPath",
     "name": "focuspath.patch.focus_level_classification.label.json",
-    "path": "2026.09.28/recvohh2HRLbeB/focuspath.patch.focus_level_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000042_FocusPath/labels/focuspath.patch.focus_level_classification.label.json",
     "size": 2564003,
     "sha256": "2815948358b90e1edeeadcd763ba2b79a3b4e032af8f2244a2cd81c709e70f74"
    },
    {
     "record_id": "recvohh61fkIm1",
+    "ptd_id": "PTD-000044",
     "dataset_name": "GlaS",
     "name": "glas.gland_segmentation.label.json",
-    "path": "2026.09.28/recvohh61fkIm1/glas.gland_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000044_GlaS/labels/glas.gland_segmentation.label.json",
     "size": 67831,
     "sha256": "146ecb04c85e3ffeb34c4639c11efec5c0ba6a11aa5e127162277aa2a4130446"
    },
    {
     "record_id": "recvohh61fkIm1",
+    "ptd_id": "PTD-000044",
     "dataset_name": "GlaS",
     "name": "glas.roi.gland_segmentation.label.json",
-    "path": "2026.09.28/recvohh61fkIm1/glas.roi.gland_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000044_GlaS/labels/glas.roi.gland_segmentation.label.json",
     "size": 75045,
     "sha256": "54ad13a9edbbd62fe800bb06cb086d169cb949988920ddeecc77ece33cc840be"
    },
    {
     "record_id": "recvohh749qWeB",
+    "ptd_id": "PTD-000046",
     "dataset_name": "GleasonXAI",
     "name": "GleasonXAI.gleason_pattern_segmentation.label.json",
-    "path": "2026.09.28/recvohh749qWeB/GleasonXAI.gleason_pattern_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000046_GleasonXAI/labels/GleasonXAI.gleason_pattern_segmentation.label.json",
     "size": 72971576,
     "sha256": "68adf9cb8e1dee9a103df00dd47e1cf09f9f04521cc55a36cda809de0087afa0"
    },
    {
     "record_id": "recvohh749qWeB",
+    "ptd_id": "PTD-000046",
     "dataset_name": "GleasonXAI",
     "name": "GleasonXAI.histologic_explanation_segmentation.label.json",
-    "path": "2026.09.28/recvohh749qWeB/GleasonXAI.histologic_explanation_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000046_GleasonXAI/labels/GleasonXAI.histologic_explanation_segmentation.label.json",
     "size": 74032957,
     "sha256": "53b766074fb4f04731f6d02d808f4c99e642bcb78b5532e265a612841261900f"
    },
    {
     "record_id": "recvohh749qWeB",
+    "ptd_id": "PTD-000046",
     "dataset_name": "GleasonXAI",
     "name": "GleasonXAI.histologic_sub_explanation_segmentation.label.json",
-    "path": "2026.09.28/recvohh749qWeB/GleasonXAI.histologic_sub_explanation_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000046_GleasonXAI/labels/GleasonXAI.histologic_sub_explanation_segmentation.label.json",
     "size": 74657207,
     "sha256": "575e61e5f60d28b8a385f98bea336c9a93d1f92f6d1b23d593803697f134cdf6"
    },
    {
     "record_id": "recvohh749qWeB",
+    "ptd_id": "PTD-000046",
     "dataset_name": "GleasonXAI",
     "name": "gleasonxai.tma_core.gleason_pattern_segmentation.label.json",
-    "path": "2026.09.28/recvohh749qWeB/gleasonxai.tma_core.gleason_pattern_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000046_GleasonXAI/labels/gleasonxai.tma_core.gleason_pattern_segmentation.label.json",
     "size": 422592,
     "sha256": "185100bb4d7dea6e63c81d0c0d75fa9c47544ced90d13d7ea76ce4ac07f2102d"
    },
    {
     "record_id": "recvohh749qWeB",
+    "ptd_id": "PTD-000046",
     "dataset_name": "GleasonXAI",
     "name": "gleasonxai.tma_core.histological_explanation_segmentation.label.json",
-    "path": "2026.09.28/recvohh749qWeB/gleasonxai.tma_core.histological_explanation_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000046_GleasonXAI/labels/gleasonxai.tma_core.histological_explanation_segmentation.label.json",
     "size": 608527,
     "sha256": "d5a014374a1111cbea943a3b621717de3a05b38595e1716622bffdac631ccd74"
    },
    {
     "record_id": "recvohh749qWeB",
+    "ptd_id": "PTD-000046",
     "dataset_name": "GleasonXAI",
     "name": "gleasonxai.tma_core.histological_sub_explanation_segmentation.label.json",
-    "path": "2026.09.28/recvohh749qWeB/gleasonxai.tma_core.histological_sub_explanation_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000046_GleasonXAI/labels/gleasonxai.tma_core.histological_sub_explanation_segmentation.label.json",
     "size": 1042034,
     "sha256": "0b5d4a34b340d8c0c74f99e8a0e375f89798b67380ab1f4bfb562ecee2b4ae94"
    },
    {
     "record_id": "recvohh87p6NcJ",
+    "ptd_id": "PTD-000047",
     "dataset_name": "HEMIT",
     "name": "hemit.he_to_mihc_stain_translation.label.json",
-    "path": "2026.09.28/recvohh87p6NcJ/hemit.he_to_mihc_stain_translation.label.json",
+    "path": "2026.09.28/datasets/PTD-000047_HEMIT/labels/hemit.he_to_mihc_stain_translation.label.json",
     "size": 1684982,
     "sha256": "9f862902ecf7a33ce5985d7931fee378959583f3a362930c0c0552c4ce60ddce"
    },
    {
     "record_id": "recvohh87p6NcJ",
+    "ptd_id": "PTD-000047",
     "dataset_name": "HEMIT",
     "name": "hemit.patch.he_to_mihc_image_translation.label.json",
-    "path": "2026.09.28/recvohh87p6NcJ/hemit.patch.he_to_mihc_image_translation.label.json",
+    "path": "2026.09.28/datasets/PTD-000047_HEMIT/labels/hemit.patch.he_to_mihc_image_translation.label.json",
     "size": 1906013,
     "sha256": "98dd7967ce8fe1776e0c9c709cd8fb7f4b0c94b3eca820ba5c0c0b702a05d734"
    },
    {
     "record_id": "recvohhbkkLXGP",
+    "ptd_id": "PTD-000048",
     "dataset_name": "HER2 Scoring Contest",
     "name": "HER2_Contest.her2_scoring.label.json",
-    "path": "2026.09.28/recvohhbkkLXGP/HER2_Contest.her2_scoring.label.json",
+    "path": "2026.09.28/datasets/PTD-000048_HER2-Scoring-Contest/labels/HER2_Contest.her2_scoring.label.json",
     "size": 24111,
     "sha256": "6bf397f2cdb6d3359e5df1bba196c72600e870cd2dd0b28096971b998e22d06d"
    },
    {
     "record_id": "recvohhbkkLXGP",
+    "ptd_id": "PTD-000048",
     "dataset_name": "HER2 Scoring Contest",
     "name": "her2_scoring_contest.released_label_subset.her2_score_prediction.label.json",
-    "path": "2026.09.28/recvohhbkkLXGP/her2_scoring_contest.released_label_subset.her2_score_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000048_HER2-Scoring-Contest/labels/her2_scoring_contest.released_label_subset.her2_score_prediction.label.json",
     "size": 21858,
     "sha256": "1e9e1d466f8e87f78bd4b4b2dc14c59a85feaad105f894ebe41796aa0b3a3e68"
    },
    {
     "record_id": "recvohhbkkLXGP",
+    "ptd_id": "PTD-000048",
     "dataset_name": "HER2 Scoring Contest",
     "name": "her2_scoring_contest.training_subset.pcms_estimation.label.json",
-    "path": "2026.09.28/recvohhbkkLXGP/her2_scoring_contest.training_subset.pcms_estimation.label.json",
+    "path": "2026.09.28/datasets/PTD-000048_HER2-Scoring-Contest/labels/her2_scoring_contest.training_subset.pcms_estimation.label.json",
     "size": 14722,
     "sha256": "7d6e48981e3e997771a13828f18ea6fffcdb839529d742dd5386a21bfe1b6622"
    },
    {
     "record_id": "recvohhcOdEpej",
+    "ptd_id": "PTD-000050",
     "dataset_name": "HEROHE",
     "name": "HEROHE.her2_status_classification.label.json",
-    "path": "2026.09.28/recvohhcOdEpej/HEROHE.her2_status_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000050_HEROHE/labels/HEROHE.her2_status_classification.label.json",
     "size": 128176,
     "sha256": "b89ec8c9110aadb64eaa54ad192c6fa71a387ddc39103f33a4ea32501ce32f56"
    },
    {
     "record_id": "recvohhcOdEpej",
+    "ptd_id": "PTD-000050",
     "dataset_name": "HEROHE",
     "name": "herohe.wsi.her2_status.label.json",
-    "path": "2026.09.28/recvohhcOdEpej/herohe.wsi.her2_status.label.json",
+    "path": "2026.09.28/datasets/PTD-000050_HEROHE/labels/herohe.wsi.her2_status.label.json",
     "size": 121836,
     "sha256": "7d2403343da27ca90e9983d23ef05cf1aa83b0a61190f28572f9680128e411b2"
    },
    {
     "record_id": "recvohhdoMo9vs",
+    "ptd_id": "PTD-000051",
     "dataset_name": "HEST-1k",
     "name": "hest-1k.ccrcc_gene_expression_prediction.label.json",
-    "path": "2026.09.28/recvohhdoMo9vs/hest-1k.ccrcc_gene_expression_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000051_HEST-1k/labels/hest-1k.ccrcc_gene_expression_prediction.label.json",
     "size": 67297,
     "sha256": "520e63ab75ad1abce3e7428b28a0081e9eeb1b00ebd6da353c894285195909e3"
    },
    {
     "record_id": "recvohhdoMo9vs",
+    "ptd_id": "PTD-000051",
     "dataset_name": "HEST-1k",
     "name": "hest-1k.coad_gene_expression_prediction.label.json",
-    "path": "2026.09.28/recvohhdoMo9vs/hest-1k.coad_gene_expression_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000051_HEST-1k/labels/hest-1k.coad_gene_expression_prediction.label.json",
     "size": 8869,
     "sha256": "6f0845e103113301b5d4200357debd98c54f5e8e0a98e7b90db0549bc5295c78"
    },
    {
     "record_id": "recvohhdoMo9vs",
+    "ptd_id": "PTD-000051",
     "dataset_name": "HEST-1k",
     "name": "hest-1k.idc_gene_expression_prediction.label.json",
-    "path": "2026.09.28/recvohhdoMo9vs/hest-1k.idc_gene_expression_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000051_HEST-1k/labels/hest-1k.idc_gene_expression_prediction.label.json",
     "size": 12254,
     "sha256": "add037980634e9b47088d3d1ad6b5855c8107432b1b7c2aaab7945a0735e217b"
    },
    {
     "record_id": "recvohhdoMo9vs",
+    "ptd_id": "PTD-000051",
     "dataset_name": "HEST-1k",
     "name": "hest-1k.lung_gene_expression_prediction.label.json",
-    "path": "2026.09.28/recvohhdoMo9vs/hest-1k.lung_gene_expression_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000051_HEST-1k/labels/hest-1k.lung_gene_expression_prediction.label.json",
     "size": 7119,
     "sha256": "14a5fdf03f58d9d141cc0fbc488564297b65af68c64b62049d0e701eb7ff6925"
    },
    {
     "record_id": "recvohhdoMo9vs",
+    "ptd_id": "PTD-000051",
     "dataset_name": "HEST-1k",
     "name": "hest-1k.lymph_idc_gene_expression_prediction.label.json",
-    "path": "2026.09.28/recvohhdoMo9vs/hest-1k.lymph_idc_gene_expression_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000051_HEST-1k/labels/hest-1k.lymph_idc_gene_expression_prediction.label.json",
     "size": 12747,
     "sha256": "1bab3a483a3c4dd508d83c3bd61121f8aa3b5756ce3a369460db5496cdd9b6db"
    },
    {
     "record_id": "recvohhdoMo9vs",
+    "ptd_id": "PTD-000051",
     "dataset_name": "HEST-1k",
     "name": "hest-1k.paad_gene_expression_prediction.label.json",
-    "path": "2026.09.28/recvohhdoMo9vs/hest-1k.paad_gene_expression_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000051_HEST-1k/labels/hest-1k.paad_gene_expression_prediction.label.json",
     "size": 9302,
     "sha256": "df608635f7d4ded6fbfddb9bd978ac61387d7558ca3b706bec862a7a448a3950"
    },
    {
     "record_id": "recvohhdoMo9vs",
+    "ptd_id": "PTD-000051",
     "dataset_name": "HEST-1k",
     "name": "hest-1k.paired_sample.ccrcc_gene_expression_prediction.label.json",
-    "path": "2026.09.28/recvohhdoMo9vs/hest-1k.paired_sample.ccrcc_gene_expression_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000051_HEST-1k/labels/hest-1k.paired_sample.ccrcc_gene_expression_prediction.label.json",
     "size": 23519,
     "sha256": "295af7c6e6983e9e71b553b3e7383328309083e41c612c36becbdf19e4c09aaf"
    },
    {
     "record_id": "recvohhdoMo9vs",
+    "ptd_id": "PTD-000051",
     "dataset_name": "HEST-1k",
     "name": "hest-1k.paired_sample.coad_gene_expression_prediction.label.json",
-    "path": "2026.09.28/recvohhdoMo9vs/hest-1k.paired_sample.coad_gene_expression_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000051_HEST-1k/labels/hest-1k.paired_sample.coad_gene_expression_prediction.label.json",
     "size": 9618,
     "sha256": "30b7a6a56372b63441c74770b8f366ef2ed4f49389e5026cce25f7911e543dc4"
    },
    {
     "record_id": "recvohhdoMo9vs",
+    "ptd_id": "PTD-000051",
     "dataset_name": "HEST-1k",
     "name": "hest-1k.paired_sample.idc_gene_expression_prediction.label.json",
-    "path": "2026.09.28/recvohhdoMo9vs/hest-1k.paired_sample.idc_gene_expression_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000051_HEST-1k/labels/hest-1k.paired_sample.idc_gene_expression_prediction.label.json",
     "size": 9874,
     "sha256": "24778abfdfecaa3e270dd15e8ffbf622d471dc163680f5d5c38e4ccb9fe62012"
    },
    {
     "record_id": "recvohhdoMo9vs",
+    "ptd_id": "PTD-000051",
     "dataset_name": "HEST-1k",
     "name": "hest-1k.paired_sample.luad_gene_expression_prediction.label.json",
-    "path": "2026.09.28/recvohhdoMo9vs/hest-1k.paired_sample.luad_gene_expression_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000051_HEST-1k/labels/hest-1k.paired_sample.luad_gene_expression_prediction.label.json",
     "size": 8420,
     "sha256": "3e08d4ed56c6cd5b49cd7432c5f45eee2f65e1ccb5cb01464a6ea518dab57872"
    },
    {
     "record_id": "recvohhdoMo9vs",
+    "ptd_id": "PTD-000051",
     "dataset_name": "HEST-1k",
     "name": "hest-1k.paired_sample.lymph_idc_gene_expression_prediction.label.json",
-    "path": "2026.09.28/recvohhdoMo9vs/hest-1k.paired_sample.lymph_idc_gene_expression_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000051_HEST-1k/labels/hest-1k.paired_sample.lymph_idc_gene_expression_prediction.label.json",
     "size": 10216,
     "sha256": "f93b61858dc28e43d358a7dca9ecb22e7cb72036eeadc950644c7bda5a3c0607"
    },
    {
     "record_id": "recvohhdoMo9vs",
+    "ptd_id": "PTD-000051",
     "dataset_name": "HEST-1k",
     "name": "hest-1k.paired_sample.paad_gene_expression_prediction.label.json",
-    "path": "2026.09.28/recvohhdoMo9vs/hest-1k.paired_sample.paad_gene_expression_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000051_HEST-1k/labels/hest-1k.paired_sample.paad_gene_expression_prediction.label.json",
     "size": 9152,
     "sha256": "2cbd6b0fe1ea4192bcde22458949ce85643c22876ef8cb6f3bb587a5e9f62b49"
    },
    {
     "record_id": "recvohhdoMo9vs",
+    "ptd_id": "PTD-000051",
     "dataset_name": "HEST-1k",
     "name": "hest-1k.paired_sample.prad_gene_expression_prediction.label.json",
-    "path": "2026.09.28/recvohhdoMo9vs/hest-1k.paired_sample.prad_gene_expression_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000051_HEST-1k/labels/hest-1k.paired_sample.prad_gene_expression_prediction.label.json",
     "size": 20875,
     "sha256": "bc510789d12eb3a5b40bd4a4b31cae1820ad2aea26c686d5b022b98015b8328c"
    },
    {
     "record_id": "recvohhdoMo9vs",
+    "ptd_id": "PTD-000051",
     "dataset_name": "HEST-1k",
     "name": "hest-1k.paired_sample.read_gene_expression_prediction.label.json",
-    "path": "2026.09.28/recvohhdoMo9vs/hest-1k.paired_sample.read_gene_expression_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000051_HEST-1k/labels/hest-1k.paired_sample.read_gene_expression_prediction.label.json",
     "size": 9591,
     "sha256": "54eac8cc86abd18a4d8bb4205b9ddaa4cd04c44c0b693e83efed601cfa33afc1"
    },
    {
     "record_id": "recvohhdoMo9vs",
+    "ptd_id": "PTD-000051",
     "dataset_name": "HEST-1k",
     "name": "hest-1k.paired_sample.skcm_gene_expression_prediction.label.json",
-    "path": "2026.09.28/recvohhdoMo9vs/hest-1k.paired_sample.skcm_gene_expression_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000051_HEST-1k/labels/hest-1k.paired_sample.skcm_gene_expression_prediction.label.json",
     "size": 8424,
     "sha256": "f4397192743abcb4123909962cf3db7b8ee4d1a5a0f7007d8757c2889667c73a"
    },
    {
     "record_id": "recvohhdoMo9vs",
+    "ptd_id": "PTD-000051",
     "dataset_name": "HEST-1k",
     "name": "hest-1k.prad_gene_expression_prediction.label.json",
-    "path": "2026.09.28/recvohhdoMo9vs/hest-1k.prad_gene_expression_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000051_HEST-1k/labels/hest-1k.prad_gene_expression_prediction.label.json",
     "size": 25382,
     "sha256": "859c902a0b685894d0b03982fef3872d5db69cd28986f5ae68893fee34da6bef"
    },
    {
     "record_id": "recvohhdoMo9vs",
+    "ptd_id": "PTD-000051",
     "dataset_name": "HEST-1k",
     "name": "hest-1k.read_gene_expression_prediction.label.json",
-    "path": "2026.09.28/recvohhdoMo9vs/hest-1k.read_gene_expression_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000051_HEST-1k/labels/hest-1k.read_gene_expression_prediction.label.json",
     "size": 8810,
     "sha256": "0dbb82d1cf22bc499977faebd57f81a1ef85c3a971374a201b32c85daf90b95a"
    },
    {
     "record_id": "recvohhdoMo9vs",
+    "ptd_id": "PTD-000051",
     "dataset_name": "HEST-1k",
     "name": "hest-1k.skcm_gene_expression_prediction.label.json",
-    "path": "2026.09.28/recvohhdoMo9vs/hest-1k.skcm_gene_expression_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000051_HEST-1k/labels/hest-1k.skcm_gene_expression_prediction.label.json",
     "size": 7123,
     "sha256": "cefdebe8a3594e9117f7926170d91b7a740e91b4b2a5aff1f034f663407cb3a0"
    },
    {
     "record_id": "recvohhixctONT",
+    "ptd_id": "PTD-000052",
     "dataset_name": "HEp-2_cell_cls",
     "name": "HEp-2_cell_cls.cell_classification.label.json",
-    "path": "2026.09.28/recvohhixctONT/HEp-2_cell_cls.cell_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000052_HEp-2_cell_cls/labels/HEp-2_cell_cls.cell_classification.label.json",
     "size": 15396956,
     "sha256": "45059259dcdde104c7cdcc1023eef184e5ab57357ad59e8d732734c65f2dcb0c"
    },
    {
     "record_id": "recvohhixctONT",
+    "ptd_id": "PTD-000052",
     "dataset_name": "HEp-2_cell_cls",
     "name": "hep-2_cell_cls.cell.cell_pattern_classification.label.json",
-    "path": "2026.09.28/recvohhixctONT/hep-2_cell_cls.cell.cell_pattern_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000052_HEp-2_cell_cls/labels/hep-2_cell_cls.cell.cell_pattern_classification.label.json",
     "size": 15961876,
     "sha256": "ac3695cee4232714f360150be45e14ea54347f2149dceea45d887accc90d457e"
    },
    {
     "record_id": "recvohhjrmzhlo",
+    "ptd_id": "PTD-000053",
     "dataset_name": "DTU/Herlev Pap Smear Databases",
     "name": "HErlev.normal_abnormal_classification.label.json",
-    "path": "2026.09.28/recvohhjrmzhlo/HErlev.normal_abnormal_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000053_DTU-Herlev-Pap-Smear-Databases/labels/HErlev.normal_abnormal_classification.label.json",
     "size": 297032,
     "sha256": "f255a262f9611144d8b423abc1bf933f07f548cbe107be2c03849a7fed51a3b0"
    },
    {
     "record_id": "recvohhjrmzhlo",
+    "ptd_id": "PTD-000053",
     "dataset_name": "DTU/Herlev Pap Smear Databases",
     "name": "HErlev.pap_smear_7_class_classification.label.json",
-    "path": "2026.09.28/recvohhjrmzhlo/HErlev.pap_smear_7_class_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000053_DTU-Herlev-Pap-Smear-Databases/labels/HErlev.pap_smear_7_class_classification.label.json",
     "size": 328393,
     "sha256": "72e8fd8eaf202ef4d6b84f3e591983a8f506a04607d1bc111be1e67cf0d13a89"
    },
    {
     "record_id": "recvohhjrmzhlo",
+    "ptd_id": "PTD-000053",
     "dataset_name": "DTU/Herlev Pap Smear Databases",
     "name": "herlev.cell.normal_vs_abnormal_classification.label.json",
-    "path": "2026.09.28/recvohhjrmzhlo/herlev.cell.normal_vs_abnormal_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000053_DTU-Herlev-Pap-Smear-Databases/labels/herlev.cell.normal_vs_abnormal_classification.label.json",
     "size": 301002,
     "sha256": "2f8f596e5bf4e8acfea237270ffee35375b63d56b380f563f9006dfca080a12a"
    },
    {
     "record_id": "recvohhjrmzhlo",
+    "ptd_id": "PTD-000053",
     "dataset_name": "DTU/Herlev Pap Smear Databases",
     "name": "herlev.cell.pap_smear_cell_classification.label.json",
-    "path": "2026.09.28/recvohhjrmzhlo/herlev.cell.pap_smear_cell_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000053_DTU-Herlev-Pap-Smear-Databases/labels/herlev.cell.pap_smear_cell_classification.label.json",
     "size": 326089,
     "sha256": "af19a69a685324483f162e0e10805a1aa996f36d499f422bce84ff6239bda77e"
    },
    {
     "record_id": "recvohhkzz4XI4",
+    "ptd_id": "PTD-000055",
     "dataset_name": "Hancock",
     "name": "hancock.five_year_survival.label.json",
-    "path": "2026.09.28/recvohhkzz4XI4/hancock.five_year_survival.label.json",
+    "path": "2026.09.28/datasets/PTD-000055_Hancock/labels/hancock.five_year_survival.label.json",
     "size": 241870,
     "sha256": "6e6440fdf9b60829c4ff308c12910cee2cf0f300fb52c4ae7ef618e66e9d9ece"
    },
    {
     "record_id": "recvohhkzz4XI4",
+    "ptd_id": "PTD-000055",
     "dataset_name": "Hancock",
     "name": "hancock.patient.recurrence_prediction.label.json",
-    "path": "2026.09.28/recvohhkzz4XI4/hancock.patient.recurrence_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000055_Hancock/labels/hancock.patient.recurrence_prediction.label.json",
     "size": 125671,
     "sha256": "3be51511cc95b06fccc8a0118eed8b9996f9068bc0cfc527152ed2cbdb1f1512"
    },
    {
     "record_id": "recvohhkzz4XI4",
+    "ptd_id": "PTD-000055",
     "dataset_name": "Hancock",
     "name": "hancock.patient.survival_status_prediction.label.json",
-    "path": "2026.09.28/recvohhkzz4XI4/hancock.patient.survival_status_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000055_Hancock/labels/hancock.patient.survival_status_prediction.label.json",
     "size": 153556,
     "sha256": "40d5c08e657f0e49a214821b5a246f947fc48af060a98c2c63da1e9656488b8d"
    },
    {
     "record_id": "recvohhkzz4XI4",
+    "ptd_id": "PTD-000055",
     "dataset_name": "Hancock",
     "name": "hancock.primary_tumor_wsi.primary_tumor_localization_prediction.label.json",
-    "path": "2026.09.28/recvohhkzz4XI4/hancock.primary_tumor_wsi.primary_tumor_localization_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000055_Hancock/labels/hancock.primary_tumor_wsi.primary_tumor_localization_prediction.label.json",
     "size": 209087,
     "sha256": "a74ca15a6ef73d6f8f9078005c8410d9fa6a70814eb13af48811e8c48984d3ae"
    },
    {
     "record_id": "recvohhkzz4XI4",
+    "ptd_id": "PTD-000055",
     "dataset_name": "Hancock",
     "name": "hancock.two_year_recurrence.label.json",
-    "path": "2026.09.28/recvohhkzz4XI4/hancock.two_year_recurrence.label.json",
+    "path": "2026.09.28/datasets/PTD-000055_Hancock/labels/hancock.two_year_recurrence.label.json",
     "size": 343313,
     "sha256": "01a240ec6ed9611e417954946df79984de73d0d4431897aa5bab7e81996dcacf"
    },
    {
     "record_id": "recvohhnUd8wSA",
+    "ptd_id": "PTD-000056",
     "dataset_name": "HiCervix",
     "name": "HiCervix.hierarchical_cell_classification.label.json",
-    "path": "2026.09.28/recvohhnUd8wSA/HiCervix.hierarchical_cell_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000056_HiCervix/labels/HiCervix.hierarchical_cell_classification.label.json",
     "size": 16111734,
     "sha256": "f8fba06964e40089b313d33895a33d2c37df0ce116e79d939c470ad53f4bc2ad"
    },
    {
     "record_id": "recvohhnUd8wSA",
+    "ptd_id": "PTD-000056",
     "dataset_name": "HiCervix",
     "name": "hicervix.cell.hierarchical_cervical_cytology_cell_classification.label.json",
-    "path": "2026.09.28/recvohhnUd8wSA/hicervix.cell.hierarchical_cervical_cytology_cell_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000056_HiCervix/labels/hicervix.cell.hierarchical_cervical_cytology_cell_classification.label.json",
     "size": 18562833,
     "sha256": "1f051105baea774609c2d21b433818b74ef318a41254671e6fa36283a664f9a1"
    },
    {
     "record_id": "recvohhoyusIZx",
+    "ptd_id": "PTD-000057",
     "dataset_name": "HistoPlexer-Ultivue",
     "name": "HistoPlexer-Ultivue.protein_multiplex_generation.label.json",
-    "path": "2026.09.28/recvohhoyusIZx/HistoPlexer-Ultivue.protein_multiplex_generation.label.json",
+    "path": "2026.09.28/datasets/PTD-000057_HistoPlexer-Ultivue/labels/HistoPlexer-Ultivue.protein_multiplex_generation.label.json",
     "size": 26574,
     "sha256": "b8228810f196f1f0d620f5f30cf4252a4d8ecbd5f81968fdb30b51b07dd70703"
    },
    {
     "record_id": "recvohhoyusIZx",
+    "ptd_id": "PTD-000057",
     "dataset_name": "HistoPlexer-Ultivue",
     "name": "histoplexer-ultivue.paired_sample.he_to_multiplex_immunofluorescence_generation.label.json",
-    "path": "2026.09.28/recvohhoyusIZx/histoplexer-ultivue.paired_sample.he_to_multiplex_immunofluorescence_generation.label.json",
+    "path": "2026.09.28/datasets/PTD-000057_HistoPlexer-Ultivue/labels/histoplexer-ultivue.paired_sample.he_to_multiplex_immunofluorescence_generation.label.json",
     "size": 12567,
     "sha256": "ad4628c0eb9943d283b60594b8529fe492c881e5abf62901cc9a9d6523350907"
    },
    {
     "record_id": "recvohhoyusIZx",
+    "ptd_id": "PTD-000057",
     "dataset_name": "HistoPlexer-Ultivue",
     "name": "histoplexer-ultivue.wsi_pair.cross_section_multimodal_wsi_registration.label.json",
-    "path": "2026.09.28/recvohhoyusIZx/histoplexer-ultivue.wsi_pair.cross_section_multimodal_wsi_registration.label.json",
+    "path": "2026.09.28/datasets/PTD-000057_HistoPlexer-Ultivue/labels/histoplexer-ultivue.wsi_pair.cross_section_multimodal_wsi_registration.label.json",
     "size": 18811,
     "sha256": "10564f924551804911a2e09c218f511434c8919f07f46f6ae22ea920a7b6a252"
    },
    {
     "record_id": "recvohhpcqP2Ap",
+    "ptd_id": "PTD-000058",
     "dataset_name": "HuBMAP - Hacking the Kidney",
     "name": "hubmap-hacking-the-kidney.glomerulus_segmentation.label.json",
-    "path": "2026.09.28/recvohhpcqP2Ap/hubmap-hacking-the-kidney.glomerulus_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000058_HuBMAP---Hacking-the-Kidney/labels/hubmap-hacking-the-kidney.glomerulus_segmentation.label.json",
     "size": 19021,
     "sha256": "c79e49e910379572ca32e9033092a7e61e38cdab7b44ab7a952234e2d4947bd6"
    },
    {
     "record_id": "recvohhpcqP2Ap",
+    "ptd_id": "PTD-000058",
     "dataset_name": "HuBMAP - Hacking the Kidney",
     "name": "hubmap-hacking-the-kidney.renal_glomerulus_segmentation.label.json",
-    "path": "2026.09.28/recvohhpcqP2Ap/hubmap-hacking-the-kidney.renal_glomerulus_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000058_HuBMAP---Hacking-the-Kidney/labels/hubmap-hacking-the-kidney.renal_glomerulus_segmentation.label.json",
     "size": 90991546,
     "sha256": "b3bc78c5d1254c2273b8c4ab42eea5696f1e38aefa221d452703944ab3b631c8"
    },
    {
     "record_id": "recvohhqL8AVJe",
+    "ptd_id": "PTD-000059",
     "dataset_name": "HunCRC",
     "name": "HunCRC.haggitt_level_classification.label.json",
-    "path": "2026.09.28/recvohhqL8AVJe/HunCRC.haggitt_level_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000059_HunCRC/labels/HunCRC.haggitt_level_classification.label.json",
     "size": 75643,
     "sha256": "457d95d352e7da6669271027b00722f4e0d02140f7ff3f365753af843ff0ebda"
    },
    {
     "record_id": "recvohhqL8AVJe",
+    "ptd_id": "PTD-000059",
     "dataset_name": "HunCRC",
     "name": "HunCRC.local_annotation_multilabel_classification.label.json",
-    "path": "2026.09.28/recvohhqL8AVJe/HunCRC.local_annotation_multilabel_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000059_HunCRC/labels/HunCRC.local_annotation_multilabel_classification.label.json",
     "size": 113093135,
     "sha256": "58aeaab8a3168a23f75efae0d9bbb52b2c0980aa8fbacc2998756de062e3a46f"
    },
    {
     "record_id": "recvohhqL8AVJe",
+    "ptd_id": "PTD-000059",
     "dataset_name": "HunCRC",
     "name": "HunCRC.polyp_type_classification.label.json",
-    "path": "2026.09.28/recvohhqL8AVJe/HunCRC.polyp_type_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000059_HunCRC/labels/HunCRC.polyp_type_classification.label.json",
     "size": 75616,
     "sha256": "9e6fd3a2bdc1b6e4fcc869d801b33fb37f56495ab70a9c67ec9ad0e8bbea5efe"
    },
    {
     "record_id": "recvohhqL8AVJe",
+    "ptd_id": "PTD-000059",
     "dataset_name": "HunCRC",
     "name": "HunCRC.sample_origin_classification.label.json",
-    "path": "2026.09.28/recvohhqL8AVJe/HunCRC.sample_origin_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000059_HunCRC/labels/HunCRC.sample_origin_classification.label.json",
     "size": 74103,
     "sha256": "6782a4b55d816314db80dd484309665c2cd09aba85e2d4f8d07dd7d19d03d3cb"
    },
    {
     "record_id": "recvohhqL8AVJe",
+    "ptd_id": "PTD-000059",
     "dataset_name": "HunCRC",
     "name": "HunCRC.slide_category_classification.label.json",
-    "path": "2026.09.28/recvohhqL8AVJe/HunCRC.slide_category_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000059_HunCRC/labels/HunCRC.slide_category_classification.label.json",
     "size": 75066,
     "sha256": "0d37f8e64325ccaafdaf5b3cec3806c837cc4d32010f51d2525f4ab0d833713e"
    },
    {
     "record_id": "recvohhqL8AVJe",
+    "ptd_id": "PTD-000059",
     "dataset_name": "HunCRC",
     "name": "huncrc.zoom2_patch.patch_multilabel_pathology_classification.label.json",
-    "path": "2026.09.28/recvohhqL8AVJe/huncrc.zoom2_patch.patch_multilabel_pathology_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000059_HunCRC/labels/huncrc.zoom2_patch.patch_multilabel_pathology_classification.label.json",
     "size": 63097785,
     "sha256": "23db708f8bf2423ab46c96d6e4a1d8e3be92f1c240a1ba79ff74bfc33b873734"
    },
    {
     "record_id": "recvohhrp4vPOO",
+    "ptd_id": "PTD-000060",
     "dataset_name": "IGNITE",
     "name": "ignite.roi.he_tissue_compartment_semantic_segmentation.label.json",
-    "path": "2026.09.28/recvohhrp4vPOO/ignite.roi.he_tissue_compartment_semantic_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000060_IGNITE/labels/ignite.roi.he_tissue_compartment_semantic_segmentation.label.json",
     "size": 366872,
     "sha256": "b559f3a23d9fcd0088a3260b7ad627fcfe841606f26bab6193c348c8eea8bc37"
    },
    {
     "record_id": "recvohhrp4vPOO",
+    "ptd_id": "PTD-000060",
     "dataset_name": "IGNITE",
     "name": "ignite.roi.he_tissue_segmentation.label.json",
-    "path": "2026.09.28/recvohhrp4vPOO/ignite.roi.he_tissue_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000060_IGNITE/labels/ignite.roi.he_tissue_segmentation.label.json",
     "size": 203047,
     "sha256": "1740a23fc0f7dd30e536666eb3b50ab163609b203daec850c1e6b481851f7a13"
    },
    {
     "record_id": "recvohhrp4vPOO",
+    "ptd_id": "PTD-000060",
     "dataset_name": "IGNITE",
     "name": "ignite.roi.nuclei_detection.label.json",
-    "path": "2026.09.28/recvohhrp4vPOO/ignite.roi.nuclei_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000060_IGNITE/labels/ignite.roi.nuclei_detection.label.json",
     "size": 5963600,
     "sha256": "1962a97467845ab866d685e59fc40e4f7bf9713131cbf7235d31d570986cc8c9"
    },
    {
     "record_id": "recvohhrp4vPOO",
+    "ptd_id": "PTD-000060",
     "dataset_name": "IGNITE",
     "name": "ignite.roi.pdl1_ihc_nuclei_detection.label.json",
-    "path": "2026.09.28/recvohhrp4vPOO/ignite.roi.pdl1_ihc_nuclei_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000060_IGNITE/labels/ignite.roi.pdl1_ihc_nuclei_detection.label.json",
     "size": 19082140,
     "sha256": "cc4946181979fa685ce3e7f7fa88d9fe32bff4c4ce6d1372f4afad45a5c72d2e"
    },
    {
     "record_id": "recvohhrp4vPOO",
+    "ptd_id": "PTD-000060",
     "dataset_name": "IGNITE",
     "name": "ignite.roi.pdl1_positive_tumor_cell_detection.label.json",
-    "path": "2026.09.28/recvohhrp4vPOO/ignite.roi.pdl1_positive_tumor_cell_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000060_IGNITE/labels/ignite.roi.pdl1_positive_tumor_cell_detection.label.json",
     "size": 70321073,
     "sha256": "432ddc3665f3741fb5b4d0356e1f82f04e060718c6b45a404a45ce4b3c534d52"
    },
    {
     "record_id": "recvohhsDAK34Y",
+    "ptd_id": "PTD-000062",
     "dataset_name": "IMP-CRS",
     "name": "IMP-CRS.colorectal_lesion_classification.label.json",
-    "path": "2026.09.28/recvohhsDAK34Y/IMP-CRS.colorectal_lesion_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000062_IMP-CRS/labels/IMP-CRS.colorectal_lesion_classification.label.json",
     "size": 1568991,
     "sha256": "3beb5fc2f1457df80dad73ec31c2aa1f367f7ddbdf64999de93e8342681ef63c"
    },
    {
     "record_id": "recvohhsDAK34Y",
+    "ptd_id": "PTD-000062",
     "dataset_name": "IMP-CRS",
     "name": "imp-crs.wsi.colorectal_three_class_diagnosis.label.json",
-    "path": "2026.09.28/recvohhsDAK34Y/imp-crs.wsi.colorectal_three_class_diagnosis.label.json",
+    "path": "2026.09.28/datasets/PTD-000062_IMP-CRS/labels/imp-crs.wsi.colorectal_three_class_diagnosis.label.json",
     "size": 1433941,
     "sha256": "34e3979351e48ff0467a8b5ca4cad548833581efe9e2704c30107af8533cc1b8"
    },
    {
     "record_id": "recvohhtgi9qag",
+    "ptd_id": "PTD-000063",
     "dataset_name": "IMPRESS",
     "name": "IMPRESS.neoadjuvant_chemotherapy_response.label.json",
-    "path": "2026.09.28/recvohhtgi9qag/IMPRESS.neoadjuvant_chemotherapy_response.label.json",
+    "path": "2026.09.28/datasets/PTD-000063_IMPRESS/labels/IMPRESS.neoadjuvant_chemotherapy_response.label.json",
     "size": 60572,
     "sha256": "5019f706b2406c853eaaf74178db8f308658dcb676f20a7a2192091c389fe62c"
    },
    {
     "record_id": "recvohhtgi9qag",
+    "ptd_id": "PTD-000063",
     "dataset_name": "IMPRESS",
     "name": "impress.patient.nac_response_prediction.label.json",
-    "path": "2026.09.28/recvohhtgi9qag/impress.patient.nac_response_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000063_IMPRESS/labels/impress.patient.nac_response_prediction.label.json",
     "size": 45211,
     "sha256": "2526f790ae8c4d77223bab95f2a45f570947343eed0a571d1eea3ee47d432a48"
    },
    {
     "record_id": "recvohhvWNmHQv",
+    "ptd_id": "PTD-000066",
     "dataset_name": "LEOPARD",
     "name": "leopard.public_training_wsi.time_to_biochemical_recurrence_prediction.label.json",
-    "path": "2026.09.28/recvohhvWNmHQv/leopard.public_training_wsi.time_to_biochemical_recurrence_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000066_LEOPARD/labels/leopard.public_training_wsi.time_to_biochemical_recurrence_prediction.label.json",
     "size": 162554,
     "sha256": "4e832c5f4dfbbaba72e5bcf562071b8a4305eb018d88ebfea0f3549efcac8ddf"
    },
    {
     "record_id": "recvohhvWNmHQv",
+    "ptd_id": "PTD-000066",
     "dataset_name": "LEOPARD",
     "name": "leopard.time_to_biochemical_recurrence.label.json",
-    "path": "2026.09.28/recvohhvWNmHQv/leopard.time_to_biochemical_recurrence.label.json",
+    "path": "2026.09.28/datasets/PTD-000066_LEOPARD/labels/leopard.time_to_biochemical_recurrence.label.json",
     "size": 155058,
     "sha256": "0615c7639dcddcf06143329a7b25771f94c7145582d6638e959469dfd0e4fc2f"
    },
    {
     "record_id": "recvohhy80M5II",
+    "ptd_id": "PTD-000174",
     "dataset_name": "LYSTO",
     "name": "lysto.lymphocyte_counting.label.json",
-    "path": "2026.09.28/recvohhy80M5II/lysto.lymphocyte_counting.label.json",
+    "path": "2026.09.28/datasets/PTD-000174_LYSTO/labels/lysto.lymphocyte_counting.label.json",
     "size": 4624668,
     "sha256": "27c09903ad26e726f94a6125a3cd15d757f41c49f32f1ef2d4d607f71324c131"
    },
    {
     "record_id": "recvohhy80M5II",
+    "ptd_id": "PTD-000174",
     "dataset_name": "LYSTO",
     "name": "lysto.training_patch.lymphocyte_count_assessment.label.json",
-    "path": "2026.09.28/recvohhy80M5II/lysto.training_patch.lymphocyte_count_assessment.label.json",
+    "path": "2026.09.28/datasets/PTD-000174_LYSTO/labels/lysto.training_patch.lymphocyte_count_assessment.label.json",
     "size": 4704253,
     "sha256": "76e08e5890d7025087a30e49fc26ddbc8a3b990d4e23d5964bacce634b912507"
    },
    {
     "record_id": "recvohhD3pfjvU",
+    "ptd_id": "PTD-000069",
     "dataset_name": "LubLung",
     "name": "lublung.patch.tissue_classification.label.json",
-    "path": "2026.09.28/recvohhD3pfjvU/lublung.patch.tissue_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000069_LubLung/labels/lublung.patch.tissue_classification.label.json",
     "size": 8075297,
     "sha256": "a8e36828cc2ae0d92e4260c5181d27b44bd6e65632eb5673673a2ea21333a168"
    },
    {
     "record_id": "recvohhD3pfjvU",
+    "ptd_id": "PTD-000069",
     "dataset_name": "LubLung",
     "name": "lublung.patch.tissue_patch_classification.label.json",
-    "path": "2026.09.28/recvohhD3pfjvU/lublung.patch.tissue_patch_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000069_LubLung/labels/lublung.patch.tissue_patch_classification.label.json",
     "size": 8120386,
     "sha256": "91adb17c4f841e877506db69778398885c79794321167d201aa626e899ef364e"
    },
    {
     "record_id": "recvohhEdyw574",
+    "ptd_id": "PTD-000180",
     "dataset_name": "MIDOG Challenge 2021",
     "name": "MIDOG_Challenge_2021.mitotic_figure_detection.label.json",
-    "path": "2026.09.28/recvohhEdyw574/MIDOG_Challenge_2021.mitotic_figure_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000180_MIDOG-Challenge-2021/labels/MIDOG_Challenge_2021.mitotic_figure_detection.label.json",
     "size": 1274353,
     "sha256": "b982467a03f658771a82e4ca345801638e5dc34940ca4c73439352ff2a1fe147"
    },
    {
     "record_id": "recvohhEdyw574",
+    "ptd_id": "PTD-000180",
     "dataset_name": "MIDOG Challenge 2021",
     "name": "midog_challenge_2021.roi.mitotic_figure_detection.label.json",
-    "path": "2026.09.28/recvohhEdyw574/midog_challenge_2021.roi.mitotic_figure_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000180_MIDOG-Challenge-2021/labels/midog_challenge_2021.roi.mitotic_figure_detection.label.json",
     "size": 1074904,
     "sha256": "bd1b18838d944ebdbc937aff24f7fff022d9c10c84f5acb7fbce46663d46fdd7"
    },
    {
     "record_id": "recvohhEPE8b1l",
+    "ptd_id": "PTD-000181",
     "dataset_name": "MIDOG 2022",
     "name": "MIDOG_Challenge_2022.mitotic_figure_detection.label.json",
-    "path": "2026.09.28/recvohhEPE8b1l/MIDOG_Challenge_2022.mitotic_figure_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000181_MIDOG-2022/labels/MIDOG_Challenge_2022.mitotic_figure_detection.label.json",
     "size": 5655229,
     "sha256": "c843e105b74044ea47f1a826e395b974c9bc91d3e16a09cb39df40edf56c191d"
    },
    {
     "record_id": "recvohhEPE8b1l",
+    "ptd_id": "PTD-000181",
     "dataset_name": "MIDOG 2022",
     "name": "midog_2022.public_labeled_roi.mitotic_figure_detection.label.json",
-    "path": "2026.09.28/recvohhEPE8b1l/midog_2022.public_labeled_roi.mitotic_figure_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000181_MIDOG-2022/labels/midog_2022.public_labeled_roi.mitotic_figure_detection.label.json",
     "size": 4874506,
     "sha256": "03b567f2e152f2e149059765f876604a88df6f0b71e5459183ba048fab911fb5"
    },
    {
     "record_id": "recvohhFo7nOOi",
+    "ptd_id": "PTD-000071",
     "dataset_name": "MIDOG++",
     "name": "midogpp.mitotic_figure_detection.label.json",
-    "path": "2026.09.28/recvohhFo7nOOi/midogpp.mitotic_figure_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000071_MIDOG/labels/midogpp.mitotic_figure_detection.label.json",
     "size": 9963244,
     "sha256": "6780ee26e2b683de1c2a14504a5cf757cdda9bad36138d9b9d38b6c218da7b81"
    },
    {
     "record_id": "recvohhFo7nOOi",
+    "ptd_id": "PTD-000071",
     "dataset_name": "MIDOG++",
     "name": "midogpp.roi.mitotic_figure_detection.label.json",
-    "path": "2026.09.28/recvohhFo7nOOi/midogpp.roi.mitotic_figure_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000071_MIDOG/labels/midogpp.roi.mitotic_figure_detection.label.json",
     "size": 6245985,
     "sha256": "8938a14fec9b34a4f0f84240b631219e2474f446fb134b331c1f17466154a854"
    },
    {
     "record_id": "recvohhG0iJ8oK",
+    "ptd_id": "PTD-000072",
     "dataset_name": "MIHIC",
     "name": "MIHIC.tissue_patch_classification.label.json",
-    "path": "2026.09.28/recvohhG0iJ8oK/MIHIC.tissue_patch_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000072_MIHIC/labels/MIHIC.tissue_patch_classification.label.json",
     "size": 91988919,
     "sha256": "99ec286c2e7987f72888ae8f312ac7a57119815a20ba2cfae8b83cf1bc68eec9"
    },
    {
     "record_id": "recvohhG0iJ8oK",
+    "ptd_id": "PTD-000072",
     "dataset_name": "MIHIC",
     "name": "mihic.patch.histological_tissue_classification.label.json",
-    "path": "2026.09.28/recvohhG0iJ8oK/mihic.patch.histological_tissue_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000072_MIHIC/labels/mihic.patch.histological_tissue_classification.label.json",
     "size": 70621939,
     "sha256": "36e6bd5d881be483e713ce1abe36d85a35ffd0e2924939834604f3c1805ba914"
    },
    {
     "record_id": "recvohhJvPce5y",
+    "ptd_id": "PTD-000073",
     "dataset_name": "MIST",
     "name": "MIST.he_to_er_stain_translation.label.json",
-    "path": "2026.09.28/recvohhJvPce5y/MIST.he_to_er_stain_translation.label.json",
+    "path": "2026.09.28/datasets/PTD-000073_MIST/labels/MIST.he_to_er_stain_translation.label.json",
     "size": 1748041,
     "sha256": "5f70a7a2cb572fde6273d241f1c9369add1748408dc057022ad3e1df00a5de9b"
    },
    {
     "record_id": "recvohhJvPce5y",
+    "ptd_id": "PTD-000073",
     "dataset_name": "MIST",
     "name": "MIST.he_to_her2_stain_translation.label.json",
-    "path": "2026.09.28/recvohhJvPce5y/MIST.he_to_her2_stain_translation.label.json",
+    "path": "2026.09.28/datasets/PTD-000073_MIST/labels/MIST.he_to_her2_stain_translation.label.json",
     "size": 1982581,
     "sha256": "2181854dfb43eb11dc740c5a439fbb265d482d93da7b8748082c6eec6891b868"
    },
    {
     "record_id": "recvohhJvPce5y",
+    "ptd_id": "PTD-000073",
     "dataset_name": "MIST",
     "name": "MIST.he_to_ki67_stain_translation.label.json",
-    "path": "2026.09.28/recvohhJvPce5y/MIST.he_to_ki67_stain_translation.label.json",
+    "path": "2026.09.28/datasets/PTD-000073_MIST/labels/MIST.he_to_ki67_stain_translation.label.json",
     "size": 1882497,
     "sha256": "0d27c51e18bc4791cd84898cd3b576acebb510aae795a2edbd89b7e9f0b90d0e"
    },
    {
     "record_id": "recvohhJvPce5y",
+    "ptd_id": "PTD-000073",
     "dataset_name": "MIST",
     "name": "MIST.he_to_pr_stain_translation.label.json",
-    "path": "2026.09.28/recvohhJvPce5y/MIST.he_to_pr_stain_translation.label.json",
+    "path": "2026.09.28/datasets/PTD-000073_MIST/labels/MIST.he_to_pr_stain_translation.label.json",
     "size": 1743528,
     "sha256": "0e0887e3344a4a333f7157ad2a1bd7b719b67bdf46f9b7ea2c56856d091c0dd3"
    },
    {
     "record_id": "recvohhJvPce5y",
+    "ptd_id": "PTD-000073",
     "dataset_name": "MIST",
     "name": "mist.he_to_ihc_stain_translation.label.json",
-    "path": "2026.09.28/recvohhJvPce5y/mist.he_to_ihc_stain_translation.label.json",
+    "path": "2026.09.28/datasets/PTD-000073_MIST/labels/mist.he_to_ihc_stain_translation.label.json",
     "size": 8452278,
     "sha256": "f3f40cc5c7c3d18a455f03bfd066eeb3bf46bde8787cbf2332db18e103157d63"
    },
    {
     "record_id": "recvohhMtaC5hW",
+    "ptd_id": "PTD-000074",
     "dataset_name": "MITOS_WSI_CCMCT",
     "name": "mitos-ccmct.cell.cell_type_classification.label.json",
-    "path": "2026.09.28/recvohhMtaC5hW/mitos-ccmct.cell.cell_type_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000074_MITOS_WSI_CCMCT/labels/mitos-ccmct.cell.cell_type_classification.label.json",
     "size": 51503716,
     "sha256": "d02102626f6a3074ec3231c959f578a55d979e717d45eb27add7958ee8eced30"
    },
    {
     "record_id": "recvohhMtaC5hW",
+    "ptd_id": "PTD-000074",
     "dataset_name": "MITOS_WSI_CCMCT",
     "name": "mitos-ccmct.heael_wsi.mitotic_figure_detection.label.json",
-    "path": "2026.09.28/recvohhMtaC5hW/mitos-ccmct.heael_wsi.mitotic_figure_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000074_MITOS_WSI_CCMCT/labels/mitos-ccmct.heael_wsi.mitotic_figure_detection.label.json",
     "size": 11972275,
     "sha256": "43a2804cf558bc6cbf3b4703430644a80fe3fd0cbd539ca21988767df8bb0e7a"
    },
    {
     "record_id": "recvohhMtaC5hW",
+    "ptd_id": "PTD-000074",
     "dataset_name": "MITOS_WSI_CCMCT",
     "name": "mitos-ccmct.mel_wsi.mitotic_figure_detection.label.json",
-    "path": "2026.09.28/recvohhMtaC5hW/mitos-ccmct.mel_wsi.mitotic_figure_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000074_MITOS_WSI_CCMCT/labels/mitos-ccmct.mel_wsi.mitotic_figure_detection.label.json",
     "size": 11932334,
     "sha256": "d022e497214325edf58aff728a9ab36dbb4edddc95eb195b2b13acbfd11c2dce"
    },
    {
     "record_id": "recvohhMtaC5hW",
+    "ptd_id": "PTD-000074",
     "dataset_name": "MITOS_WSI_CCMCT",
     "name": "mitos-ccmct.odael_cell.cell_classification.label.json",
-    "path": "2026.09.28/recvohhMtaC5hW/mitos-ccmct.odael_cell.cell_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000074_MITOS_WSI_CCMCT/labels/mitos-ccmct.odael_cell.cell_classification.label.json",
     "size": 82030800,
     "sha256": "8c63cae033e4e6979a35af8293e7cfe477e870aad4fd1bcbdeb20eb5e99b3274"
    },
    {
     "record_id": "recvohhMtaC5hW",
+    "ptd_id": "PTD-000074",
     "dataset_name": "MITOS_WSI_CCMCT",
     "name": "mitos-ccmct.odael_wsi.mitotic_figure_detection.label.json",
-    "path": "2026.09.28/recvohhMtaC5hW/mitos-ccmct.odael_wsi.mitotic_figure_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000074_MITOS_WSI_CCMCT/labels/mitos-ccmct.odael_wsi.mitotic_figure_detection.label.json",
     "size": 12610659,
     "sha256": "d2ef54109db863795b8205f914d0f89831b34d99ad0a704bc2b6e78da201d784"
    },
    {
     "record_id": "recvohhMtaC5hW",
+    "ptd_id": "PTD-000074",
     "dataset_name": "MITOS_WSI_CCMCT",
     "name": "mitos-ccmct.wsi.mitotic_figure_detection.label.json",
-    "path": "2026.09.28/recvohhMtaC5hW/mitos-ccmct.wsi.mitotic_figure_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000074_MITOS_WSI_CCMCT/labels/mitos-ccmct.wsi.mitotic_figure_detection.label.json",
     "size": 61902607,
     "sha256": "775701d6eac2d50b9aa018a21d62d1cde9c18eb3a3e5acb24995ce3ffe6dd9d6"
    },
    {
     "record_id": "recvohhN0ULcTy",
+    "ptd_id": "PTD-000075",
     "dataset_name": "MITOS_WSI_CMC",
     "name": "mitos-cmc.codael_cell.mitotic_cell_classification.label.json",
-    "path": "2026.09.28/recvohhN0ULcTy/mitos-cmc.codael_cell.mitotic_cell_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000075_MITOS_WSI_CMC/labels/mitos-cmc.codael_cell.mitotic_cell_classification.label.json",
     "size": 35211089,
     "sha256": "ce4d01c2f9d6fa7145c6cdba572aedbfddb753b558f943f7fee2d6e0fe878f39"
    },
    {
     "record_id": "recvohhN0ULcTy",
+    "ptd_id": "PTD-000075",
     "dataset_name": "MITOS_WSI_CMC",
     "name": "mitos-cmc.codael_wsi.mitotic_count_roi_localization.label.json",
-    "path": "2026.09.28/recvohhN0ULcTy/mitos-cmc.codael_wsi.mitotic_count_roi_localization.label.json",
+    "path": "2026.09.28/datasets/PTD-000075_MITOS_WSI_CMC/labels/mitos-cmc.codael_wsi.mitotic_count_roi_localization.label.json",
     "size": 20326,
     "sha256": "d96d16b1a90dfa2a10c927f826bebe806032cd797261da5503fdcd92a75e4520"
    },
    {
     "record_id": "recvohhN0ULcTy",
+    "ptd_id": "PTD-000075",
     "dataset_name": "MITOS_WSI_CMC",
     "name": "mitos-cmc.codael_wsi.mitotic_figure_detection.label.json",
-    "path": "2026.09.28/recvohhN0ULcTy/mitos-cmc.codael_wsi.mitotic_figure_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000075_MITOS_WSI_CMC/labels/mitos-cmc.codael_wsi.mitotic_figure_detection.label.json",
     "size": 14415522,
     "sha256": "641801e64ea35253673adf60f53d32cfccf8ef33afeaf920ad1d873230d36246"
    },
    {
     "record_id": "recvohhN0ULcTy",
+    "ptd_id": "PTD-000075",
     "dataset_name": "MITOS_WSI_CMC",
     "name": "mitos-cmc.codael_wsi.tumor_region_segmentation.label.json",
-    "path": "2026.09.28/recvohhN0ULcTy/mitos-cmc.codael_wsi.tumor_region_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000075_MITOS_WSI_CMC/labels/mitos-cmc.codael_wsi.tumor_region_segmentation.label.json",
     "size": 396875,
     "sha256": "a7c806cebb4e25581b58eef573c3a6ec182ce886058cb97dbc99b0beb6571fcc"
    },
    {
     "record_id": "recvohhN0ULcTy",
+    "ptd_id": "PTD-000075",
     "dataset_name": "MITOS_WSI_CMC",
     "name": "mitos-cmc.mel_cell.mitotic_cell_classification.label.json",
-    "path": "2026.09.28/recvohhN0ULcTy/mitos-cmc.mel_cell.mitotic_cell_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000075_MITOS_WSI_CMC/labels/mitos-cmc.mel_cell.mitotic_cell_classification.label.json",
     "size": 27757545,
     "sha256": "8e1937df7d81d4e2737a47aa2d54f42bfcfc6ff6235b4b45dd53164e392fb709"
    },
    {
     "record_id": "recvohhN0ULcTy",
+    "ptd_id": "PTD-000075",
     "dataset_name": "MITOS_WSI_CMC",
     "name": "mitos-cmc.mel_wsi.mitotic_figure_detection.label.json",
-    "path": "2026.09.28/recvohhN0ULcTy/mitos-cmc.mel_wsi.mitotic_figure_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000075_MITOS_WSI_CMC/labels/mitos-cmc.mel_wsi.mitotic_figure_detection.label.json",
     "size": 11400919,
     "sha256": "20307fef8dd4d6617570d9f08eac279f8f6083cb21cc8df62c6be681800a0bb3"
    },
    {
     "record_id": "recvohhN0ULcTy",
+    "ptd_id": "PTD-000075",
     "dataset_name": "MITOS_WSI_CMC",
     "name": "mitos-cmc.odael_cell.mitotic_cell_classification.label.json",
-    "path": "2026.09.28/recvohhN0ULcTy/mitos-cmc.odael_cell.mitotic_cell_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000075_MITOS_WSI_CMC/labels/mitos-cmc.odael_cell.mitotic_cell_classification.label.json",
     "size": 35158594,
     "sha256": "dee31d7b8cddf4cdbb2c991dd8779b4d568b92240df18a725490d910aeaf5741"
    },
    {
     "record_id": "recvohhN0ULcTy",
+    "ptd_id": "PTD-000075",
     "dataset_name": "MITOS_WSI_CMC",
     "name": "mitos-cmc.odael_wsi.mitotic_figure_detection.label.json",
-    "path": "2026.09.28/recvohhN0ULcTy/mitos-cmc.odael_wsi.mitotic_figure_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000075_MITOS_WSI_CMC/labels/mitos-cmc.odael_wsi.mitotic_figure_detection.label.json",
     "size": 14413288,
     "sha256": "9c9296b392f9390f6d10fe85d2a18c159b267c1b804e8d83616be7a10117df06"
    },
    {
     "record_id": "recvohhN0ULcTy",
+    "ptd_id": "PTD-000075",
     "dataset_name": "MITOS_WSI_CMC",
     "name": "mitos-cmc.odael_wsi.tumor_region_segmentation.label.json",
-    "path": "2026.09.28/recvohhN0ULcTy/mitos-cmc.odael_wsi.tumor_region_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000075_MITOS_WSI_CMC/labels/mitos-cmc.odael_wsi.tumor_region_segmentation.label.json",
     "size": 396742,
     "sha256": "21b8ce6cc4b583bcb60af5d39792832bc1fd05db8f32d40590cbed7f1952f742"
    },
    {
     "record_id": "recvohhN0ULcTy",
+    "ptd_id": "PTD-000075",
     "dataset_name": "MITOS_WSI_CMC",
     "name": "mitos-cmc.patch.mitotic_figure_classification.label.json",
-    "path": "2026.09.28/recvohhN0ULcTy/mitos-cmc.patch.mitotic_figure_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000075_MITOS_WSI_CMC/labels/mitos-cmc.patch.mitotic_figure_classification.label.json",
     "size": 22912190,
     "sha256": "a8695ba889a834bf90712b7af9e9ea5d16d94b7dfd1528e16abb86f0aa95a79e"
    },
    {
     "record_id": "recvohhN0ULcTy",
+    "ptd_id": "PTD-000075",
     "dataset_name": "MITOS_WSI_CMC",
     "name": "mitos-cmc.wsi.mitotic_figure_detection.label.json",
-    "path": "2026.09.28/recvohhN0ULcTy/mitos-cmc.wsi.mitotic_figure_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000075_MITOS_WSI_CMC/labels/mitos-cmc.wsi.mitotic_figure_detection.label.json",
     "size": 12158892,
     "sha256": "333ee3b37105f34613801e6b7cbf27ea8cbf9da7384938a4ac79fadf848230e4"
    },
    {
     "record_id": "recvohhNAaTO6P",
+    "ptd_id": "PTD-000182",
     "dataset_name": "MONKEY",
     "name": "monkey.public_train_wsi.inflammatory_cell_subtype_detection.label.json",
-    "path": "2026.09.28/recvohhNAaTO6P/monkey.public_train_wsi.inflammatory_cell_subtype_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000182_MONKEY/labels/monkey.public_train_wsi.inflammatory_cell_subtype_detection.label.json",
     "size": 19446921,
     "sha256": "533ec60d51d7c45a1d6b272a2fbd1022e92ff9ad7ddc7525bd3276743cc27869"
    },
    {
     "record_id": "recvohhNAaTO6P",
+    "ptd_id": "PTD-000182",
     "dataset_name": "MONKEY",
     "name": "monkey.public_train_wsi.mononuclear_inflammatory_cell_detection.label.json",
-    "path": "2026.09.28/recvohhNAaTO6P/monkey.public_train_wsi.mononuclear_inflammatory_cell_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000182_MONKEY/labels/monkey.public_train_wsi.mononuclear_inflammatory_cell_detection.label.json",
     "size": 12990000,
     "sha256": "0751ef251190a19b72540cb2f44f4336450a39f760ffec0b42b9c0e7c6199545"
    },
    {
     "record_id": "recvohhO6ECFh5",
+    "ptd_id": "PTD-000076",
     "dataset_name": "MSIfromHE",
     "name": "msifromhe.patch.msi_status_classification.label.json",
-    "path": "2026.09.28/recvohhO6ECFh5/msifromhe.patch.msi_status_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000076_MSIfromHE/labels/msifromhe.patch.msi_status_classification.label.json",
     "size": 108839697,
     "sha256": "e79cac3b07c98924d4ea7d67cb76c186a195f06c40bb2666e00f3a1fcda74e16"
    },
    {
     "record_id": "recvohhY8YWzKC",
+    "ptd_id": "PTD-000080",
     "dataset_name": "MitoEM",
     "name": "mitoem.public_train_val_slice.mitochondria_instance_segmentation.label.json",
-    "path": "2026.09.28/recvohhY8YWzKC/mitoem.public_train_val_slice.mitochondria_instance_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000080_MitoEM/labels/mitoem.public_train_val_slice.mitochondria_instance_segmentation.label.json",
     "size": 555907,
     "sha256": "87a4540edb9083c1665c4c6ad8596468f40cd5c0fc3f66a29555659ca4179113"
    },
    {
     "record_id": "recvohhZHzxUsT",
+    "ptd_id": "PTD-000081",
     "dataset_name": "MoNuSAC2020",
     "name": "monusac2020.released_roi.nuclei_instance_segmentation_and_classification.label.json",
-    "path": "2026.09.28/recvohhZHzxUsT/monusac2020.released_roi.nuclei_instance_segmentation_and_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000081_MoNuSAC2020/labels/monusac2020.released_roi.nuclei_instance_segmentation_and_classification.label.json",
     "size": 366776,
     "sha256": "60fd5c118251c58e81ca5ee81f276f3d2bcb2c206a577461fd24c53bf6e010f9"
    },
    {
     "record_id": "recvohi0itqy42",
+    "ptd_id": "PTD-000082",
     "dataset_name": "MoNuSeg",
     "name": "monuseg.roi_image.nuclei_instance_segmentation.label.json",
-    "path": "2026.09.28/recvohi0itqy42/monuseg.roi_image.nuclei_instance_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000082_MoNuSeg/labels/monuseg.roi_image.nuclei_instance_segmentation.label.json",
     "size": 21828,
     "sha256": "69ec088e9afe74b2d895c74dcf388598af831f65b207c1fc73aa6ba5f8cba129"
    },
    {
     "record_id": "recvohi0SFGVOU",
+    "ptd_id": "PTD-000083",
     "dataset_name": "Multi-Scanner SCC",
     "name": "multi-scanner_scc.wsi.multi_class_tissue_segmentation.label.json",
-    "path": "2026.09.28/recvohi0SFGVOU/multi-scanner_scc.wsi.multi_class_tissue_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000083_Multi-Scanner-SCC/labels/multi-scanner_scc.wsi.multi_class_tissue_segmentation.label.json",
     "size": 84122897,
     "sha256": "82abe23bdba595e38336e4ed9db4d59ff5a040b86d78e3800ed64c045fac512a"
    },
    {
     "record_id": "recvohi2YLExku",
+    "ptd_id": "PTD-000085",
     "dataset_name": "NCT-CRC-HE-100K",
     "name": "nct-crc-he-100k.crc_val_he_7k_patch.tissue_type_classification.label.json",
-    "path": "2026.09.28/recvohi2YLExku/nct-crc-he-100k.crc_val_he_7k_patch.tissue_type_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000085_NCT-CRC-HE-100K/labels/nct-crc-he-100k.crc_val_he_7k_patch.tissue_type_classification.label.json",
     "size": 2056409,
     "sha256": "e0428dc9ae77027ed20258383a764b665c503f205c8f23b948fc477d07f3810e"
    },
    {
     "record_id": "recvohi2YLExku",
+    "ptd_id": "PTD-000085",
     "dataset_name": "NCT-CRC-HE-100K",
     "name": "nct-crc-he-100k.nct_crc_he_100k_nonorm_patch.tissue_type_classification.label.json",
-    "path": "2026.09.28/recvohi2YLExku/nct-crc-he-100k.nct_crc_he_100k_nonorm_patch.tissue_type_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000085_NCT-CRC-HE-100K/labels/nct-crc-he-100k.nct_crc_he_100k_nonorm_patch.tissue_type_classification.label.json",
     "size": 29398856,
     "sha256": "d8bf1ae5cc7ce14b743d8e608a7ea57e92d38314ce2c875dffd579a0a23c178b"
    },
    {
     "record_id": "recvohi2YLExku",
+    "ptd_id": "PTD-000085",
     "dataset_name": "NCT-CRC-HE-100K",
     "name": "nct-crc-he-100k.nct_crc_he_100k_patch.tissue_type_classification.label.json",
-    "path": "2026.09.28/recvohi2YLExku/nct-crc-he-100k.nct_crc_he_100k_patch.tissue_type_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000085_NCT-CRC-HE-100K/labels/nct-crc-he-100k.nct_crc_he_100k_patch.tissue_type_classification.label.json",
     "size": 27998835,
     "sha256": "3087b6d0b12660cdf7f9724f6e88f28344fa1c29f76f0d30715891782bc9d09d"
    },
    {
     "record_id": "recvohi5I5qf1b",
+    "ptd_id": "PTD-000128",
     "dataset_name": "NeurIPS 2022 Cell Segmentation Competition Dataset",
     "name": "neurips_2022_cell_segmentation_competition_dataset.public_test_image.cell_instance_segmentation.label.json",
-    "path": "2026.09.28/recvohi5I5qf1b/neurips_2022_cell_segmentation_competition_dataset.public_test_image.cell_instance_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000128_NeurIPS-2022-Cell-Segmentation-Competition-Dataset/labels/neurips_2022_cell_segmentation_competition_dataset.public_test_image.cell_instance_segmentation.label.json",
     "size": 22880,
     "sha256": "4dc67c22dc86a2f82ee90e1c69261144872510bcef75825e7b64d944bc915415"
    },
    {
     "record_id": "recvohi5I5qf1b",
+    "ptd_id": "PTD-000128",
     "dataset_name": "NeurIPS 2022 Cell Segmentation Competition Dataset",
     "name": "neurips_2022_cell_segmentation_competition_dataset.public_test_wsi.cell_instance_segmentation.label.json",
-    "path": "2026.09.28/recvohi5I5qf1b/neurips_2022_cell_segmentation_competition_dataset.public_test_wsi.cell_instance_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000128_NeurIPS-2022-Cell-Segmentation-Competition-Dataset/labels/neurips_2022_cell_segmentation_competition_dataset.public_test_wsi.cell_instance_segmentation.label.json",
     "size": 2561,
     "sha256": "77cd8ad528e5ef971f01af39a343dc4d856e4745707ea83233c80e5be014c535"
    },
    {
     "record_id": "recvohi5I5qf1b",
+    "ptd_id": "PTD-000128",
     "dataset_name": "NeurIPS 2022 Cell Segmentation Competition Dataset",
     "name": "neurips_2022_cell_segmentation_competition_dataset.training_labeled_image.cell_instance_segmentation.label.json",
-    "path": "2026.09.28/recvohi5I5qf1b/neurips_2022_cell_segmentation_competition_dataset.training_labeled_image.cell_instance_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000128_NeurIPS-2022-Cell-Segmentation-Competition-Dataset/labels/neurips_2022_cell_segmentation_competition_dataset.training_labeled_image.cell_instance_segmentation.label.json",
     "size": 426054,
     "sha256": "faf03d5c4d5c9030d6412c6ec880ddc440ad9dcfc8d6dd9a504327212cf1118d"
    },
    {
     "record_id": "recvohi5I5qf1b",
+    "ptd_id": "PTD-000128",
     "dataset_name": "NeurIPS 2022 Cell Segmentation Competition Dataset",
     "name": "neurips_2022_cell_segmentation_competition_dataset.tuning_image.cell_instance_segmentation.label.json",
-    "path": "2026.09.28/recvohi5I5qf1b/neurips_2022_cell_segmentation_competition_dataset.tuning_image.cell_instance_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000128_NeurIPS-2022-Cell-Segmentation-Competition-Dataset/labels/neurips_2022_cell_segmentation_competition_dataset.tuning_image.cell_instance_segmentation.label.json",
     "size": 41443,
     "sha256": "60bc77f5c2a7b2de963f3ea2e96b7f09d602ab871de39cb4f8ded88b9796d719"
    },
    {
     "record_id": "recvohi6h9YAja",
+    "ptd_id": "PTD-000087",
     "dataset_name": "NuCLS",
     "name": "nucls.corrected_single_rater_cell.nucleus_classification.label.json",
-    "path": "2026.09.28/recvohi6h9YAja/nucls.corrected_single_rater_cell.nucleus_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000087_NuCLS/labels/nucls.corrected_single_rater_cell.nucleus_classification.label.json",
     "size": 67572041,
     "sha256": "41d6b66a05c223e6605653226c1d150ba736551b93bbdc98340c12108b1d5eaf"
    },
    {
     "record_id": "recvohi6h9YAja",
+    "ptd_id": "PTD-000087",
     "dataset_name": "NuCLS",
     "name": "nucls.corrected_single_rater_fov.nucleus_detection.label.json",
-    "path": "2026.09.28/recvohi6h9YAja/nucls.corrected_single_rater_fov.nucleus_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000087_NuCLS/labels/nucls.corrected_single_rater_fov.nucleus_detection.label.json",
     "size": 15873633,
     "sha256": "b6424662421c0efe4c8cb6c6b2dc5fca63a28d6bf33bcfb2bdee103a7824c0e0"
    },
    {
     "record_id": "recvohi6h9YAja",
+    "ptd_id": "PTD-000087",
     "dataset_name": "NuCLS",
     "name": "nucls.corrected_single_rater_fov.nucleus_instance_segmentation.label.json",
-    "path": "2026.09.28/recvohi6h9YAja/nucls.corrected_single_rater_fov.nucleus_instance_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000087_NuCLS/labels/nucls.corrected_single_rater_fov.nucleus_instance_segmentation.label.json",
     "size": 32730464,
     "sha256": "4e95e36fa7311fad59f1b1f6b913da63487bc09e0d21306e84b5f196853145e0"
    },
    {
     "record_id": "recvohi74GlaKb",
+    "ptd_id": "PTD-000089",
     "dataset_name": "WBC dataset",
     "name": "nuclick_wbcs.patch.white_blood_cell_segmentation.label.json",
-    "path": "2026.09.28/recvohi74GlaKb/nuclick_wbcs.patch.white_blood_cell_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000089_WBC-dataset/labels/nuclick_wbcs.patch.white_blood_cell_segmentation.label.json",
     "size": 628183,
     "sha256": "b6bb36be35a0927ded14d30c1dd967bc39039827c4e419123d26dfd77c63bed2"
    },
    {
     "record_id": "recvohi7Ak0PZu",
+    "ptd_id": "PTD-000189",
     "dataset_name": "NucMM",
     "name": "nucmm.public_train_val_subvolume.neuronal_nuclei_instance_segmentation_3d.label.json",
-    "path": "2026.09.28/recvohi7Ak0PZu/nucmm.public_train_val_subvolume.neuronal_nuclei_instance_segmentation_3d.label.json",
+    "path": "2026.09.28/datasets/PTD-000189_NucMM/labels/nucmm.public_train_val_subvolume.neuronal_nuclei_instance_segmentation_3d.label.json",
     "size": 68789,
     "sha256": "293499a9ac21b55b7534f9fb6b16406674661c8d21b04d554e2280e715f3ba8b"
    },
    {
     "record_id": "recvohi7TJh0M1",
+    "ptd_id": "PTD-000090",
     "dataset_name": "Nuclei data",
     "name": "nuclei_data.crc_nucleus_patch.neoplastic_vs_non_neoplastic_nuclei_classification.label.json",
-    "path": "2026.09.28/recvohi7TJh0M1/nuclei_data.crc_nucleus_patch.neoplastic_vs_non_neoplastic_nuclei_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000090_Nuclei-data/labels/nuclei_data.crc_nucleus_patch.neoplastic_vs_non_neoplastic_nuclei_classification.label.json",
     "size": 93317609,
     "sha256": "702fdb4b6923e87de77224adcac852932759775aa59a2beafb5a0806a212f1fa"
    },
    {
     "record_id": "recvohi7TJh0M1",
+    "ptd_id": "PTD-000090",
     "dataset_name": "Nuclei data",
     "name": "nuclei_data.plasma_cell_nucleus_patch.plasma_cell_vs_other_nuclei_classification.label.json",
-    "path": "2026.09.28/recvohi7TJh0M1/nuclei_data.plasma_cell_nucleus_patch.plasma_cell_vs_other_nuclei_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000090_Nuclei-data/labels/nuclei_data.plasma_cell_nucleus_patch.plasma_cell_vs_other_nuclei_classification.label.json",
     "size": 4055723,
     "sha256": "96a5eb1aff216aeae72c60fcde79c58c4d72ccabbd4c7c0880ddda4202f24fc4"
    },
    {
     "record_id": "recvohi9cSdbk2",
+    "ptd_id": "PTD-000093",
     "dataset_name": "OCELOT 2023",
     "name": "ocelot2023.patch_pair.cell_detection.label.json",
-    "path": "2026.09.28/recvohi9cSdbk2/ocelot2023.patch_pair.cell_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000093_OCELOT-2023/labels/ocelot2023.patch_pair.cell_detection.label.json",
     "size": 24229932,
     "sha256": "bd347beb9fe03447a29119229e472e72e336b342996c9ed088b4462fa3e0b837"
    },
    {
     "record_id": "recvohibXLIdDV",
+    "ptd_id": "PTD-000095",
     "dataset_name": "Osteosarcoma-Tumor-Assessment",
     "name": "osteosarcoma-tumor-assessment.tile.histopathology_tile_classification.label.json",
-    "path": "2026.09.28/recvohibXLIdDV/osteosarcoma-tumor-assessment.tile.histopathology_tile_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000095_Osteosarcoma-Tumor-Assessment/labels/osteosarcoma-tumor-assessment.tile.histopathology_tile_classification.label.json",
     "size": 313070,
     "sha256": "f55613c838f4865f4e56d70cd4a55bb2a69ae554e2073b8f484b044f519de0e5"
    },
    {
     "record_id": "recvohieVnTO0T",
+    "ptd_id": "PTD-000096",
     "dataset_name": "Ovarian-Bevacizumab-Response",
     "name": "ovarian-bevacizumab-response.wsi.bevacizumab_treatment_effectiveness.label.json",
-    "path": "2026.09.28/recvohieVnTO0T/ovarian-bevacizumab-response.wsi.bevacizumab_treatment_effectiveness.label.json",
+    "path": "2026.09.28/datasets/PTD-000096_Ovarian-Bevacizumab-Response/labels/ovarian-bevacizumab-response.wsi.bevacizumab_treatment_effectiveness.label.json",
     "size": 73432,
     "sha256": "8b3994f4ecc4d06c5c4a1c09ade077160e6ad938f64f4e184588e5874ff58e42"
    },
    {
     "record_id": "recvohirC6VB7s",
+    "ptd_id": "PTD-000164",
     "dataset_name": "PCam",
     "name": "pcam.patch.binary_tumor_classification.label.json",
-    "path": "2026.09.28/recvohirC6VB7s/pcam.patch.binary_tumor_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000164_PCam/labels/pcam.patch.binary_tumor_classification.label.json",
     "size": 90505388,
     "sha256": "64a846293fbe8dac47ff412652db43effcf4d1d85c424310b5fb837aea546a67"
    },
    {
     "record_id": "recvohiu41e5ht",
+    "ptd_id": "PTD-000165",
     "dataset_name": "PTRC-HGSOC",
     "name": "ptrc_hgsoc.wsi.platinum_response_classification.label.json",
-    "path": "2026.09.28/recvohiu41e5ht/ptrc_hgsoc.wsi.platinum_response_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000165_PTRC-HGSOC/labels/ptrc_hgsoc.wsi.platinum_response_classification.label.json",
     "size": 159190,
     "sha256": "667c59b385678588182bcaaf59912129758a5b1fe05529121e4b263cce88bb97"
    },
    {
     "record_id": "recvohixkYnN8j",
+    "ptd_id": "PTD-000166",
     "dataset_name": "PUMA",
     "name": "puma.roi.nuclei_ten_class_panoptic_segmentation.label.json",
-    "path": "2026.09.28/recvohixkYnN8j/puma.roi.nuclei_ten_class_panoptic_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000166_PUMA/labels/puma.roi.nuclei_ten_class_panoptic_segmentation.label.json",
     "size": 242685,
     "sha256": "bba0945adc26156cacf1817322e9dace9fd886568e9a30d46534d8165b02e53f"
    },
    {
     "record_id": "recvohixkYnN8j",
+    "ptd_id": "PTD-000166",
     "dataset_name": "PUMA",
     "name": "puma.roi.nuclei_three_class_panoptic_segmentation.label.json",
-    "path": "2026.09.28/recvohixkYnN8j/puma.roi.nuclei_three_class_panoptic_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000166_PUMA/labels/puma.roi.nuclei_three_class_panoptic_segmentation.label.json",
     "size": 175360,
     "sha256": "27c427748fc64272f6c33d7d9c75ff8dbdf7e6ccf8e3a180d61fcadf2ad3b812"
    },
    {
     "record_id": "recvohixkYnN8j",
+    "ptd_id": "PTD-000166",
     "dataset_name": "PUMA",
     "name": "puma.roi.tissue_semantic_segmentation.label.json",
-    "path": "2026.09.28/recvohixkYnN8j/puma.roi.tissue_semantic_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000166_PUMA/labels/puma.roi.tissue_semantic_segmentation.label.json",
     "size": 160274,
     "sha256": "0bdd5ba36389264174f5937046619ec148ba9ffe2bf5102c89cb9e624a069dcd"
    },
    {
     "record_id": "recvohiA0VxoVl",
+    "ptd_id": "PTD-000167",
     "dataset_name": "Pan-Tumor T-Lymphocyte Detection Dataset",
     "name": "pan_tumor_t_lymphocyte.roi.cell_detection_and_classification.label.json",
-    "path": "2026.09.28/recvohiA0VxoVl/pan_tumor_t_lymphocyte.roi.cell_detection_and_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000167_Pan-Tumor-T-Lymphocyte-Detection-Dataset/labels/pan_tumor_t_lymphocyte.roi.cell_detection_and_classification.label.json",
     "size": 30307699,
     "sha256": "dd52588b076fb76906b1b1f51c3ad460621c842fa8131a403df933f9eda47f0a"
    },
    {
     "record_id": "recvohiCfnFyls",
+    "ptd_id": "PTD-000168",
     "dataset_name": "PanNuke",
     "name": "pannuke.cell.nuclei_classification.label.json",
-    "path": "2026.09.28/recvohiCfnFyls/pannuke.cell.nuclei_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000168_PanNuke/labels/pannuke.cell.nuclei_classification.label.json",
     "size": 96086508,
     "sha256": "b4a255c98113dab080e1ae8aad2218e278827c3cee65e06e21de7cde85b3e429"
    },
    {
     "record_id": "recvohiCfnFyls",
+    "ptd_id": "PTD-000168",
     "dataset_name": "PanNuke",
     "name": "pannuke.patch.nuclei_detection.label.json",
-    "path": "2026.09.28/recvohiCfnFyls/pannuke.patch.nuclei_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000168_PanNuke/labels/pannuke.patch.nuclei_detection.label.json",
     "size": 51704466,
     "sha256": "6dec91ecee0c8e54a01ee6321b26f5efd3c2465c87bc5f9c8daf059dd95f77db"
    },
    {
     "record_id": "recvohiCfnFyls",
+    "ptd_id": "PTD-000168",
     "dataset_name": "PanNuke",
     "name": "pannuke.patch.nuclei_instance_segmentation_and_classification.label.json",
-    "path": "2026.09.28/recvohiCfnFyls/pannuke.patch.nuclei_instance_segmentation_and_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000168_PanNuke/labels/pannuke.patch.nuclei_instance_segmentation_and_classification.label.json",
     "size": 5702081,
     "sha256": "3af707fd52fb59e5adba9156b19019a175d1fa8ef9ab42701b9d16259e5828b8"
    },
    {
     "record_id": "recvohiDW2hjOU",
+    "ptd_id": "PTD-000169",
     "dataset_name": "PathGen-1.6M",
     "name": "pathgen-1.6m.patch.pathology_image_text_contrastive_pretraining.label.json",
-    "path": "2026.09.28/recvohiDW2hjOU/pathgen-1.6m.patch.pathology_image_text_contrastive_pretraining.label.json",
+    "path": "2026.09.28/datasets/PTD-000169_PathGen-1.6M/labels/pathgen-1.6m.patch.pathology_image_text_contrastive_pretraining.label.json",
     "size": 1247366375,
     "sha256": "a9fab79f0e4de0d386962ac2227e507e3d439c0f7a1685955452b95f26114d2e"
    },
    {
     "record_id": "recvohiDW2hjOU",
+    "ptd_id": "PTD-000169",
     "dataset_name": "PathGen-1.6M",
     "name": "pathgen-1.6m.patch.pathology_patch_caption_generation.label.json",
-    "path": "2026.09.28/recvohiDW2hjOU/pathgen-1.6m.patch.pathology_patch_caption_generation.label.json",
+    "path": "2026.09.28/datasets/PTD-000169_PathGen-1.6M/labels/pathgen-1.6m.patch.pathology_patch_caption_generation.label.json",
     "size": 1231157515,
     "sha256": "37a8fe0085b1cad9b975d3ceb71084ffb80412fbe3cce0d89eb42f271b424090"
    },
    {
     "record_id": "recvohiF50x1fP",
+    "ptd_id": "PTD-000170",
     "dataset_name": "Pathology-CoT",
     "name": "pathology_cot.wsi.pathology_cot_generation.label.json",
-    "path": "2026.09.28/recvohiF50x1fP/pathology_cot.wsi.pathology_cot_generation.label.json",
+    "path": "2026.09.28/datasets/PTD-000170_Pathology-CoT/labels/pathology_cot.wsi.pathology_cot_generation.label.json",
     "size": 1825375,
     "sha256": "37e24d80b091a53f2f118f6cdc17511bdaccde93488cf281e62933db489dff31"
    },
    {
     "record_id": "recvohiGbGwaUR",
+    "ptd_id": "PTD-000172",
     "dataset_name": "Post-NAT-BRCA",
     "name": "post_nat_brca.patch.cancer_cellularity_scoring.label.json",
-    "path": "2026.09.28/recvohiGbGwaUR/post_nat_brca.patch.cancer_cellularity_scoring.label.json",
+    "path": "2026.09.28/datasets/PTD-000172_Post-NAT-BRCA/labels/post_nat_brca.patch.cancer_cellularity_scoring.label.json",
     "size": 669267,
     "sha256": "a5884a5c2cfe22e8db0a7b31138c51d117fef0c9a54993ca74e1fcc85b889768"
    },
    {
     "record_id": "recvohiKWPuUDc",
+    "ptd_id": "PTD-000104",
     "dataset_name": "RINGS",
     "name": "rings.patch.prostate_cancer_tissue_segmentation.label.json",
-    "path": "2026.09.28/recvohiKWPuUDc/rings.patch.prostate_cancer_tissue_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000104_RINGS/labels/rings.patch.prostate_cancer_tissue_segmentation.label.json",
     "size": 634602,
     "sha256": "d7e2057bcd0ef0d96e6b5342d3a3f9741ce699a88baf6a8091dce3b64309fac0"
    },
    {
     "record_id": "recvohiKWPuUDc",
+    "ptd_id": "PTD-000104",
     "dataset_name": "RINGS",
     "name": "rings.patch.prostate_gland_segmentation.label.json",
-    "path": "2026.09.28/recvohiKWPuUDc/rings.patch.prostate_gland_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000104_RINGS/labels/rings.patch.prostate_gland_segmentation.label.json",
     "size": 611861,
     "sha256": "73b8a88761fb0366aee329191c0b8da1f2908ebfb5fe45003128704887a2f2be"
    },
    {
     "record_id": "recvohiRr5gLgg",
+    "ptd_id": "PTD-000195",
     "dataset_name": "SELMA3D",
     "name": "selma3d.training_annotated_patch.spot_like_structure_segmentation.label.json",
-    "path": "2026.09.28/recvohiRr5gLgg/selma3d.training_annotated_patch.spot_like_structure_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000195_SELMA3D/labels/selma3d.training_annotated_patch.spot_like_structure_segmentation.label.json",
     "size": 34295,
     "sha256": "4be3885132dccb4174caed602b0151c56a435f774d46b116f41495f3d40e4c52"
    },
    {
     "record_id": "recvohiRr5gLgg",
+    "ptd_id": "PTD-000195",
     "dataset_name": "SELMA3D",
     "name": "selma3d.training_annotated_patch.tree_like_tubular_structure_segmentation.label.json",
-    "path": "2026.09.28/recvohiRr5gLgg/selma3d.training_annotated_patch.tree_like_tubular_structure_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000195_SELMA3D/labels/selma3d.training_annotated_patch.tree_like_tubular_structure_segmentation.label.json",
     "size": 18737,
     "sha256": "a0cd78b166d4e85be35d1dea3b26cf0a37ba06862a593edb30da0d8ba57a50cf"
    },
    {
     "record_id": "recvohiSzqUjPH",
+    "ptd_id": "PTD-000106",
     "dataset_name": "SICAPv2",
     "name": "sicapv2.patch.cribriform_detection.label.json",
-    "path": "2026.09.28/recvohiSzqUjPH/sicapv2.patch.cribriform_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000106_SICAPv2/labels/sicapv2.patch.cribriform_detection.label.json",
     "size": 1544997,
     "sha256": "28f69158c92e8c29a0808566bc6a3632bd2a53c0b61fc884fef88d391d472a43"
    },
    {
     "record_id": "recvohiSzqUjPH",
+    "ptd_id": "PTD-000106",
     "dataset_name": "SICAPv2",
     "name": "sicapv2.patch.gleason_grade_classification.label.json",
-    "path": "2026.09.28/recvohiSzqUjPH/sicapv2.patch.gleason_grade_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000106_SICAPv2/labels/sicapv2.patch.gleason_grade_classification.label.json",
     "size": 4173881,
     "sha256": "427b7f1ec63e82eea3990432f757b57d6ed4468c994aa406f88fb828c64fcf33"
    },
    {
     "record_id": "recvohiSzqUjPH",
+    "ptd_id": "PTD-000106",
     "dataset_name": "SICAPv2",
     "name": "sicapv2.patch.gleason_segmentation.label.json",
-    "path": "2026.09.28/recvohiSzqUjPH/sicapv2.patch.gleason_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000106_SICAPv2/labels/sicapv2.patch.gleason_segmentation.label.json",
     "size": 14843048,
     "sha256": "792f08bf6056de4dc957a49206bc0c6f0515364886f3e1f6a99180c402c3d2cd"
    },
    {
     "record_id": "recvohiSzqUjPH",
+    "ptd_id": "PTD-000106",
     "dataset_name": "SICAPv2",
     "name": "sicapv2.wsi.gleason_score_prediction.label.json",
-    "path": "2026.09.28/recvohiSzqUjPH/sicapv2.wsi.gleason_score_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000106_SICAPv2/labels/sicapv2.wsi.gleason_score_prediction.label.json",
     "size": 43511,
     "sha256": "c93b46ed33de7459c1af42fa599c9af19768a05e057923d274c476c10afbebf1"
    },
    {
     "record_id": "recvohiV0spuBN",
+    "ptd_id": "PTD-000107",
     "dataset_name": "SLN-Breast",
     "name": "sln_breast.wsi.metastasis_classification.label.json",
-    "path": "2026.09.28/recvohiV0spuBN/sln_breast.wsi.metastasis_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000107_SLN-Breast/labels/sln_breast.wsi.metastasis_classification.label.json",
     "size": 38276,
     "sha256": "1014e9aacbc0b9b7bb230698a688873b3efbda35408fbf6e3f2d5beeb1b3a156"
    },
    {
     "record_id": "recvohiXGpXiWE",
+    "ptd_id": "PTD-000153",
     "dataset_name": "STHELAR",
     "name": "sthelar.cell.cell_type_classification.label.json",
-    "path": "2026.09.28/recvohiXGpXiWE/sthelar.cell.cell_type_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000153_STHELAR/labels/sthelar.cell.cell_type_classification.label.json",
     "size": 593498494,
     "sha256": "0b4944f79dfd49e797cb2abd170d508ac4022c5e7ce76b87f51fac3ed3235d00"
    },
    {
     "record_id": "recvohiXGpXiWE",
+    "ptd_id": "PTD-000153",
     "dataset_name": "STHELAR",
     "name": "sthelar.patch_20x.cell_type_segmentation.label.json",
-    "path": "2026.09.28/recvohiXGpXiWE/sthelar.patch_20x.cell_type_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000153_STHELAR/labels/sthelar.patch_20x.cell_type_segmentation.label.json",
     "size": 281687107,
     "sha256": "25609561b7fbf3b8013c561f7f1923a9053c0c165734afa29b39b74bd9882d4f"
    },
    {
     "record_id": "recvohiXGpXiWE",
+    "ptd_id": "PTD-000153",
     "dataset_name": "STHELAR",
     "name": "sthelar.patch_40x.cell_type_segmentation.label.json",
-    "path": "2026.09.28/recvohiXGpXiWE/sthelar.patch_40x.cell_type_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000153_STHELAR/labels/sthelar.patch_40x.cell_type_segmentation.label.json",
     "size": 982498933,
     "sha256": "da26a4dbd9acfc2f89442397b23a74ec9781312f46d49af94571a7d6fdb9d973"
    },
    {
     "record_id": "recvohiXGpXiWE",
+    "ptd_id": "PTD-000153",
     "dataset_name": "STHELAR",
     "name": "sthelar_20x.patch.cell_instance_segmentation.label.json",
-    "path": "2026.09.28/recvohiXGpXiWE/sthelar_20x.patch.cell_instance_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000153_STHELAR/labels/sthelar_20x.patch.cell_instance_segmentation.label.json",
     "size": 95391871,
     "sha256": "9c1d989ac2a594539ce0c92e7fa57806e26f57e598fd2de3c8d65bdafba7f201"
    },
    {
     "record_id": "recvohiXGpXiWE",
+    "ptd_id": "PTD-000153",
     "dataset_name": "STHELAR",
     "name": "sthelar_20x.patch.cell_type_multilabel_classification.label.json",
-    "path": "2026.09.28/recvohiXGpXiWE/sthelar_20x.patch.cell_type_multilabel_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000153_STHELAR/labels/sthelar_20x.patch.cell_type_multilabel_classification.label.json",
     "size": 109979073,
     "sha256": "ddcacc9910766616f2d323e72975541d46783b272df6945246b161b475806e11"
    },
    {
     "record_id": "recvohj3Ocx2qO",
+    "ptd_id": "PTD-000113",
     "dataset_name": "SegPath",
     "name": "segpath.patch.endothelial_cell_segmentation.label.json",
-    "path": "2026.09.28/recvohj3Ocx2qO/segpath.patch.endothelial_cell_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000113_SegPath/labels/segpath.patch.endothelial_cell_segmentation.label.json",
     "size": 5059127,
     "sha256": "0aa30f20e1222ba0b33be079d754d750849a0f47712fad1dc4033565b9cf0b06"
    },
    {
     "record_id": "recvohj3Ocx2qO",
+    "ptd_id": "PTD-000113",
     "dataset_name": "SegPath",
     "name": "segpath.patch.epithelium_segmentation.label.json",
-    "path": "2026.09.28/recvohj3Ocx2qO/segpath.patch.epithelium_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000113_SegPath/labels/segpath.patch.epithelium_segmentation.label.json",
     "size": 12402906,
     "sha256": "92c120690aca515bb27086936656fee64d36ddb9758308e6bae2d8fae8a12851"
    },
    {
     "record_id": "recvohj3Ocx2qO",
+    "ptd_id": "PTD-000113",
     "dataset_name": "SegPath",
     "name": "segpath.patch.leukocyte_segmentation.label.json",
-    "path": "2026.09.28/recvohj3Ocx2qO/segpath.patch.leukocyte_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000113_SegPath/labels/segpath.patch.leukocyte_segmentation.label.json",
     "size": 11556406,
     "sha256": "956b6e1e02dbfbf3e07aa5781bf5c1d0895a5fb10cf50f86a92e2f4c87c2e8f0"
    },
    {
     "record_id": "recvohj3Ocx2qO",
+    "ptd_id": "PTD-000113",
     "dataset_name": "SegPath",
     "name": "segpath.patch.lymphocyte_segmentation.label.json",
-    "path": "2026.09.28/recvohj3Ocx2qO/segpath.patch.lymphocyte_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000113_SegPath/labels/segpath.patch.lymphocyte_segmentation.label.json",
     "size": 5867153,
     "sha256": "43aa443df2c13e5d453ab4301141b5871133f4ef336e71deb53228be2f250e22"
    },
    {
     "record_id": "recvohj3Ocx2qO",
+    "ptd_id": "PTD-000113",
     "dataset_name": "SegPath",
     "name": "segpath.patch.myeloid_cell_segmentation.label.json",
-    "path": "2026.09.28/recvohj3Ocx2qO/segpath.patch.myeloid_cell_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000113_SegPath/labels/segpath.patch.myeloid_cell_segmentation.label.json",
     "size": 6672558,
     "sha256": "8359df806ee983c36f5489852ad92bb6be1eebee13240966f4cd056f0bc55189"
    },
    {
     "record_id": "recvohj3Ocx2qO",
+    "ptd_id": "PTD-000113",
     "dataset_name": "SegPath",
     "name": "segpath.patch.plasma_cell_segmentation.label.json",
-    "path": "2026.09.28/recvohj3Ocx2qO/segpath.patch.plasma_cell_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000113_SegPath/labels/segpath.patch.plasma_cell_segmentation.label.json",
     "size": 6219265,
     "sha256": "6dd8a264ff06c79edf01ca3be4257973e0bf4d23493e8ac713897569b76c5a89"
    },
    {
     "record_id": "recvohj3Ocx2qO",
+    "ptd_id": "PTD-000113",
     "dataset_name": "SegPath",
     "name": "segpath.patch.red_blood_cell_segmentation.label.json",
-    "path": "2026.09.28/recvohj3Ocx2qO/segpath.patch.red_blood_cell_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000113_SegPath/labels/segpath.patch.red_blood_cell_segmentation.label.json",
     "size": 11552452,
     "sha256": "c090503ec4810515be070c03330f861992aa10ef89c4f673c58515cb83067363"
    },
    {
     "record_id": "recvohj3Ocx2qO",
+    "ptd_id": "PTD-000113",
     "dataset_name": "SegPath",
     "name": "segpath.patch.smooth_muscle_myofibroblast_segmentation.label.json",
-    "path": "2026.09.28/recvohj3Ocx2qO/segpath.patch.smooth_muscle_myofibroblast_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000113_SegPath/labels/segpath.patch.smooth_muscle_myofibroblast_segmentation.label.json",
     "size": 15802956,
     "sha256": "0eb58763a49bcc30de448c1add8a15e2cf804d746a48689ed2113993ee558ec2"
    },
    {
     "record_id": "recvohj4lI4WFo",
+    "ptd_id": "PTD-000114",
     "dataset_name": "TNBC_NucleiSegmentation",
     "name": "tnbc.patch.nuclei_segmentation.label.json",
-    "path": "2026.09.28/recvohj4lI4WFo/tnbc.patch.nuclei_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000114_TNBC_NucleiSegmentation/labels/tnbc.patch.nuclei_segmentation.label.json",
     "size": 24158,
     "sha256": "27b61dcb2490da68f1d41b3a3b07a531983bbc554b90d10e829116a109986be9"
    },
    {
     "record_id": "recvohj4UoQ5If",
+    "ptd_id": "PTD-000115",
     "dataset_name": "SlideChat",
     "name": "slidechat.slide.caption.label.json",
-    "path": "2026.09.28/recvohj4UoQ5If/slidechat.slide.caption.label.json",
+    "path": "2026.09.28/datasets/PTD-000115_SlideChat/labels/slidechat.slide.caption.label.json",
     "size": 4906438,
     "sha256": "74c8c99293f28630ca6b1ec58cd196e93c91c43a9ba3f531c9bc1b2db5f4696d"
    },
    {
     "record_id": "recvohj4UoQ5If",
+    "ptd_id": "PTD-000115",
     "dataset_name": "SlideChat",
     "name": "slidechat.slide.closed_set_vqa.label.json",
-    "path": "2026.09.28/recvohj4UoQ5If/slidechat.slide.closed_set_vqa.label.json",
+    "path": "2026.09.28/datasets/PTD-000115_SlideChat/labels/slidechat.slide.closed_set_vqa.label.json",
     "size": 7326948,
     "sha256": "527432feaf1842f126fb23e30dbd6174bdff7f37e448ba9cc76ecd1ce83a8d3b"
    },
    {
     "record_id": "recvohj5qQvoq6",
+    "ptd_id": "PTD-000116",
     "dataset_name": "SurGen",
     "name": "surgen.sr1482_braf.label.json",
-    "path": "2026.09.28/recvohj5qQvoq6/surgen.sr1482_braf.label.json",
+    "path": "2026.09.28/datasets/PTD-000116_SurGen/labels/surgen.sr1482_braf.label.json",
     "size": 106845,
     "sha256": "a687d87abd18351e3b0788d055092aff4eb01708f46726e351aa266448f603d8"
    },
    {
     "record_id": "recvohj5qQvoq6",
+    "ptd_id": "PTD-000116",
     "dataset_name": "SurGen",
     "name": "surgen.sr1482_kras.label.json",
-    "path": "2026.09.28/recvohj5qQvoq6/surgen.sr1482_kras.label.json",
+    "path": "2026.09.28/datasets/PTD-000116_SurGen/labels/surgen.sr1482_kras.label.json",
     "size": 126496,
     "sha256": "a9b139f40c49b5d61314a26ca64193c2758a3bccc5ed294dcd882b065784fd4a"
    },
    {
     "record_id": "recvohj5qQvoq6",
+    "ptd_id": "PTD-000116",
     "dataset_name": "SurGen",
     "name": "surgen.sr1482_msi.label.json",
-    "path": "2026.09.28/recvohj5qQvoq6/surgen.sr1482_msi.label.json",
+    "path": "2026.09.28/datasets/PTD-000116_SurGen/labels/surgen.sr1482_msi.label.json",
     "size": 126840,
     "sha256": "5e3fde71ad5977e7683ec9e6163b03e474ccccd82da65d59482bac00b8d07491"
    },
    {
     "record_id": "recvohj5qQvoq6",
+    "ptd_id": "PTD-000116",
     "dataset_name": "SurGen",
     "name": "surgen.sr1482_nras.label.json",
-    "path": "2026.09.28/recvohj5qQvoq6/surgen.sr1482_nras.label.json",
+    "path": "2026.09.28/datasets/PTD-000116_SurGen/labels/surgen.sr1482_nras.label.json",
     "size": 108419,
     "sha256": "9461ae7ae2f2b67ddfd030ab79554819f1b799ec29654dd798423fba23ebc669"
    },
    {
     "record_id": "recvohj5qQvoq6",
+    "ptd_id": "PTD-000116",
     "dataset_name": "SurGen",
     "name": "surgen.sr386_5y_sur.label.json",
-    "path": "2026.09.28/recvohj5qQvoq6/surgen.sr386_5y_sur.label.json",
+    "path": "2026.09.28/datasets/PTD-000116_SurGen/labels/surgen.sr386_5y_sur.label.json",
     "size": 135695,
     "sha256": "029aefa542841fe5a36155542931e32f3d21c885b1e65d4dd333b5867a08563e"
    },
    {
     "record_id": "recvohj5qQvoq6",
+    "ptd_id": "PTD-000116",
     "dataset_name": "SurGen",
     "name": "surgen.sr386_braf.label.json",
-    "path": "2026.09.28/recvohj5qQvoq6/surgen.sr386_braf.label.json",
+    "path": "2026.09.28/datasets/PTD-000116_SurGen/labels/surgen.sr386_braf.label.json",
     "size": 131377,
     "sha256": "4b2150fd7f705f173e3eeafccaf12859f4d63f80c7b4a5e77f53835783e80b63"
    },
    {
     "record_id": "recvohj5qQvoq6",
+    "ptd_id": "PTD-000116",
     "dataset_name": "SurGen",
     "name": "surgen.sr386_kras.label.json",
-    "path": "2026.09.28/recvohj5qQvoq6/surgen.sr386_kras.label.json",
+    "path": "2026.09.28/datasets/PTD-000116_SurGen/labels/surgen.sr386_kras.label.json",
     "size": 129236,
     "sha256": "f3040e08cddf9f92c581309daa93395a145cf2a771cda8b6254b02e26038d9c9"
    },
    {
     "record_id": "recvohj5qQvoq6",
+    "ptd_id": "PTD-000116",
     "dataset_name": "SurGen",
     "name": "surgen.sr386_msi.label.json",
-    "path": "2026.09.28/recvohj5qQvoq6/surgen.sr386_msi.label.json",
+    "path": "2026.09.28/datasets/PTD-000116_SurGen/labels/surgen.sr386_msi.label.json",
     "size": 134287,
     "sha256": "8f03a11b091235e5af15b57e60db5966cd49295ebc1f43482f6ceb8d8e284140"
    },
    {
     "record_id": "recvohj5qQvoq6",
+    "ptd_id": "PTD-000116",
     "dataset_name": "SurGen",
     "name": "surgen.sr386_nras.label.json",
-    "path": "2026.09.28/recvohj5qQvoq6/surgen.sr386_nras.label.json",
+    "path": "2026.09.28/datasets/PTD-000116_SurGen/labels/surgen.sr386_nras.label.json",
     "size": 129991,
     "sha256": "abd6ed471ad2b1190e2e1d2d4c628f79bd1880bf2f15cb44d0f43d1b5f9f4b30"
    },
    {
     "record_id": "recvohj5qQvoq6",
+    "ptd_id": "PTD-000116",
     "dataset_name": "SurGen",
     "name": "surgen.sr386_ras.label.json",
-    "path": "2026.09.28/recvohj5qQvoq6/surgen.sr386_ras.label.json",
+    "path": "2026.09.28/datasets/PTD-000116_SurGen/labels/surgen.sr386_ras.label.json",
     "size": 133056,
     "sha256": "af613cb19569739e0eba0652fe7f0e35eeb3718661d02f1d296f86ee76aab14a"
    },
    {
     "record_id": "recvohj5qQvoq6",
+    "ptd_id": "PTD-000116",
     "dataset_name": "SurGen",
     "name": "surgen.surgen_msi.label.json",
-    "path": "2026.09.28/recvohj5qQvoq6/surgen.surgen_msi.label.json",
+    "path": "2026.09.28/datasets/PTD-000116_SurGen/labels/surgen.surgen_msi.label.json",
     "size": 255643,
     "sha256": "dd7e3c3d4698e3af1b92747fda4ebffac9575ab200e37395a04dad6a5d9dac4f"
    },
    {
     "record_id": "recvohj8aPRN5H",
+    "ptd_id": "PTD-000119",
     "dataset_name": "TIGER",
     "name": "tiger.region.lymphocyte_and_plasma_cell_detection.label.json",
-    "path": "2026.09.28/recvohj8aPRN5H/tiger.region.lymphocyte_and_plasma_cell_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000119_TIGER/labels/tiger.region.lymphocyte_and_plasma_cell_detection.label.json",
     "size": 8094942,
     "sha256": "51f46875c168b963fbb739b37d441c586ce81513af2e473eaae1f1ff16ccc034"
    },
    {
     "record_id": "recvohj8aPRN5H",
+    "ptd_id": "PTD-000119",
     "dataset_name": "TIGER",
     "name": "tiger.region.tissue_compartment_segmentation.label.json",
-    "path": "2026.09.28/recvohj8aPRN5H/tiger.region.tissue_compartment_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000119_TIGER/labels/tiger.region.tissue_compartment_segmentation.label.json",
     "size": 2488127,
     "sha256": "6199fc378b290b53f7a71ea1c12a2fe1553ae4771c8547bccf5ac7ae95f2104b"
    },
    {
     "record_id": "recvohj8aPRN5H",
+    "ptd_id": "PTD-000119",
     "dataset_name": "TIGER",
     "name": "tiger.wsi.slide_level_til_score_estimation.label.json",
-    "path": "2026.09.28/recvohj8aPRN5H/tiger.wsi.slide_level_til_score_estimation.label.json",
+    "path": "2026.09.28/datasets/PTD-000119_TIGER/labels/tiger.wsi.slide_level_til_score_estimation.label.json",
     "size": 34347,
     "sha256": "d259fdc93dd92b47d8da7e369e9f7e3c88940926fddebb058de7590a1b863b6a"
    },
    {
     "record_id": "recvohjgATYVc5",
+    "ptd_id": "PTD-000124",
     "dataset_name": "UPENN-GBM",
     "name": "upenn_gbm.patient.idh1_status_prediction.label.json",
-    "path": "2026.09.28/recvohjgATYVc5/upenn_gbm.patient.idh1_status_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000124_UPENN-GBM/labels/upenn_gbm.patient.idh1_status_prediction.label.json",
     "size": 159905,
     "sha256": "ab6b95bd6706c3f81a897ed2b1b819f0f23bd333fa67330f12325c3f9e267c3e"
    },
    {
     "record_id": "recvohjgATYVc5",
+    "ptd_id": "PTD-000124",
     "dataset_name": "UPENN-GBM",
     "name": "upenn_gbm.patient.mgmt_methylation_status_prediction.label.json",
-    "path": "2026.09.28/recvohjgATYVc5/upenn_gbm.patient.mgmt_methylation_status_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000124_UPENN-GBM/labels/upenn_gbm.patient.mgmt_methylation_status_prediction.label.json",
     "size": 83270,
     "sha256": "8558075d7bd6c69ff32e12358f91c815ca7423e5bc8de17a199f31ff0121de22"
    },
    {
     "record_id": "recvohjgATYVc5",
+    "ptd_id": "PTD-000124",
     "dataset_name": "UPENN-GBM",
     "name": "upenn_gbm.patient.overall_survival_prediction.label.json",
-    "path": "2026.09.28/recvohjgATYVc5/upenn_gbm.patient.overall_survival_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000124_UPENN-GBM/labels/upenn_gbm.patient.overall_survival_prediction.label.json",
     "size": 199310,
     "sha256": "4493cd68c05ec5ba8f954266e1b73b8defae9c4bc24f83acd57796d452d41c07"
    },
    {
     "record_id": "recvohjhMrBHAA",
+    "ptd_id": "PTD-000126",
     "dataset_name": "VisioMel",
     "name": "visiomel.wsi.five_year_melanoma_relapse_prediction.label.json",
-    "path": "2026.09.28/recvohjhMrBHAA/visiomel.wsi.five_year_melanoma_relapse_prediction.label.json",
+    "path": "2026.09.28/datasets/PTD-000126_VisioMel/labels/visiomel.wsi.five_year_melanoma_relapse_prediction.label.json",
     "size": 479057,
     "sha256": "83b9817c90b70f1e957f92ce80ae17ffccff46f58bea4bb85563ea434873ec9a"
    },
    {
     "record_id": "recvohjmruttZ4",
+    "ptd_id": "PTD-000204",
     "dataset_name": "Fluorescent Neuronal Cells v2",
     "name": "fluorescent_neuronal_cells_v2.roi.cell_counting.label.json",
-    "path": "2026.09.28/recvohjmruttZ4/fluorescent_neuronal_cells_v2.roi.cell_counting.label.json",
+    "path": "2026.09.28/datasets/PTD-000204_Fluorescent-Neuronal-Cells-v2/labels/fluorescent_neuronal_cells_v2.roi.cell_counting.label.json",
     "size": 167641,
     "sha256": "301bfeb42700b186907cc7418e3b79ca1b055ff9619719ad0606895213e38a9b"
    },
    {
     "record_id": "recvohjmruttZ4",
+    "ptd_id": "PTD-000204",
     "dataset_name": "Fluorescent Neuronal Cells v2",
     "name": "fluorescent_neuronal_cells_v2.roi.object_detection.label.json",
-    "path": "2026.09.28/recvohjmruttZ4/fluorescent_neuronal_cells_v2.roi.object_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000204_Fluorescent-Neuronal-Cells-v2/labels/fluorescent_neuronal_cells_v2.roi.object_detection.label.json",
     "size": 2999208,
     "sha256": "35adce427a092851084ed96bf7308064586e4fe383ea7689704c12af89c5d6ed"
    },
    {
     "record_id": "recvohjmruttZ4",
+    "ptd_id": "PTD-000204",
     "dataset_name": "Fluorescent Neuronal Cells v2",
     "name": "fluorescent_neuronal_cells_v2.roi.semantic_segmentation.label.json",
-    "path": "2026.09.28/recvohjmruttZ4/fluorescent_neuronal_cells_v2.roi.semantic_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000204_Fluorescent-Neuronal-Cells-v2/labels/fluorescent_neuronal_cells_v2.roi.semantic_segmentation.label.json",
     "size": 399212,
     "sha256": "a411b79cf56deb2ca492bd0988d428431ec1701238e8bf340e80af937b614fac"
    },
    {
     "record_id": "recvohjo7JwagK",
+    "ptd_id": "PTD-000207",
     "dataset_name": "PLISM",
     "name": "plism.sm.registration.label.json",
-    "path": "2026.09.28/recvohjo7JwagK/plism.sm.registration.label.json",
+    "path": "2026.09.28/datasets/PTD-000207_PLISM/labels/plism.sm.registration.label.json",
     "size": 5343735,
     "sha256": "af6e84e448f6d1d7cefcfe3d5eea9dbb3481bced7b46a874eb998923c69b15e0"
    },
    {
     "record_id": "recvohjo7JwagK",
+    "ptd_id": "PTD-000207",
     "dataset_name": "PLISM",
     "name": "plism.wsi.registration.label.json",
-    "path": "2026.09.28/recvohjo7JwagK/plism.wsi.registration.label.json",
+    "path": "2026.09.28/datasets/PTD-000207_PLISM/labels/plism.wsi.registration.label.json",
     "size": 16389233,
     "sha256": "a319ebbe5b27df87bd751b2bfd9982f7661b00380063be0348e1f902dc86f439"
    },
    {
     "record_id": "recvohjpftoTe3",
+    "ptd_id": "PTD-000209",
     "dataset_name": "A large and diverse brain organoid dataset of 1,400 cross-laboratory images of 64 trackable brain organoids from four different clones",
     "name": "brain_organoid.roi.organoid_segmentation.label.json",
-    "path": "2026.09.28/recvohjpftoTe3/brain_organoid.roi.organoid_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000209_A-large-and-diverse-brain-organoid-dataset-of-1-400-cross-la/labels/brain_organoid.roi.organoid_segmentation.label.json",
     "size": 687261,
     "sha256": "2ee1003d7a60365468640105228e181613f08495c6a30d5602a467975749fee1"
    },
    {
     "record_id": "recvohjpOvx9Vf",
+    "ptd_id": "PTD-000210",
     "dataset_name": "Pulmonary Circulation Vessels Dataset",
     "name": "pulmonary_circulation_vessels_dataset.roi.vessel_semantic_segmentation.label.json",
-    "path": "2026.09.28/recvohjpOvx9Vf/pulmonary_circulation_vessels_dataset.roi.vessel_semantic_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000210_Pulmonary-Circulation-Vessels-Dataset/labels/pulmonary_circulation_vessels_dataset.roi.vessel_semantic_segmentation.label.json",
     "size": 234863,
     "sha256": "4d81a0e620aaec410a7ca47549bc3fd1272b82564b16f5834b467576ac2fcb7d"
    },
    {
     "record_id": "recvohjGsC1F75",
+    "ptd_id": "PTD-000223",
     "dataset_name": "Brown Multicellular ThinPrep (BMT)",
     "name": "bmt.fov.cytology_classification.label.json",
-    "path": "2026.09.28/recvohjGsC1F75/bmt.fov.cytology_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000223_Brown-Multicellular-ThinPrep-BMT/labels/bmt.fov.cytology_classification.label.json",
     "size": 142102,
     "sha256": "0d29649a1d2bb9ca9cea34a0854f02c2d77d673867765f3d7ce1fb399afc1c94"
    },
    {
     "record_id": "recvohjJKiGCIx",
+    "ptd_id": "PTD-000227",
     "dataset_name": "2024_Diosdi_ tumour-stroma_spheroid_multicultures_dataset",
     "name": "spheroid.volumes_3d.whole_spheroid_segmentation.label.json",
-    "path": "2026.09.28/recvohjJKiGCIx/spheroid.volumes_3d.whole_spheroid_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000227_2024_Diosdi_-tumour-stroma_spheroid_multicultures_dataset/labels/spheroid.volumes_3d.whole_spheroid_segmentation.label.json",
     "size": 48760,
     "sha256": "b069fb78537a87c5f2cd2a1d4beb1200fc296918f982d7c5fc043e21ba5e096b"
    },
    {
     "record_id": "recvohjZPFClro",
+    "ptd_id": "PTD-000244",
     "dataset_name": "An annotated dataset of Gram stains from positive blood cultures",
     "name": "pbc.roi.microorganism_detection.label.json",
-    "path": "2026.09.28/recvohjZPFClro/pbc.roi.microorganism_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000244_An-annotated-dataset-of-Gram-stains-from-positive-blood-cult/labels/pbc.roi.microorganism_detection.label.json",
     "size": 1888187,
     "sha256": "3d4a3935b65cd4d6dfee05cef4aaaa2c8648fe8313fd896865e26a9cf4440bc6"
    },
    {
     "record_id": "recvohjZPFClro",
+    "ptd_id": "PTD-000244",
     "dataset_name": "An annotated dataset of Gram stains from positive blood cultures",
     "name": "pbc.roi.morphology_classification.label.json",
-    "path": "2026.09.28/recvohjZPFClro/pbc.roi.morphology_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000244_An-annotated-dataset-of-Gram-stains-from-positive-blood-cult/labels/pbc.roi.morphology_classification.label.json",
     "size": 118161,
     "sha256": "936cc5bb764458159fa161db7d9826b3727e9a48091158ebd148ea2df65d2973"
    },
    {
     "record_id": "recvohjZPFClro",
+    "ptd_id": "PTD-000244",
     "dataset_name": "An annotated dataset of Gram stains from positive blood cultures",
     "name": "pbc.roi.species_classification.label.json",
-    "path": "2026.09.28/recvohjZPFClro/pbc.roi.species_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000244_An-annotated-dataset-of-Gram-stains-from-positive-blood-cult/labels/pbc.roi.species_classification.label.json",
     "size": 128736,
     "sha256": "b1b6511336c53b2d8d0b16a84563bf3a49fbea5a611935a26a8e5856fde10ec8"
    },
    {
     "record_id": "recvohk4Jp2Ket",
+    "ptd_id": "PTD-000252",
     "dataset_name": "CLWD",
     "name": "clwd.wsi.lung_adenocarcinoma_subtype_classification.label.json",
-    "path": "2026.09.28/recvohk4Jp2Ket/clwd.wsi.lung_adenocarcinoma_subtype_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000252_CLWD/labels/clwd.wsi.lung_adenocarcinoma_subtype_classification.label.json",
     "size": 102202,
     "sha256": "bee16c85a52b8611565731eb9d4dc08871f8a547374be4e6c7310cdb618c8975"
    },
    {
     "record_id": "recvohkaZ5pzSv",
+    "ptd_id": "PTD-000261",
     "dataset_name": "Blood Cell Detection Dataset",
     "name": "bcdd.fov.cell_detection.label.json",
-    "path": "2026.09.28/recvohkaZ5pzSv/bcdd.fov.cell_detection.label.json",
+    "path": "2026.09.28/datasets/PTD-000261_Blood-Cell-Detection-Dataset/labels/bcdd.fov.cell_detection.label.json",
     "size": 656321,
     "sha256": "8cacbecd3c3dc9ec228e7fc0c2ae9256afbc7c72436a99c4ef7ea94853c542b3"
    },
    {
     "record_id": "recvohkxFseaO8",
+    "ptd_id": "PTD-000289",
     "dataset_name": "PTCGA200",
     "name": "ptcga200.patch.organ_classification.label.json",
-    "path": "2026.09.28/recvohkxFseaO8/ptcga200.patch.organ_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000289_PTCGA200/labels/ptcga200.patch.organ_classification.label.json",
     "size": 805131269,
     "sha256": "327c201543235450df4922a88c07fb653f4b26f253f2a18692f4f727a995d62c"
    },
    {
     "record_id": "recvohkycTlwmA",
+    "ptd_id": "PTD-000290",
     "dataset_name": "RCCNucSeg",
     "name": "RCCNucSeg.nuclei_grading.label.json",
-    "path": "2026.09.28/recvohkycTlwmA/RCCNucSeg.nuclei_grading.label.json",
+    "path": "2026.09.28/datasets/PTD-000290_RCCNucSeg/labels/RCCNucSeg.nuclei_grading.label.json",
     "size": 297311,
     "sha256": "d02f2e230e3eebff7917ea2cb6cbc0e7910076ab8db6c81d8d94d89bb00ff1b5"
    },
    {
     "record_id": "recvohkycTlwmA",
+    "ptd_id": "PTD-000290",
     "dataset_name": "RCCNucSeg",
     "name": "rccnucseg.patch.fine_grained_nuclei_grading.label.json",
-    "path": "2026.09.28/recvohkycTlwmA/rccnucseg.patch.fine_grained_nuclei_grading.label.json",
+    "path": "2026.09.28/datasets/PTD-000290_RCCNucSeg/labels/rccnucseg.patch.fine_grained_nuclei_grading.label.json",
     "size": 788030,
     "sha256": "29bee38b94321fbcb001787734862688af1a7eef977a2f0b00ccba25ca39f7df"
    },
    {
     "record_id": "recvohkycTlwmA",
+    "ptd_id": "PTD-000290",
     "dataset_name": "RCCNucSeg",
     "name": "rccnucseg.patch.nuclei_instance_segmentation.label.json",
-    "path": "2026.09.28/recvohkycTlwmA/rccnucseg.patch.nuclei_instance_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000290_RCCNucSeg/labels/rccnucseg.patch.nuclei_instance_segmentation.label.json",
     "size": 453230,
     "sha256": "17882b93d14dae94ee7191805c0e72f1d66791832e7ec3af61e807e1001514a9"
    },
    {
     "record_id": "recvohkz1TlOay",
+    "ptd_id": "PTD-000292",
     "dataset_name": "SMMILe_SpatialAnnotation",
     "name": "smmile_tcga_lu.wsi.tumor_region_segmentation.label.json",
-    "path": "2026.09.28/recvohkz1TlOay/smmile_tcga_lu.wsi.tumor_region_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000292_SMMILe_SpatialAnnotation/labels/smmile_tcga_lu.wsi.tumor_region_segmentation.label.json",
     "size": 283795,
     "sha256": "26f6a4ac99207de9ac9d2372bf06fa78abca1cde225f4eac430358d41d988be5"
    },
    {
     "record_id": "recvohkz1TlOay",
+    "ptd_id": "PTD-000292",
     "dataset_name": "SMMILe_SpatialAnnotation",
     "name": "smmile_tcga_rcc.wsi.tumor_region_segmentation.label.json",
-    "path": "2026.09.28/recvohkz1TlOay/smmile_tcga_rcc.wsi.tumor_region_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000292_SMMILe_SpatialAnnotation/labels/smmile_tcga_rcc.wsi.tumor_region_segmentation.label.json",
     "size": 185890,
     "sha256": "75b68fd2d744c5918809401610d08c46e6f5b4836406e3d5675cdfece36d1762"
    },
    {
     "record_id": "recvohkz1TlOay",
+    "ptd_id": "PTD-000292",
     "dataset_name": "SMMILe_SpatialAnnotation",
     "name": "smmile_tcga_stad.patch.histotype_annotation.label.json",
-    "path": "2026.09.28/recvohkz1TlOay/smmile_tcga_stad.patch.histotype_annotation.label.json",
+    "path": "2026.09.28/datasets/PTD-000292_SMMILe_SpatialAnnotation/labels/smmile_tcga_stad.patch.histotype_annotation.label.json",
     "size": 34227074,
     "sha256": "bf569c014ec35dac73cc89e765d0dbd13f94f79456b1615ff04314dccea9f7ed"
    },
    {
     "record_id": "recvohkzEj6Liq",
+    "ptd_id": "PTD-000293",
     "dataset_name": "Singpath-CytoText",
     "name": "Singpath_CytoText.cross_modal_retrieval.label.json",
-    "path": "2026.09.28/recvohkzEj6Liq/Singpath_CytoText.cross_modal_retrieval.label.json",
+    "path": "2026.09.28/datasets/PTD-000293_Singpath-CytoText/labels/Singpath_CytoText.cross_modal_retrieval.label.json",
     "size": 14044047,
     "sha256": "7d74004e109ff83c356eb08ce935785180117b3579bbf1308ec1eb1b8d423649"
    },
    {
     "record_id": "recvohkzEj6Liq",
+    "ptd_id": "PTD-000293",
     "dataset_name": "Singpath-CytoText",
     "name": "Singpath_CytoText.image_classification.label.json",
-    "path": "2026.09.28/recvohkzEj6Liq/Singpath_CytoText.image_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000293_Singpath-CytoText/labels/Singpath_CytoText.image_classification.label.json",
     "size": 5487769,
     "sha256": "b7ef6c5f45f2b77fb3120006c40fc1daeb84173d32fc4bcc4a547da6f7897082"
    },
    {
     "record_id": "recvohkzEj6Liq",
+    "ptd_id": "PTD-000293",
     "dataset_name": "Singpath-CytoText",
     "name": "Singpath_CytoText.vision_language_modeling.label.json",
-    "path": "2026.09.28/recvohkzEj6Liq/Singpath_CytoText.vision_language_modeling.label.json",
+    "path": "2026.09.28/datasets/PTD-000293_Singpath-CytoText/labels/Singpath_CytoText.vision_language_modeling.label.json",
     "size": 23825010,
     "sha256": "09e3eaabfc1562e75fe840d1e821c6c90be4eaa6a972fe7dd33edf89c467b1ae"
    },
    {
     "record_id": "recvohkzEj6Liq",
+    "ptd_id": "PTD-000293",
     "dataset_name": "Singpath-CytoText",
     "name": "singpath_cytotext.cell.bethesda_category_classification.label.json",
-    "path": "2026.09.28/recvohkzEj6Liq/singpath_cytotext.cell.bethesda_category_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000293_Singpath-CytoText/labels/singpath_cytotext.cell.bethesda_category_classification.label.json",
     "size": 5668186,
     "sha256": "8fa5eed8305cb8d05b9862751384e9c4009ee576c13e2591200a07c7471e0660"
    },
    {
     "record_id": "recvohkzEj6Liq",
+    "ptd_id": "PTD-000293",
     "dataset_name": "Singpath-CytoText",
     "name": "singpath_cytotext.cell.natural_language_caption_generation.label.json",
-    "path": "2026.09.28/recvohkzEj6Liq/singpath_cytotext.cell.natural_language_caption_generation.label.json",
+    "path": "2026.09.28/datasets/PTD-000293_Singpath-CytoText/labels/singpath_cytotext.cell.natural_language_caption_generation.label.json",
     "size": 12775366,
     "sha256": "ab9ba991fd2735bbeb94a944ee90c2eacbd8aa4100c6a86e2ed3473cec9560de"
    },
    {
     "record_id": "recvohkzEj6Liq",
+    "ptd_id": "PTD-000293",
     "dataset_name": "Singpath-CytoText",
     "name": "singpath_cytotext.cell.structured_pathological_description_generation.label.json",
-    "path": "2026.09.28/recvohkzEj6Liq/singpath_cytotext.cell.structured_pathological_description_generation.label.json",
+    "path": "2026.09.28/datasets/PTD-000293_Singpath-CytoText/labels/singpath_cytotext.cell.structured_pathological_description_generation.label.json",
     "size": 16017581,
     "sha256": "8062dd33627bee1a10f2ff7395279a74d87b0863b8a71919fd40c8746e1dbb9f"
    },
    {
     "record_id": "recvohkzEj6Liq",
+    "ptd_id": "PTD-000293",
     "dataset_name": "Singpath-CytoText",
     "name": "singpath_cytotext.cell.text_to_image_retrieval.label.json",
-    "path": "2026.09.28/recvohkzEj6Liq/singpath_cytotext.cell.text_to_image_retrieval.label.json",
+    "path": "2026.09.28/datasets/PTD-000293_Singpath-CytoText/labels/singpath_cytotext.cell.text_to_image_retrieval.label.json",
     "size": 26851566,
     "sha256": "f418a6886d867274a0ab0bde4e95aa2618aeb45bd0a8a3b7febc4df471eb553e"
    },
    {
     "record_id": "recvohkBiLVFtT",
+    "ptd_id": "PTD-000296",
     "dataset_name": "IBDColEpi",
     "name": "ibdcolepi.wsi.epithelium_segmentation.label.json",
-    "path": "2026.09.28/recvohkBiLVFtT/ibdcolepi.wsi.epithelium_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000296_IBDColEpi/labels/ibdcolepi.wsi.epithelium_segmentation.label.json",
     "size": 145789,
     "sha256": "852aeae7b36602544aa46ea3efa6289e887e57f42b25c0aa35a6eae51c3eb52e"
    },
    {
     "record_id": "recvohkDwU1odg",
+    "ptd_id": "PTD-000300",
     "dataset_name": "cd45rb",
     "name": "cd45rb.patch.leukocyte_segmentation.label.json",
-    "path": "2026.09.28/recvohkDwU1odg/cd45rb.patch.leukocyte_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000300_cd45rb/labels/cd45rb.patch.leukocyte_segmentation.label.json",
     "size": 14433203,
     "sha256": "e623d87cceeb56823ae15f8aaaaa8f1fe179b186f2ffc74e6e20fff104d74197"
    },
    {
     "record_id": "recvohkGZ2GdIf",
+    "ptd_id": "PTD-000307",
     "dataset_name": "TCGA Tissue Segmentation",
     "name": "tcga_tissue_segmentation.wsi.tissue_segmentation.label.json",
-    "path": "2026.09.28/recvohkGZ2GdIf/tcga_tissue_segmentation.wsi.tissue_segmentation.label.json",
+    "path": "2026.09.28/datasets/PTD-000307_TCGA-Tissue-Segmentation/labels/tcga_tissue_segmentation.wsi.tissue_segmentation.label.json",
     "size": 124717,
     "sha256": "980b71df487ded79a7855ed7c8876dd1691bd410a1366119402afacbf8c421f6"
    },
    {
     "record_id": "recvohkRnqMTx9",
+    "ptd_id": "PTD-000318",
     "dataset_name": "her2st",
     "name": "HER2ST.pathologist_region_classification.label.json",
-    "path": "2026.09.28/recvohkRnqMTx9/HER2ST.pathologist_region_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000318_her2st/labels/HER2ST.pathologist_region_classification.label.json",
     "size": 1543018,
     "sha256": "5cc32b20e3420fb41a523e545405c56fd96bb03c31067fc189b59ee5d4c4049f"
    },
    {
     "record_id": "recvohkRnqMTx9",
+    "ptd_id": "PTD-000318",
     "dataset_name": "her2st",
     "name": "her2st.pathologist_region_annotation.label.json",
-    "path": "2026.09.28/recvohkRnqMTx9/her2st.pathologist_region_annotation.label.json",
+    "path": "2026.09.28/datasets/PTD-000318_her2st/labels/her2st.pathologist_region_annotation.label.json",
     "size": 1785872,
     "sha256": "e19988644497336e6f7966bcb789654d8a8887ac07eca4e2dc3db0755abd742e"
    },
    {
     "record_id": "recvohkRWmsz0J",
+    "ptd_id": "PTD-000319",
     "dataset_name": "Replication Data for: Automated Gleason grading of prostate cancer tissue microarrays via deep learning.",
     "name": "replication_data_for_automated_gleason_grading_of_prostate_tma.pixel.pixel_level_gleason_region_annotation.label.json",
-    "path": "2026.09.28/recvohkRWmsz0J/replication_data_for_automated_gleason_grading_of_prostate_tma.pixel.pixel_level_gleason_region_annotation.label.json",
+    "path": "2026.09.28/datasets/PTD-000319_Replication-Data-for-Automated-Gleason-grading-of-prostate-c/labels/replication_data_for_automated_gleason_grading_of_prostate_tma.pixel.pixel_level_gleason_region_annotation.label.json",
     "size": 717444,
     "sha256": "f46cf0f598a0f60e3acc7855713948f2d99937c7e2d048e8c42dcfac32544d35"
    },
    {
     "record_id": "recvohkW7Gspyr",
+    "ptd_id": "PTD-000329",
     "dataset_name": "CLOVER Instructions",
     "name": "clover_instructions.record.pathology_vqa.label.json",
-    "path": "2026.09.28/recvohkW7Gspyr/clover_instructions.record.pathology_vqa.label.json",
+    "path": "2026.09.28/datasets/PTD-000329_CLOVER-Instructions/labels/clover_instructions.record.pathology_vqa.label.json",
     "size": 89824575,
     "sha256": "feaf67715db1f2b1468302156826cb8f53ec7c6b121c554f6f632fdefc433ee9"
    },
    {
     "record_id": "recvohkZdWiP0W",
+    "ptd_id": "PTD-000334",
     "dataset_name": "Human DLPFC Visium dataset",
     "name": "spatiallibd_dlpfc.spot.cortical_layer_classification.label.json",
-    "path": "2026.09.28/recvohkZdWiP0W/spatiallibd_dlpfc.spot.cortical_layer_classification.label.json",
+    "path": "2026.09.28/datasets/PTD-000334_Human-DLPFC-Visium-dataset/labels/spatiallibd_dlpfc.spot.cortical_layer_classification.label.json",
     "size": 16521670,
     "sha256": "5253956f2b3baf31fae801c772d282f9d3188480e48283ad5058dbc4ba20b3bf"
    },
    {
     "record_id": "recvohlog8J0tq",
+    "ptd_id": "PTD-000373",
     "dataset_name": "PathText",
     "name": "pathtext.wsi.pathology_report_generation.label.json",
-    "path": "2026.09.28/recvohlog8J0tq/pathtext.wsi.pathology_report_generation.label.json",
+    "path": "2026.09.28/datasets/PTD-000373_PathText/labels/pathtext.wsi.pathology_report_generation.label.json",
     "size": 8810553,
     "sha256": "5da78b26f12a05aa475db46a7a9d209ed8b296c9c382e257990832b7ee1fadb1"
    }

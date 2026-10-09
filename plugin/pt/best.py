@@ -10,7 +10,7 @@ from __future__ import annotations
 import os
 from typing import Any
 
-from .data import Data
+from .data import PTD_FIELD_ID, Data
 from .i18n import L
 from .render import emit
 from .table import derived_columns, kind_name, observed_values
@@ -103,7 +103,7 @@ def schema_map(data: Data) -> dict[str, Any]:
     for c in data.columns:
         by_field.setdefault(c.field_id, []).append(c)
     filters, prose, report_only = [], [], []
-    for fid in data.field_ids:
+    for fid in [PTD_FIELD_ID, *data.field_ids]:
         cols = by_field.get(fid, [])
         if not cols:
             report_only.append({"field_id": fid, "name": data.field_name(fid, lang)})

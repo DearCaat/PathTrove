@@ -9,6 +9,7 @@ from .errors import PtError
 from .i18n import L
 from .parse import parse_report
 from .render import emit, md_table, parse_layers
+from .zhvalues import translate_report_value
 
 ALWAYS_RETURNED = ("id", "name")
 
@@ -29,12 +30,14 @@ def load(data: Data, row: dict[str, Any], lang: str | None = None) -> tuple[dict
     return (parse_report(str(path)) if path else {}), "zh", note
 
 
-def field_entry(parsed: dict[str, Any] | None, layers: tuple[str, ...], lang: str) -> dict[str, Any]:
+def field_entry(parsed: dict[str, Any] | None, layers: tuple[str, ...], lang: str, fid: int | None = None) -> dict[str, Any]:
     if parsed is None:
         return {"missing": L(lang, "this report has no such field", "这份报告没有该字段")}
     e: dict[str, Any] = {}
     if "value" in layers:
         e["value"] = parsed["value"]
+        if lang == "zh" and fid is not None and parsed["value"] is not None:      # categorical values shown in Chinese, as in the table
+            e["value"] = translate_report_value(fid, parsed["value"])
         if parsed.get("value_note"):
             e["value_note"] = parsed["value_note"]
         if parsed.get("value_raw"):
@@ -83,7 +86,7 @@ def get(data: Data, resource: Any, fields_spec: Any, layer: Any = None, fmt: str
         if note:
             notes.append(f"{r['name']}: {note}")
         items.append({"id": r["id"], "name": r["name"], "lang": used_lang,
-                      "fields": [{"field_id": f, "name": data.field_name(f), **field_entry(parsed.get(f), layers, lang)} for f in fids]})
+                      "fields": [{"field_id": f, "name": data.field_name(f), **field_entry(parsed.get(f), layers, used_lang, f)} for f in fids]})
     env = {"data_version": data.version, "command": "report get", "lang": lang if used <= {lang} else f"{lang} (fallback: {','.join(sorted(used))})",
            "layers": list(layers), "notes": notes, "items": items}
     body: list[str] = []

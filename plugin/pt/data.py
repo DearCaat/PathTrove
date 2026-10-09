@@ -12,7 +12,7 @@ from functools import cached_property
 from pathlib import Path
 from typing import Any
 
-from . import store
+from . import store, zhvalues
 from .errors import PtError
 from .i18n import L, norm_lang
 
@@ -43,12 +43,22 @@ SHORT_TEXT = {"1-1", "7-2", "8-1", "19-1", "27-2", "28-1"}
 # Columns of the table that are attachments or internal, not report fields.
 INTERNAL_COLUMNS = {"报告附件", "下载指南", "label.json"}
 NAME_COLUMN = "数据集名称"
+# The PTD column (catalogue field 0): the permanent resource id, shown to users as `id`.
+PTD_COLUMN = "PTD 编号"
+PTD_FIELD_ID = 0
+PTD_INPUT = re.compile(r"PTD-?(\d+)", re.IGNORECASE)
 LINK = re.compile(r"\((https?://[^)\s]+)\)")
 
 
 def norm(text: str) -> str:
     """NFKC + casefold + drop everything that is not a letter or digit."""
     return "".join(ch for ch in unicodedata.normalize("NFKC", str(text)).casefold() if ch.isalnum())
+
+
+def ptd_key(text: str) -> str | None:
+    """'PTD-000123' in any case, zero padding optional -> the canonical id; None if the text is not a PTD id."""
+    m = PTD_INPUT.fullmatch(str(text).strip())
+    return f"PTD-{int(m.group(1)):06d}" if m else None
 
 
 def suggest(word: str, options: list[str], n: int = 5) -> list[str]:
@@ -74,6 +84,8 @@ class Column:
             self.kind = "date"
         elif col["type"] == "link":
             self.kind = "link"
+        elif col["type"] == "identifier":
+            self.kind = "identifier"
         else:
             self.kind = "short" if col["id"] in SHORT_TEXT else "text"
 
@@ -123,7 +135,7 @@ class Core:
     def rows(self) -> list[dict[str, Any]]:
         rows = json.loads((self.root / "table_snapshot.json").read_text(encoding="utf-8"))["rows"]
         for r in rows:
-            r["id"] = r["record_id"]
+            r["id"] = ptd_key(str(r["fields"].get(PTD_COLUMN) or "")) or r["record_id"]     # the PTD id is the resource id
             r["name"] = str(r["fields"].get(NAME_COLUMN) or r["record_id"])
         return rows
 
@@ -143,16 +155,33 @@ class Core:
         cmap = snap["column_map"]
         out = []
         for zr in self.rows:
-            er = by.get(zr["id"])
+            er = by.get(zr["record_id"])
             if er is None:
                 out.append({**zr, "lang_fallback": True})
                 continue
             fields = {zh: er["fields"].get(en) for zh, en in cmap.items()}
-            for col in INTERNAL_COLUMNS:                       # attachments are files, not language-dependent cells
+            for col in (*INTERNAL_COLUMNS, PTD_COLUMN):        # attachments and the PTD id are not language-dependent
                 fields[col] = zr["fields"].get(col)
-            out.append({"record_id": zr["id"], "id": zr["id"], "fields": fields,
+            out.append({"record_id": zr["record_id"], "id": zr["id"], "fields": fields,
                         "name": str(er["fields"].get("Dataset Name") or zr["name"])})
         return out
+
+    @cached_property
+    def rows_zh(self) -> list[dict[str, Any]]:
+        """The Chinese table as shown to the user: categorical cells translated to Chinese (the stored table has English there).
+        `raw_fields` keeps the stored cells (free-text search and the English spellings still work)."""
+        out = []
+        for r in self.rows:
+            fields = dict(r["fields"])
+            for c in self.columns:
+                if c.kind == "categorical" and c.zh in fields and fields[c.zh] not in (None, "", []):
+                    raw = fields[c.zh]
+                    fields[c.zh] = [self.zh_value(c.id, x) for x in raw] if isinstance(raw, list) else self.zh_value(c.id, raw)
+            out.append({**r, "fields": fields, "raw_fields": r["fields"]})
+        return out
+
+    def zh_value(self, col_id: str, value: Any) -> Any:
+        return zhvalues.translate(col_id, value, self.value_map.get(col_id))
 
     @cached_property
     def value_map(self) -> dict[str, dict[str, str]]:
@@ -193,6 +222,11 @@ class Core:
         return sorted(cols, key=lambda c: tuple(int(p) for p in c.id.split("-")))
 
     @cached_property
+    def field_en(self) -> dict[int, str]:
+        catalog = json.loads((self.root / "report_fields.json").read_text(encoding="utf-8"))
+        return {int(k): v["name_en"] for k, v in catalog.items()}
+
+    @cached_property
     def field_zh(self) -> dict[int, str]:
         catalog = json.loads((self.root / "report_fields.json").read_text(encoding="utf-8"))
         zh = {int(k): v["name_zh"] for k, v in catalog.items()}
@@ -224,11 +258,15 @@ class Data:
 
     @cached_property
     def rows(self) -> list[dict[str, Any]]:
-        return self.core.rows_en if self.lang == "en" else self.core.rows
+        return self.core.rows_en if self.lang == "en" else self.core.rows_zh
 
     @cached_property
     def by_id(self) -> dict[str, dict[str, Any]]:
         return {r["id"]: r for r in self.rows}
+
+    @cached_property
+    def by_record_id(self) -> dict[str, dict[str, Any]]:
+        return {r["record_id"]: r for r in self.rows}
 
     @property
     def label_records(self) -> list[dict[str, Any]]:
@@ -253,7 +291,9 @@ class Data:
 
     def field_name(self, fid: int, lang: str | None = None) -> str:
         lang = lang or self.lang
-        return FIELD_EN[fid] if lang == "en" else self.field_zh.get(fid, FIELD_EN[fid])
+        if lang == "en":
+            return FIELD_EN.get(fid) or self.core.field_en.get(fid, str(fid))
+        return self.field_zh.get(fid) or FIELD_EN.get(fid, str(fid))
 
     @cached_property
     def _column_aliases(self) -> dict[str, Column]:
@@ -316,6 +356,8 @@ class Data:
             hint = []
             for k in difflib.get_close_matches(norm(token), list(self._field_aliases), n=8, cutoff=0.5) + \
                     [k for k in self._field_aliases if norm(token) and norm(token) in k]:
+                if what == "report field" and self._field_aliases[k] == PTD_FIELD_ID:
+                    continue                                   # the PTD id is not a report field
                 n = self.field_name(self._field_aliases[k])
                 if n not in hint:
                     hint.append(n)
@@ -333,22 +375,33 @@ class Data:
         if any(norm(t) == "all" for t in tokens):
             return list(self.field_ids)
         out = [self.field_id(t) for t in tokens]
+        if PTD_FIELD_ID in out:
+            raise PtError(L(self.lang, "the PTD id is the resource id, not a report field: give resources with --resource (for example PTD-000001)",
+                            "PTD 编号是资源编号，不是报告字段：请用 --resource 指定资源（例如 PTD-000001）"))
         return list(dict.fromkeys(out))
 
     # ------------------------------------------------------------ categorical values in either language
     def value_in_lang(self, col: Any, value: str) -> str | None:
         """Translate a categorical value given in the other language into this call's language; None if it has no mapping."""
-        vm = self.core.value_map.get(getattr(col, "id", ""), {})
-        if self.lang == "en":
-            return vm.get(value)
-        rev = {en: zh for zh, en in vm.items()}
-        return rev.get(value)
+        cid = getattr(col, "id", "")
+        if self.lang == "zh":
+            return {k.casefold(): v for k, v in self.core_en_to_zh(cid).items()}.get(value.casefold())
+        zh_en = dict(self.core.value_map.get(cid, {}))
+        for en, zh in self.core_en_to_zh(cid).items():
+            zh_en.setdefault(zh, en)
+        return {k.casefold(): v for k, v in zh_en.items()}.get(value.casefold())
+
+    def core_en_to_zh(self, col_id: str) -> dict[str, str]:
+        return zhvalues.zh_map(col_id, self.core.value_map.get(col_id))
 
     # ------------------------------------------------------------ resources
     def resolve(self, key: str) -> list[dict[str, Any]]:
         key = key.strip()
-        if key in self.by_id:
-            return [self.by_id[key]]
+        pk = ptd_key(key)
+        if pk and pk in self.by_id:                       # PTD id, any case
+            return [self.by_id[pk]]
+        if key in self.by_record_id:                      # Feishu record id
+            return [self.by_record_id[key]]
         exact = [r for r in self.rows if r["name"].casefold() == key.casefold()]
         if exact:
             return exact
@@ -357,6 +410,17 @@ class Data:
         if loose:
             return loose
         return [r for r in self.rows if n and n in norm(r["name"])]
+
+    def _unknown_ptd(self, key: str) -> str:
+        """Error for a PTD id that is not in this release, with the nearest ids that are."""
+        want = int(ptd_key(key)[4:])
+        ids = sorted((r["id"] for r in self.rows if ptd_key(r["id"])), key=lambda x: abs(int(x[4:]) - want))[:3]
+        near = ", ".join(ids)
+        return L(self.lang,
+                 f"no resource has the PTD id {key!r} in PathTrove {self.version}. Nearest PTD ids here: {near}. "
+                 "Find ids with `table search` (the id column); a resource can also be given by its name or record id.",
+                 f"PathTrove {self.version} 中没有 PTD 编号 {key!r} 的资源。最近的编号有：{near}。"
+                 "可用 `table search` 的 id 列查找编号；也可以用名称或 record id 指定资源。")
 
     def resources(self, spec: Any) -> list[dict[str, Any]]:
         """Resolve names or record ids (a list, or a string with comma-separated entries) to table rows.
@@ -378,6 +442,8 @@ class Data:
         out, seen = [], set()
         for k in keys:
             hits = self.resolve(k)
+            if not hits and ptd_key(k):
+                raise PtError(self._unknown_ptd(k))
             if not hits:
                 near = suggest(k, [r["name"] for r in self.rows])
                 raise PtError(L(self.lang,
@@ -400,13 +466,13 @@ class Data:
     def report_path(self, row: dict[str, Any], lang: str | None = None) -> Path | None:
         lang = lang or self.lang
         if lang == "en":
-            p = self.root / "en" / "reports" / f"{row['id']}.md"
+            p = self.root / "en" / "reports" / f"{row['record_id']}.md"
             return p if p.exists() else None
         att = row["fields"].get("报告附件") or []
         if not att:
             return None
         stem = att[0]["name"].removesuffix(".md")
-        for name in (f"{stem}.md", f"{stem}__{row['id']}.md"):
+        for name in (f"{stem}.md", f"{stem}__{row['record_id']}.md"):
             if (self.root / "reports" / name).exists():
                 return self.root / "reports" / name
         return None
@@ -414,11 +480,11 @@ class Data:
     def guide_path(self, row: dict[str, Any], lang: str | None = None) -> Path | None:
         lang = lang or self.lang
         if lang == "en":
-            p = self.root / "en" / "guides" / f"{row['id']}.md"
+            p = self.root / "en" / "guides" / f"{row['record_id']}.md"
             return p if p.exists() else None
         dup = sum(1 for r in self.core.rows if r["name"] == row["name"]) > 1
         safe = re.sub(r'[/\\:*?"<>|]+', "_", row["name"]).strip() or "unnamed"
-        folder = self.root / "download_guides" / (f"{safe}__{row['id']}" if dup else safe)
+        folder = self.root / "download_guides" / (f"{safe}__{row['record_id']}" if dup else safe)
         files = sorted(folder.glob("*.md")) if folder.exists() else []
         return files[0] if len(files) == 1 else None
 

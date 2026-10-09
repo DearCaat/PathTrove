@@ -5,7 +5,7 @@ import re
 from collections import Counter
 from typing import Any
 
-from .data import Column, Data, norm, suggest
+from .data import PTD_FIELD_ID, Column, Data, norm, suggest
 from .errors import PtError
 from .i18n import L
 from .render import emit, md_table
@@ -33,16 +33,18 @@ KIND_HELP = {
         "categorical": "one or more values from a list (multi-valued: a resource can have several)",
         "numeric": "a number", "date": "YYYY or YYYY-MM", "link": "one or more URLs",
         "short": "a short string (name, delimited list); filter with ~ or =",
+        "identifier": "the resource's PTD id (PTD-000001); filter with = or ~",
         "text": "prose only: no structured value. Filter with ~; read it with `report get --layer text`",
     },
     "zh": {
         "categorical": "取自列表的一个或多个值（多值：一个资源可有几个）",
         "numeric": "数值", "date": "YYYY 或 YYYY-MM", "link": "一个或多个链接",
         "short": "短字符串（名称、分隔的列表）；用 ~ 或 = 过滤",
+        "identifier": "资源的 PTD 编号（PTD-000001）；用 = 或 ~ 过滤",
         "text": "只有长文本，没有结构化取值。用 ~ 过滤；用 `report get --layer text` 阅读",
     },
 }
-KIND_NAME_ZH = {"categorical": "分类", "numeric": "数值", "date": "日期", "link": "链接", "short": "短文本", "text": "长文本"}
+KIND_NAME_ZH = {"identifier": "编号", "categorical": "分类", "numeric": "数值", "date": "日期", "link": "链接", "short": "短文本", "text": "长文本"}
 
 
 def kind_name(kind: str, lang: str) -> str:
@@ -74,9 +76,9 @@ def derived_columns(data: Data) -> list[Derived]:
     labels = data.labels_by_resource
 
     def uniq(key: str):
-        return lambda row: sorted({str(r[key]) for r in labels.get(row["id"], []) if r.get(key)}) or None
+        return lambda row: sorted({str(r[key]) for r in labels.get(row["record_id"], []) if r.get(key)}) or None
     return [
-        Derived("L1", "标签文件数", "label_files", "numeric", lambda row: len(labels[row["id"]]) if row["id"] in labels else None),
+        Derived("L1", "标签文件数", "label_files", "numeric", lambda row: len(labels[row["record_id"]]) if row["record_id"] in labels else None),
         Derived("L2", "标签层级", "label_level", "categorical", uniq("level")),
         Derived("L3", "标签任务类型", "label_task_type", "categorical", uniq("task_type")),
     ]
@@ -125,7 +127,12 @@ class Cond:
             return val in (None, [], "")
         if op == "~":
             hay = val if isinstance(val, list) else [val]
-            hay = [str(h).casefold() for h in hay if h not in (None, "")]
+            hay = [h for h in hay if h not in (None, "")]
+            if col.kind == "categorical":                      # a term may be given in either language
+                hay = hay + [o for o in (data.value_in_lang(col, str(h)) for h in hay) if o]
+                hay += [raw for raw in ((row.get("raw_fields") or {}).get(col.zh) if isinstance(col, Column) else []) or []
+                        if isinstance(raw, str)]
+            hay = [str(h).casefold() for h in hay]
             return any(t.casefold() in h for t in self.values for h in hay)
         if col.kind == "numeric" or (col.kind == "date" and op in (">=", "<=", ">", "<")):
             if val is None:
@@ -182,7 +189,9 @@ def parse_where(data: Data, exprs: Any) -> list[Cond]:
                     fixed.append(other if other and other.casefold() in known else v)
             unknown = [v for v in fixed if v.casefold() not in known]
             if unknown and len(unknown) == len(fixed):
-                near = suggest(unknown[0], list(obs))
+                alt = {en: zh for en, zh in data.core_en_to_zh(col.id).items() if zh in obs} if lang == "zh" else {}
+                near = [alt.get(n, n) for n in suggest(unknown[0], list(obs) + list(alt))]   # English spellings also suggest the Chinese value
+                near = list(dict.fromkeys(near))
                 shown = ", ".join(f"{k} ({v})" for k, v in obs.most_common(40))
                 more = "" if len(obs) <= 40 else L(lang, f", … {len(obs)} in all; `table fields --field {col.id}` lists them",
                                                    f"，……共 {len(obs)} 个；`table fields --field {col.id}` 可列出全部")
@@ -204,12 +213,13 @@ def parse_where(data: Data, exprs: Any) -> list[Cond]:
 
 def query_hit(data: Data, row: dict[str, Any], words: list[str], mode: str) -> tuple[bool, int]:
     hay = [row["name"].casefold()]
-    for c in data.columns:
-        v = row["fields"].get(c.zh)
-        if isinstance(v, list):
-            hay += [str(x).casefold() for x in v]
-        elif isinstance(v, str):
-            hay.append(v.casefold())
+    for fields in (row["fields"], row.get("raw_fields") or {}):      # shown values and, for lang=zh, the stored (English) ones
+        for c in data.columns:
+            v = fields.get(c.zh)
+            if isinstance(v, list):
+                hay += [str(x).casefold() for x in v]
+            elif isinstance(v, str):
+                hay.append(v.casefold())
     blob = "\n".join(hay)
     hits = [w.casefold() in blob for w in words]
     ok = all(hits) if mode == "all" else any(hits)
@@ -286,7 +296,7 @@ def fields(data: Data, field: str | None = None, values_limit: int = 40, fmt: st
     lang = data.lang
     out = []
     is_derived = bool(field) and any(norm(field) in (norm(d.id), norm(d.en), norm(d.zh)) for d in derived_columns(data))
-    ids = [] if is_derived else ([data.field_id(field, "table field")] if field else data.field_ids)
+    ids = [] if is_derived else ([data.field_id(field, "table field")] if field else [PTD_FIELD_ID, *data.field_ids])
     cols_by_field: dict[int, list[Column]] = {}
     for c in data.columns:
         cols_by_field.setdefault(c.field_id, []).append(c)
@@ -309,6 +319,8 @@ def fields(data: Data, field: str | None = None, values_limit: int = 40, fmt: st
                     item["values_note"] = L(lang, f"{len(obs) - values_limit} more values; raise --values-limit",
                                             f"还有 {len(obs) - values_limit} 个取值；请加大 --values-limit")
                 extra = [e for e in c.enum if e not in obs and (data.value_in_lang(c, e) or e) not in obs]
+                if lang == "zh":
+                    extra = [data.zh_value(c.id, e) for e in extra]
                 if extra:
                     item["declared_values_without_resources"] = extra
             entry["columns"].append(item)
@@ -441,7 +453,7 @@ def stats(data: Data, group_by: Any = None, where: Any = None, query: Any = None
             md_rows.append({**table[-1], "kind": kind_name(c.kind, lang)})
         env["fill_rates"] = table
         env["notes"].append(L(lang, "overview: fill rate = resources with a value / resources selected; 'Not Specified' counts as a value",
-                              "总览：填充率 = 有值的资源数 / 选中的资源数；“Not Specified”也算一个值"))
+                              "总览：填充率 = 有值的资源数 / 选中的资源数；“未说明”（Not Specified）也算一个值"))
         if not rows:
             env["notes"] += zero_result_hint(data, conds, query, match)
         return emit(env, fmt, output, [selected, "", *md_table(md_rows, None, lang)], "fill_rates")

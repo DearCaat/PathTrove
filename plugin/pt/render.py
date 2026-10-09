@@ -32,7 +32,7 @@ KEYS_ZH = {
     "n_classes": "类别数", "class_distribution": "类别分布", "class_names": "类别名", "split_distribution": "划分分布",
     "raw_file": "原始文件", "sha256": "sha256", "fetch": "下载命令", "class_distribution_note": "类别分布说明",
     "task_schema": "任务结构", "limitations": "局限", "class_distribution_basis": "类别分布依据", "provenance": "出处",
-    "levels": "层级", "task_types": "任务类型", "files_count": "文件数", "openness_reasoning (field 3)": "开放程度依据（字段 3）",
+    "levels": "层级", "split": "划分", "split_parts": "划分部分", "files_with_split": "有官方划分的文件数", "has_official_split": "有官方划分", "split_counts": "划分数量", "samples_without_split": "无划分样本数", "split_notes": "划分相关文字", "file_list": "文件列表", "task_types": "任务类型", "files_count": "文件数", "openness_reasoning (field 3)": "开放程度依据（字段 3）",
     "license_reasoning (field 32)": "许可证依据（字段 32）", "json_block": "JSON 块", "tested_from": "测试环境",
     "record_id": "record id", "data_version": "数据版本", "installed": "已安装", "location": "位置", "cache_root": "缓存目录",
     "archive": "数据包", "hf_endpoint": "HF 地址", "bundle_override": "PATHTROVE_BUNDLE 覆盖", "path": "路径", "bytes": "字节",

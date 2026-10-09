@@ -7,7 +7,7 @@ description: Use when the user describes a research need or task and wants datas
 
 Use the `pathtrove-data` skill for the tools and the rules that apply everywhere (language, data version, the external search policy). This skill is the method for recommending datasets. Call `pathtrove_version` first (with `lang`), then `pathtrove_best_data_principles` (with `lang`): it returns the full principles, each with its reason, and a map of the schema of the installed data (which columns can filter, which hold prose only, which fields exist only in the report). There is no plan, no review and no receipt: you do the work with `table search` / `table stats` / `table fields` and `report get` / `report find`.
 
-The five principles, in short:
+The five principles, in short (they are for you; in the answer, say what you did in plain words, without principle numbers, field ids or tool names):
 
 1. **Analyse the need.** Write each condition in the user's words. A condition is hard when one structured value expresses it directly and stably; the rest is judged on the report evidence. If the user lists the hard conditions, only those are filters.
 2. **Turn hard conditions into filters on the schema.** Pick the field, the value and the layer: table columns (exact values from `table fields`; `a|b` is any-of; repeated `--where` is AND) or the report layers (value, text, source). A condition with no structured column is recalled with `report find` (literal words: try Chinese, English and synonyms) and judged on the reports. A column with `filled` near 0 cannot filter.

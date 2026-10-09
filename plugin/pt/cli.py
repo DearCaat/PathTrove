@@ -17,7 +17,7 @@ from .data import Data
 from .errors import PtError
 from .i18n import L, norm_lang
 
-SERVER_VERSION = "0.6.0"
+SERVER_VERSION = "0.1.0"
 PROTOCOL_VERSION = "2025-06-18"
 
 QUICKSTART = """\
@@ -36,12 +36,13 @@ Results are headed by the data version; cite it. Default output is the value lay
   pathtrove download test --resource SurGen                the download test record (not a dataset property)
   pathtrove download guide --resource BRACS --section access
   pathtrove label list --level wsi                         resources with WSI-level label files
+  pathtrove label list --where 'organ=Breast' --split train,test     breast resources whose label files have official train and test parts (counts shown)
   pathtrove label get --resource ACROBAT                   task, level, classes, splits, counts
   pathtrove label fetch --resource ACROBAT --file acrobat.wsi_registration.label.json --dest ./labels
   pathtrove best-data principles                           from a research need to recommended datasets: method, schema map, outside-search policy
 
 Notes
-  fields   by id (1-38), Chinese or English name; resources by name or record id (--resource, repeat or comma-separate).
+  fields   by id (1-38), Chinese or English name; resources by PTD id (PTD-000001), name or record id (--resource, repeat or comma-separate).
   filters  --where 'FIELD=A|B'  'FIELD!=A'  'FIELD~term'  'FIELD>=100'  'FIELD:filled'  'FIELD:empty'   (repeat = AND)
   output   --format md|json|ndjson; --output FILE writes a large result to a file and returns only a summary.
   language every command takes --lang zh|en (default: environment variable PATHTROVE_LANG, else zh). Use the language the user writes in.
@@ -76,7 +77,7 @@ class Cmd:
     common: tuple[str, ...] = ("format", "output", "lang")
 
 
-RES = Arg("resource", "dataset name or record id; repeat or comma-separate for several", "list",
+RES = Arg("resource", "PTD id (PTD-000001), dataset name or record id; repeat or comma-separate for several", "list",
           flags=("--resources", "--name", "--names", "--id", "--ids"))
 LAYER = Arg("layer", "layers to return: value (default), text, source; comma-separated, or all", "str")
 LANG = Arg("lang", "language of the output: zh or en (default: PATHTROVE_LANG, else zh). Use the language the user writes in", "choice", ("zh", "en"))
@@ -99,7 +100,7 @@ def _cmds() -> list[Cmd]:
             [Arg("field", "show one field only (id or name)"), Arg("values_limit", "values shown per field (default 40)", "int")],
             lambda d, a: table.fields(d, a.get("field"), _n(a, "values_limit", 40), a.get("format"), a.get("output"))),
         Cmd("table", "search", "find resources by categorical filters, numeric ranges, text; projection, sorting, paging",
-            "Structured search over the resource table. Returns id, name and the requested fields (--fields; default organ, staining, "
+            "Structured search over the resource table. Returns id (the PTD id), name and the requested fields (--fields; default organ, staining, "
             "task tags, openness). Prose columns are filtered with ~ but not displayed here; use `report get`.",
             [QUERY, MATCH, WHERE, Arg("fields", "columns to return, comma-separated (ids or names)"),
              Arg("sort", "FIELD or FIELD:desc (numeric, date, categorical)"), OFFSET, LIMIT],
@@ -143,14 +144,22 @@ def _cmds() -> list[Cmd]:
             "Label files map samples to task labels and splits. This lists them; `label get` summarizes one; `label fetch` downloads the raw file.",
             [RES, Arg("level", "label level (patch, wsi, slide, cell, patient, region, roi, ...)"),
              Arg("task_type", "task type (classification, segmentation, detection, survival, ...)", flags=("--task-type",)),
-             Arg("task", "substring of the task name"), OFFSET, LIMIT],
+             Arg("task", "substring of the task name"),
+             Arg("where", "filter the resources, same syntax as `table search --where` (repeatable, AND): e.g. 'organ=Breast|乳腺', "
+                          "'staining=H&E', 'openness=Fully Open', 'license~CC-BY'. Values may be given in either language", "list"),
+             Arg("split", "official split of the file: any (has one), none (has none), or the parts it must have, comma-separated: "
+                          "train, val, test (e.g. train,test). The split unit (patient / slide / image) is not a field: see split_note"),
+             Arg("split_note", "substring (e.g. patient) searched in the file's split-related text (limitations and task-schema split "
+                               "entries), the only place where the split unit is stated", flags=("--split-note",)),
+             OFFSET, LIMIT],
             lambda d, a: label.list_(d, a.get("resource"), a.get("level"), a.get("task_type"), a.get("task"), _n(a, "offset", 0),
-                                     _n(a, "limit", 30), a.get("format"), a.get("output"))),
+                                     _n(a, "limit", 30), a.get("format"), a.get("output"), a.get("where"), a.get("split"),
+                                     a.get("split_note"))),
         Cmd("label", "get", "task, level, classes, splits and counts of a resource's label files",
             "Summaries from the bundled label index; never sample rows.",
             [RES, Arg("file", "substring of the label file name"), Arg("level", "filter by level"),
              Arg("task_type", "filter by task type", flags=("--task-type",)), Arg("task", "substring of the task name"),
-             Arg("split", "only files that have this split, and show only that split"), LAYER,
+             Arg("split", "only files that have this split (any, none, or parts such as train,test), and show only those parts"), LAYER,
              Arg("max_classes", "classes shown per file (default 30)", "int", flags=("--max-classes",))],
             lambda d, a: label.get(d, a.get("resource"), a.get("file"), a.get("level"), a.get("task_type"), a.get("task"), a.get("split"),
                                    a.get("layer"), _n(a, "max_classes", 30), a.get("format"), a.get("output"))),
@@ -198,6 +207,8 @@ USAGE_RULES = {
         "8. Answer in the language the user writes in and pass lang=zh|en accordingly on every call, so the output never mixes languages; run `table fields` before filtering.",
         "9. To recommend datasets for a research need, call `best-data principles` and follow it: analyse the need, turn hard conditions into filters, start broad, judge on report evidence, respect k. There is no plan or review step; you work with `table` and `report`.",
         "10. External search follows the policy below; `PATHTROVE_WEB` (shown in `version`) says whether it is on.",
+        "11. Write the answer for the user, not for the tools: do not quote internal names such as field ids, rule or principle numbers, tool or command names, or environment variables (PATHTROVE_WEB); say in plain words what they mean (for example \"external search was off\", \"the table has no structured value for race\").",
+        "12. Resources are identified by their PTD id (for example PTD-000123, the id column of every table and label result); cite it with data_version. A name or record id also works as input.",
     ],
     "zh": [
         "1. 凡基于 PathTrove 的回答都要写明 data_version（数据版本）。",
@@ -210,6 +221,8 @@ USAGE_RULES = {
         "8. 用用户书写的语言回答，并在每次调用里传对应的 lang=zh|en，保证输出不混用语言；过滤之前先运行 `table fields`。",
         "9. 为研究需求推荐数据集时，先调用 `best-data principles` 并照它做：分析需求、把硬条件落成过滤、先宽后窄、在报告证据上判断、遵守 k。没有计划或审查环节；你用 `table` 和 `report` 完成。",
         "10. 外部检索遵循下面的策略；`PATHTROVE_WEB`（见 `version`）说明它是否开启。",
+        "11. 回答是写给用户的，不是写给工具的：不要引用内部名称，如字段编号、规则或原则编号、工具或命令名、环境变量（PATHTROVE_WEB）；用平实的话说出它的意思（例如“本次没有做外部检索”“表里没有种族的结构化取值”）。",
+        "12. 每个资源都有永久编号 PTD（如 PTD-000123），即每个表格与标签结果中的 id 列；引用资源时连同 data_version 一起给出。名称或 record id 仍可用于输入。",
     ],
 }
 
@@ -388,7 +401,7 @@ TOOL_TEXT = {
     ("download", "objects"): "Downloadable objects and sizes of a resource, as text: the guide's download-objects section and the report's storage-size text, labelled as text (no structured list or dataset size exists).",
     ("download", "test"): "The download test record of a resource: date, method status, direct/proxy reachability, bytes received, file URLs. It records one test from PathTrove's test environment on a date (network conditions as in the recorded note); it is NOT the dataset size and NOT a property of the resource.",
     ("download", "guide"): "The download guide of a resource by section; the two guide templates are mapped onto one set of section names. Without `section` it returns the outline; `section: 'all'` returns everything.",
-    ("label", "list"): "Which resources have label files (filter by `level`, `task_type`, `task`), or with `resource`, the label files of that resource. Label files map samples to task labels and splits.",
+    ("label", "list"): "Which resources have label files, or with `resource`, the label files of that resource; every file row shows its split parts and sample counts. Filter the files by `level`, `task_type`, `task`, `split` (any / none / train,val,test: official split parts the file must have) and `split_note` (text search, e.g. 'patient', in the file's split-related text: the split unit is stated only there). Filter the resources with `where`, same syntax as `table search` (e.g. ['organ=Breast|乳腺', 'staining=H&E']). Label files map samples to task labels and splits.",
     ("label", "get"): "Task, level, class counts, splits and sample counts of a resource's label files, from the bundled index (never sample rows). `layer` text/source adds the task schema, limitations and provenance.",
     ("best-data", "principles"): "From a research need to recommended datasets. Call it when the user describes a research need and wants datasets recommended. There is no plan, review or receipt: it returns five principles (analyse the need and mark hard conditions; turn them into filters on the schema, by field, value and layer; start broad and re-check the conditions once against the user's words when the pool is empty or very small; judge on report evidence, respect k, counts agree with the list; outside search only for coverage gaps) and a schema map of this data version. You then work with `table` and `report`.",
     ("label", "fetch"): "Download one raw label.json of a resource from the public Hugging Face repo to `dest` and verify its sha256 against the data manifest. Files can be large (up to 1.2 GB): check the size with `label list` first. `file` is required when the resource has several.",
