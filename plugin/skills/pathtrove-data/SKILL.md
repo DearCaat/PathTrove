@@ -7,6 +7,10 @@ description: Use for any question about computational-pathology or biomedical-im
 
 PathTrove is a curated, versioned database of computational-pathology resources. For each resource it holds a table row (structured fields), a resource report (each field with its value, its explanation and the primary sources it cites), a download guide with a download test record, and, for some resources, label files that map samples to task labels and splits. The data package (a versioned archive on the public Hugging Face repo `Dearcat/PathTrove`, ~14 MB) is downloaded once on first use, checked against a sha256 recorded in the plugin, cached locally and read from there.
 
+## What this plugin is for
+
+This plugin tells you how to use PathTrove: what the data is, how to query it, and how to read what it returns. It does not tell you how to answer the user. PathTrove is one source and a partial one: a curated selection of public computational-pathology resources (datasets, challenges, benchmarks), frozen at its data version. Many public resources released before that date are not in it, nothing released after it is, and large programmes and portals such as TCGA (GDC), CPTAC, HTAN and GTEx are not entries of their own: they appear only as the source of resources built on them. It holds no papers, methods or results. Whether to use other sources (the web, portals such as GDC or TCIA, repositories such as Hugging Face or Zenodo, papers) is your judgement. A user who calls PathTrove by name ("$pathtrove", "/pathtrove", "use PathTrove") wants PathTrove used, not the answer limited to it; only an explicit limit ("in PathTrove", "only PathTrove") keeps the answer inside PathTrove. When an answer uses both, put outside material in its own section, apart from what comes from PathTrove, each item with its URL and access date, and never present outside material as PathTrove's.
+
 ## Structure
 
 Commands are `pathtrove <domain> <verb>` (MCP tools `pathtrove_<domain>_<verb>`), read-only:
@@ -17,7 +21,7 @@ Commands are `pathtrove <domain> <verb>` (MCP tools `pathtrove_<domain>_<verb>`)
 | `report` | `get`, `find` | the report fields of resources in layers value / text / source; finding a term across reports |
 | `download` | `plan`, `objects`, `test`, `guide` | how to obtain a resource: access, license, links; downloadable objects and sizes; the download test record; the guide by section. It never downloads a dataset |
 | `label` | `list`, `get`, `fetch` | which label files exist; task, level, classes, splits, counts; downloading a raw label file |
-| `best-data` | `principles` | from a research need to recommended datasets: the method (analyse the need, filters on the schema, start broad, judge on report evidence, respect k, outside search for gaps) and a schema map; no plan or review. See the `pathtrove-best-data` skill |
+| `best-data` | `principles` | from a research need to recommended datasets: the method (analyse the need, filters on the schema, start broad, judge on report evidence) and a schema map; no plan or review. See the `pathtrove-best-data` skill |
 
 Every result starts with the data version. Default output is the value layer only; `layer: "text"`, `"source"` or `"all"` adds the prose and the cited sources. `format: json` and `output: <file>` (large results go to a file, the reply is a summary) are available everywhere. 
 
@@ -27,17 +31,13 @@ Resources are identified by their PTD id (for example `PTD-000123`, in the `id` 
 
 Every tool and command takes `lang` (`zh` or `en`; the default comes from the environment variable `PATHTROVE_LANG`, else `zh`). **Set `lang` to the language the user writes in, on every call, and answer in that language**: the table (field names, allowed values, notes), the error messages and the report and guide text then all come in one language, so the answer never mixes two. Report and guide text is the English translation for `lang=en` when one exists and passed the translation check; otherwise the original Chinese is shown, labelled `lang=zh`, and you say so in the answer. Categorical values (organ, staining, openness, task tags ...) are shown in Chinese for `lang=zh` and in English for `lang=en`, and a filter accepts either spelling. Proper names, dataset names and quotations from primary sources stay as they are.
 
-Write the answer for the user, not for the tools. Do not quote internal names: field ids, rule or principle numbers, tool or command names, environment variables such as `PATHTROVE_WEB`. Say in plain words what they mean ("external search was off", "the table has no structured value for race").
+Write the answer for the user, not for the tools. Do not quote internal names: field ids, rule or principle numbers, tool or command names, environment variables. Say in plain words what they mean ("the table has no structured value for race").
 
 ## Before the first query
 
-Call `pathtrove_version` once per task (with `lang`). Keep the `data_version`, the `usage_rules` (the same rules as below in short form), the `known_limitations` and the list of values the data does not have as structured fields. The first call may take a moment: it downloads the data package. If it cannot (no network to huggingface.co), the error says how to fix it: set `HF_ENDPOINT` to a mirror, or install from a local copy of the archive with `pathtrove data install --file`; tell the user, do not work around it. Every answer built on PathTrove states the data version, because the database changes between releases and a reader must be able to reproduce the lookup.
+Call `pathtrove_version` once per task (with `lang`). Keep the `data_version`, the `role` (what this plugin is for, as above), the `usage_rules` (the same rules as below in short form), the `known_limitations` and the list of values the data does not have as structured fields. The first call may take a moment: it downloads the data package. If it cannot (no network to huggingface.co), the error says how to fix it: set `HF_ENDPOINT` to a mirror, or install from a local copy of the archive with `pathtrove data install --file`; tell the user, do not work around it. Every answer built on PathTrove states the data version, because the database changes between releases and a reader must be able to reproduce the lookup.
 
-If a PathTrove call fails, say so and report the error. Do not substitute web search for it silently: the user asked for PathTrove's curated evidence, and web results are a different kind of source.
-
-## External search policy
-
-`pathtrove_version` shows `external_search.PATHTROVE_WEB` (`on` by default; `off` = no external search) and the policy. In short: **PathTrove first**; go outside PathTrove only to **fill coverage gaps** (the need asks for completeness, or PathTrove returns too few or none) or when the user **explicitly asks** for outside information; never to re-check values of resources PathTrove already covers (the curated record is the evidence; "verifying" it on the web puts web prose in its place, at the cost of many calls). Report external findings in their own section, each labelled "not in PathTrove <version>, not curated", with URL and access date; never invent a value PathTrove lacks. Waste: searching outside first; searching outside for resources PathTrove already covers; repeating near-identical searches; opening external pages that have nothing to do with the conclusion. With `PATHTROVE_WEB=off`: no external search, and say that completeness is limited to PathTrove.
+If a PathTrove call fails, say so and report the error. Do not present an answer from other sources as PathTrove's.
 
 ## Finding and checking resources
 
@@ -59,6 +59,6 @@ If a PathTrove call fails, say so and report the error. Do not substitute web se
 
 - Value-only data takes precedence over prose. Where a structured value exists, quote it; where the data has no value, say it is missing (or quote the prose, labelled as prose). Do not fill a missing value from a guess or from another field.
 - Quote numbers as the report gives them and name the field they came from. Where the report records conflicting sources, say so; do not pick one silently.
-- Decision-critical values (cohort size, label definition, license, access conditions) are the report's values; cite the source the report gives for them. Do not re-check them on the web. The current release declares that field reliability, depth and coverage are still limited; say so when it matters.
-- A resource absent from PathTrove may still exist. Say "not found in PathTrove <version>", not "does not exist". If the user needs completeness, follow the external search policy above (or, with `PATHTROVE_WEB=off`, say that completeness is limited to PathTrove).
+- Decision-critical values (cohort size, label definition, license, access conditions) are the report's values; cite the source the report gives for them. The source layer holds the primary sources the report cites; that is the first place to check a value. The current release declares that field reliability, depth and coverage are still limited; say so when it matters.
+- A resource absent from PathTrove may still exist. Say "not found in PathTrove <version>", not "does not exist": the data is a partial selection frozen at its version.
 - PathTrove does not host or redistribute data. Access is governed by each provider's terms; a listing grants no access rights.

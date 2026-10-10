@@ -17,7 +17,7 @@ from .data import Data
 from .errors import PtError
 from .i18n import L, norm_lang
 
-SERVER_VERSION = "0.1.0"
+SERVER_VERSION = "0.1.1"
 PROTOCOL_VERSION = "2025-06-18"
 
 QUICKSTART = """\
@@ -39,7 +39,7 @@ Results are headed by the data version; cite it. Default output is the value lay
   pathtrove label list --where 'organ=Breast' --split train,test     breast resources whose label files have official train and test parts (counts shown)
   pathtrove label get --resource ACROBAT                   task, level, classes, splits, counts
   pathtrove label fetch --resource ACROBAT --file acrobat.wsi_registration.label.json --dest ./labels
-  pathtrove best-data principles                           from a research need to recommended datasets: method, schema map, outside-search policy
+  pathtrove best-data principles                           from a research need to recommended datasets: method, schema map
 
 Notes
   fields   by id (1-38), Chinese or English name; resources by PTD id (PTD-000001), name or record id (--resource, repeat or comma-separate).
@@ -167,9 +167,9 @@ def _cmds() -> list[Cmd]:
             "The data package holds an index only. Files can be large (up to 1.2 GB); check the size in `label list` first. Needs network access to huggingface.co (or HF_ENDPOINT).",
             [RES, Arg("file", "label file name (needed if the resource has several)"), Arg("dest", "target directory", required=True)],
             lambda d, a: label.fetch(d, a.get("resource"), a.get("dest"), a.get("file")), common=("lang",)),
-        Cmd("best-data", "principles", "from a research need to recommended datasets: the method, a map of the schema, the outside-search policy",
-            "No plan and no review: read the principles, then do the work with `table` and `report`. Returns five principles (analyse the need; turn hard conditions "
-            "into filters; start broad and re-check conditions on an empty pool; judge on report evidence and respect k; outside search for coverage gaps only) "
+        Cmd("best-data", "principles", "from a research need to recommended datasets: the method and a map of the schema",
+            "No plan and no review: read the principles, then do the work with `table` and `report`. Returns four principles (analyse the need; turn hard conditions "
+            "into filters; start broad and re-check conditions on an empty pool; judge on report evidence) "
             "and, from the installed data, which columns can filter, which hold prose only and which fields exist only in the report.",
             [], lambda d, a: best.principles(d, a.get("format"), a.get("output"))),
     ]
@@ -199,35 +199,30 @@ USAGE_RULES = {
     "en": [
         "1. Cite data_version in every answer built on PathTrove.",
         "2. Give every candidate a search returns an explicit verdict (fits / does not fit / cannot tell yet); open the report before judging.",
-        "3. 'Not found in PathTrove' is not 'does not exist'. If the need asks for completeness, or PathTrove returns too few or none, say so and follow the external-search policy (below).",
+        "3. 'Not found in PathTrove' is not 'does not exist': PathTrove is a partial selection frozen at data_version (see `role`). Say 'not found in PathTrove <data_version>'.",
         "4. Stay with the value layer. If a value is missing, say only text exists (or nothing); never fill it from a guess or another field.",
         "5. The download test record is one test on one date, not a property of the dataset; bytes received or content length are not the dataset size.",
-        "6. Decision-critical values (cohort size, labels, license, access) come from the report's value layer; read the text and source layers (`--layer text,source`) for the evidence behind them. Do not re-check them on the web: the curated record is the evidence.",
-        "7. If a PathTrove call fails, report the error; do not silently substitute web search for it.",
+        "6. Decision-critical values (cohort size, labels, license, access) come from the report's value layer; the text and source layers (`--layer text,source`) hold the evidence behind them and the primary sources the report cites, which is the first place to check a value.",
+        "7. If a PathTrove call fails, report the error; do not present an answer from other sources as PathTrove's.",
         "8. Answer in the language the user writes in and pass lang=zh|en accordingly on every call, so the output never mixes languages; run `table fields` before filtering.",
-        "9. To recommend datasets for a research need, call `best-data principles` and follow it: analyse the need, turn hard conditions into filters, start broad, judge on report evidence, respect k. There is no plan or review step; you work with `table` and `report`.",
-        "10. External search follows the policy below; `PATHTROVE_WEB` (shown in `version`) says whether it is on.",
-        "11. Write the answer for the user, not for the tools: do not quote internal names such as field ids, rule or principle numbers, tool or command names, or environment variables (PATHTROVE_WEB); say in plain words what they mean (for example \"external search was off\", \"the table has no structured value for race\").",
-        "12. Resources are identified by their PTD id (for example PTD-000123, the id column of every table and label result); cite it with data_version. A name or record id also works as input.",
+        "9. To recommend datasets for a research need, call `best-data principles` and follow it: analyse the need, turn hard conditions into filters, start broad, judge on report evidence. There is no plan or review step; you work with `table` and `report`.",
+        "10. Write the answer for the user, not for the tools: do not quote internal names such as field ids, rule or principle numbers, tool or command names, or environment variables; say in plain words what they mean (for example \"the table has no structured value for race\").",
+        "11. Resources are identified by their PTD id (for example PTD-000123, the id column of every table and label result); cite it with data_version. A name or record id also works as input.",
     ],
     "zh": [
         "1. 凡基于 PathTrove 的回答都要写明 data_version（数据版本）。",
         "2. 对检索返回的每个候选给出明确结论（符合 / 不符合 / 暂无法判断）；判断之前先打开报告。",
-        "3.“在 PathTrove 里没找到”不等于“不存在”。需求要求完整性，或 PathTrove 结果太少、没有时，要说明，并按下面的外部检索策略处理。",
+        "3.“在 PathTrove 里没找到”不等于“不存在”：PathTrove 是固定在 data_version 的部分选集（见 `role`）。应说“在 PathTrove <data_version> 中没有找到”。",
         "4. 以值层为准。某个值缺失时，只说明“只有文字”（或什么都没有）；不得凭猜测或用别的字段补。",
         "5. 下载测试记录是某一天的一次测试，不是数据集的属性；收到的字节数或 content length 不是数据集大小。",
-        "6. 决定性的数值（队列规模、标签、许可证、访问方式）以报告的值层为准；背后的证据读文字层和来源层（`--layer text,source`）。不要再到网上复核：策展记录本身就是证据。",
-        "7. PathTrove 调用失败时如实报告错误，不要悄悄改用网络搜索来代替。",
+        "6. 决定性的数值（队列规模、标签、许可证、访问方式）以报告的值层为准；文字层和来源层（`--layer text,source`）给出背后的证据和报告引用的原始来源，核对一个值时先看这里。",
+        "7. PathTrove 调用失败时如实报告错误，不要把来自其他来源的回答说成 PathTrove 的。",
         "8. 用用户书写的语言回答，并在每次调用里传对应的 lang=zh|en，保证输出不混用语言；过滤之前先运行 `table fields`。",
-        "9. 为研究需求推荐数据集时，先调用 `best-data principles` 并照它做：分析需求、把硬条件落成过滤、先宽后窄、在报告证据上判断、遵守 k。没有计划或审查环节；你用 `table` 和 `report` 完成。",
-        "10. 外部检索遵循下面的策略；`PATHTROVE_WEB`（见 `version`）说明它是否开启。",
-        "11. 回答是写给用户的，不是写给工具的：不要引用内部名称，如字段编号、规则或原则编号、工具或命令名、环境变量（PATHTROVE_WEB）；用平实的话说出它的意思（例如“本次没有做外部检索”“表里没有种族的结构化取值”）。",
-        "12. 每个资源都有永久编号 PTD（如 PTD-000123），即每个表格与标签结果中的 id 列；引用资源时连同 data_version 一起给出。名称或 record id 仍可用于输入。",
+        "9. 为研究需求推荐数据集时，先调用 `best-data principles` 并照它做：分析需求、把硬条件落成过滤、先宽后窄、在报告证据上判断。没有计划或审查环节；你用 `table` 和 `report` 完成。",
+        "10. 回答是写给用户的，不是写给工具的：不要引用内部名称，如字段编号、规则或原则编号、工具或命令名、环境变量；用平实的话说出它的意思（例如“表里没有种族的结构化取值”）。",
+        "11. 每个资源都有永久编号 PTD（如 PTD-000123），即每个表格与标签结果中的 id 列；引用资源时连同 data_version 一起给出。名称或 record id 仍可用于输入。",
     ],
 }
-
-WEB_POLICY = best.WEB_POLICY
-
 
 def version_info(d: Data) -> str:
     lang = d.lang
@@ -237,9 +232,8 @@ def version_info(d: Data) -> str:
     lim = m.get("known_limitations_zh") if lang == "zh" and m.get("known_limitations_zh") else m.get("known_limitations")
     st = store.status(m)
     info = {"data_version": m["data_version"], "command": "version", "lang": lang, "released": m.get("released"), "counts": m.get("counts"),
+            "role": best.role(lang, m["data_version"]),
             "usage_rules": USAGE_RULES[lang],
-            "external_search": {"PATHTROVE_WEB": "on" if best.web_enabled() else "off",
-                                "policy": [x.replace("<data_version>", m["data_version"]) for x in WEB_POLICY[lang]]},
             "best_data": {"principles": best.heads(lang),
                           "details": L(lang, "`pathtrove best-data principles` (MCP: pathtrove_best_data_principles) gives the full text and a schema map",
                                        "`pathtrove best-data principles`（MCP：pathtrove_best_data_principles）给出全文和 schema 地图")},
@@ -403,7 +397,7 @@ TOOL_TEXT = {
     ("download", "guide"): "The download guide of a resource by section; the two guide templates are mapped onto one set of section names. Without `section` it returns the outline; `section: 'all'` returns everything.",
     ("label", "list"): "Which resources have label files, or with `resource`, the label files of that resource; every file row shows its split parts and sample counts. Filter the files by `level`, `task_type`, `task`, `split` (any / none / train,val,test: official split parts the file must have) and `split_note` (text search, e.g. 'patient', in the file's split-related text: the split unit is stated only there). Filter the resources with `where`, same syntax as `table search` (e.g. ['organ=Breast|乳腺', 'staining=H&E']). Label files map samples to task labels and splits.",
     ("label", "get"): "Task, level, class counts, splits and sample counts of a resource's label files, from the bundled index (never sample rows). `layer` text/source adds the task schema, limitations and provenance.",
-    ("best-data", "principles"): "From a research need to recommended datasets. Call it when the user describes a research need and wants datasets recommended. There is no plan, review or receipt: it returns five principles (analyse the need and mark hard conditions; turn them into filters on the schema, by field, value and layer; start broad and re-check the conditions once against the user's words when the pool is empty or very small; judge on report evidence, respect k, counts agree with the list; outside search only for coverage gaps) and a schema map of this data version. You then work with `table` and `report`.",
+    ("best-data", "principles"): "From a research need to recommended datasets. Call it when the user describes a research need and wants datasets recommended. There is no plan, review or receipt: it returns four principles (analyse the need and mark hard conditions; turn them into filters on the schema, by field, value and layer; start broad and re-check the conditions once against the user's words when the pool is empty or very small; judge on report evidence, counts agree with the list) and a schema map of this data version. You then work with `table` and `report`.",
     ("label", "fetch"): "Download one raw label.json of a resource from the public Hugging Face repo to `dest` and verify its sha256 against the data manifest. Files can be large (up to 1.2 GB): check the size with `label list` first. `file` is required when the resource has several.",
 }
 
@@ -414,16 +408,16 @@ LANG_PROP = {"type": "string", "enum": ["zh", "en"],
 def instructions() -> str:
     text = ("PathTrove: a curated, versioned database of computational-pathology resources (table, reports, download guides, label index), "
             "read read-only from a local data package. Call `pathtrove_version` first; it returns the data version and these rules in the "
-            "language you pass as `lang`.\n\nUsage rules:\n" + "\n".join(USAGE_RULES["en"])
+            "language you pass as `lang`.\n\nWhat this plugin is for:\n" + "\n".join("- " + x for x in best.ROLE["en"]).replace("<data_version>", "the data version")
+            + "\n\nUsage rules:\n" + "\n".join(USAGE_RULES["en"])
             + "\n\nEvery tool takes `lang` (zh|en). Set it to the language the user writes in on every call; do not mix languages in the answer. "
-              "The data package is downloaded from Hugging Face on first use; if a call reports that it is missing, relay the fix in the error."
-            + f"\n\nExternal search policy (PATHTROVE_WEB={'on' if best.web_enabled() else 'off'}):\n" + "\n".join("- " + x for x in WEB_POLICY["en"]))
+              "The data package is downloaded from Hugging Face on first use; if a call reports that it is missing, relay the fix in the error.")
     text += "\n\nRecommending datasets for a research need (`pathtrove_best_data_principles` gives the full text and a schema map):\n" + "\n".join(best.heads("en"))
     return text
 
 
 def tools() -> list[dict[str, Any]]:
-    out = [{"name": "pathtrove_version", "description": "Data version, release date, counts, usage rules, known limitations and translation coverage of the PathTrove release. Call once per task; cite the version in the answer." + POINTER,
+    out = [{"name": "pathtrove_version", "description": "Data version, what this plugin is for, release date, counts, usage rules, known limitations and translation coverage of the PathTrove release. Call once per task; cite the version in the answer." + POINTER,
             "inputSchema": {"type": "object", "properties": {"lang": LANG_PROP}, "required": []}}]
     for c in CMDS:
         props = {a.name: _schema(a) for a in c.args if a.name != "lang"}

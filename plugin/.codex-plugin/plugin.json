@@ -1,6 +1,6 @@
 {
   "name": "pathtrove",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Look up computational-pathology datasets in PathTrove, in Chinese or English: table search and statistics, resource reports with sources, download guides, label files, and recommending datasets for a research need. The data package (~14 MB) is downloaded from the public Hugging Face repo Dearcat/PathTrove on first use and cached locally (no key, no server).",
   "author": {
     "name": "PathTrove Team",

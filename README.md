@@ -132,7 +132,7 @@ The `pathtrove` plugin lets agents such as Claude Code and Codex answer question
 | 现在收录的数据里，按器官分各有多少个数据集？乳腺的里面 H&E 的有多少？ | Counts rows of the resource table by organ and by staining, and gives the exact numbers. |
 | 有没有现成的、按患者划分好训练/测试的乳腺癌标注文件？ | Finds breast cancer label files, with their official splits and the text that explains each split. |
 | 帮我把 Ovarian-Bevacizumab-Response 的标注文件下到 ./labels。 | Downloads that label file into `./labels` and checks its sha256. |
-| Find public WSI datasets with paired frozen-section and FFPE slides of the same cases. | Searches PathTrove first. For the gaps it searches the web and lists those results separately as "not in PathTrove, not curated". |
+| Find public WSI datasets with paired frozen-section and FFPE slides of the same cases. | Searches PathTrove. If the agent also looks elsewhere, those results go in a separate section, with URLs, apart from what comes from PathTrove. |
 
 ### Install and first use
 
@@ -149,7 +149,7 @@ The install commands are at the [top of this page](#start-here-install-the-plugi
 | Report | Open one resource report, or search across all reports. Each field can be read as its value, its text or its source. |
 | Download | Check how to get a resource: access status and license, the download guide by section, the downloadable objects and their sizes as the guide describes them, and the record of a download test. |
 | Label | See which resources have label files (filter by organ or split), list one resource's files, and fetch one file with a sha256 check. |
-| Best data | Turn a research need into recommended datasets: analyse the need, make hard conditions into filters, start broad, judge on report evidence, and respect the number asked for. |
+| Best data | Turn a research need into recommended datasets: analyse the need, make hard conditions into filters, start broad, and judge on report evidence. |
 
 Every answer states the data version. `pathtrove version` shows it.
 
@@ -158,15 +158,13 @@ Every resource has a permanent PTD id, such as `PTD-000001`. The plugin shows it
 ### How it works and privacy
 
 - **Data stays on your machine.** The plugin reads its local cache. It sends no question, query or personal data to any server. Its only network access is downloading the data package and the label files you ask for, both from Hugging Face.
-- **Web search is the agent's choice, not the plugin's.** If the agent has web tools, it may use them for a question PathTrove cannot answer. The policy the agent is given: PathTrove first; go outside only to fill coverage gaps; label anything found outside as not curated by PathTrove.
-- **To forbid outside search**, set `PATHTROVE_WEB=off`. The plugin can only tell the agent this setting; it cannot switch off the client's own web tools.
+- **The plugin teaches the agent how to use PathTrove; it does not limit the agent to it.** PathTrove is one source and a partial one: a curated selection of public computational-pathology resources frozen at its data version, without large programmes such as TCGA or HTAN as entries of their own, and without papers or results. Whether the agent also uses the web or other repositories is its own judgement (and your client's settings); the agent is asked to keep what comes from PathTrove apart from what does not, with URLs and access dates for outside material. To keep an answer to PathTrove only, say so in your question.
 
 ### Settings
 
 | Variable | Values (default) | What it does |
 | --- | --- | --- |
 | `PATHTROVE_LANG` | `zh`, `en` (`zh`) | Output language when a command or tool gets no `lang` argument. The agent answers in the language the user writes in. |
-| `PATHTROVE_WEB` | `on`, `off` (`on`) | `off` tells the agent not to search outside PathTrove. |
 | `PATHTROVE_HOME` | a directory (`~/.cache/pathtrove`) | Where the data package is cached. |
 | `HF_ENDPOINT` | a URL (`https://huggingface.co`) | Hugging Face host. Behind a firewall, use a mirror such as `https://hf-mirror.com`. |
 | `HTTPS_PROXY` | a URL (none) | Proxy for downloading the data package and label files, such as `http://127.0.0.1:7890`. |

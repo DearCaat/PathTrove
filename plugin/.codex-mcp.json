@@ -10,7 +10,6 @@
       "env_vars": [
         "PATHTROVE_HOME",
         "PATHTROVE_LANG",
-        "PATHTROVE_WEB",
         "HF_ENDPOINT",
         "HTTPS_PROXY",
         "HTTP_PROXY",
