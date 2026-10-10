@@ -1,0 +1,20 @@
+{
+  "name": "pathtrove",
+  "interface": {
+    "displayName": "PathTrove"
+  },
+  "plugins": [
+    {
+      "name": "pathtrove",
+      "source": {
+        "source": "local",
+        "path": "./plugin"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    }
+  ]
+}

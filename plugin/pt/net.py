@@ -49,14 +49,21 @@ def _opener() -> urllib.request.OpenerDirector:
 
 
 def open_url(url: str, lang: str, headers: dict[str, str] | None = None, timeout: int = 60):
+    """Open `url`. A failed connection (DNS, TLS handshake, reset; often a flaky proxy) is retried up to 3 times with a short
+    wait; an HTTP error status is not retried."""
     req = urllib.request.Request(url, headers={"User-Agent": "pathtrove-plugin", **(headers or {})})
-    try:
-        return _opener().open(req, timeout=timeout)
-    except urllib.error.HTTPError as err:
-        raise PtError(L(lang, f"HTTP {err.code} from {url}", f"{url} 返回 HTTP {err.code}")) from None
-    except (urllib.error.URLError, OSError, http.client.HTTPException) as err:
-        why = getattr(err, "reason", err)
-        raise PtError(L(lang, f"cannot reach {url}: {why}", f"无法连接 {url}：{why}")) from None
+    for attempt in range(1, ATTEMPTS + 1):
+        try:
+            return _opener().open(req, timeout=timeout)
+        except urllib.error.HTTPError as err:
+            raise PtError(L(lang, f"HTTP {err.code} from {url}", f"{url} 返回 HTTP {err.code}")) from None
+        except (urllib.error.URLError, OSError, http.client.HTTPException) as err:
+            if attempt < ATTEMPTS:
+                time.sleep(2 * attempt)
+                continue
+            why = getattr(err, "reason", err)
+            raise PtError(L(lang, f"cannot reach {url} in {ATTEMPTS} attempts: {why}",
+                            f"无法连接 {url}（已试 {ATTEMPTS} 次）：{why}")) from None
 
 
 def sha256_file(path: Path) -> str:

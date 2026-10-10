@@ -26,6 +26,8 @@
 
 PathTrove 插件让 Claude Code、Codex 等 agent 直接读取资源表、资源报告、下载指南和标签文件。你用自己的话描述需求，agent 查找、比较、准备数据，并说明依据。
 
+### 1. 安装
+
 **Claude Code**：在 Claude Code 里依次输入
 
 ```text
@@ -33,11 +35,11 @@ PathTrove 插件让 Claude Code、Codex 等 agent 直接读取资源表、资源
 /plugin install pathtrove@pathtrove
 ```
 
-**Codex**：在终端运行（非交互的 `codex exec` 还需放行该服务器，见[下文](#codex-与其他-mcp-客户端)）
+**Codex**：在终端运行，然后新开一个 Codex 会话
 
 ```bash
-git clone https://github.com/DearCaat/PathTrove.git
-codex mcp add pathtrove -- python3 "$PWD/PathTrove/plugin/bin/pathtrove" mcp
+codex plugin marketplace add DearCaat/PathTrove
+codex plugin add pathtrove@pathtrove
 ```
 
 **其他 MCP 客户端**：克隆本仓库，把下面这段加入客户端的 MCP 配置，路径换成你的克隆位置
@@ -50,12 +52,20 @@ codex mcp add pathtrove -- python3 "$PWD/PathTrove/plugin/bin/pathtrove" mcp
 - 第一次使用时从 Hugging Face 下载约 14 MB 数据包，校验后缓存在本机；你的问题和检索都在本机完成。
 - 插件数据版本 2026.09.28：352 个资源，每个附资源报告与下载指南；108 个资源有标签文件。每个回答都会注明数据版本。
 
-装好后，可以先问这几句：
+### 2. 用 `/pathtrove` 或 `$pathtrove` 开头提问
 
-1. **了解 PathTrove**：我在做计算病理，你这边有什么办法帮我找数据集？能做到哪些事？
-2. **看全貌**：现在收录的数据里，按器官分各有多少个数据集？乳腺的里面 H&E 的有多少？
-3. **按研究需求找数据**：我想做结直肠癌 MSI 状态预测，推荐 5 个能用的公开 WSI 数据集，最好能分出外部验证队列。
-4. **拿到标签文件**：有没有现成的、按患者划分好训练/测试的乳腺癌标注文件？
+在问题前加上 `/pathtrove`（Claude Code）或 `$pathtrove`（Codex），agent 就会用 PathTrove 回答。只输入 `/pathtrove` 或 `$pathtrove`，它会介绍 PathTrove 能做什么。
+
+不加前缀时，问题里提到病理、WSI、某个数据集等，agent 通常也会自己用 PathTrove；但像“找个能直接下载的小数据集练手”这样看不出领域的问题，它可能不用 PathTrove，直接凭自己的知识回答。想确保用上 PathTrove，就加前缀。其他 MCP 客户端没有这两个前缀，请在问题里写明“用 PathTrove”。
+
+可以先问这几句（Codex 把 `/pathtrove` 换成 `$pathtrove`）：
+
+```text
+/pathtrove 我在做计算病理，你这边有什么办法帮我找数据集？能做到哪些事？
+/pathtrove 现在收录的数据里，按器官分各有多少个数据集？乳腺的里面 H&E 的有多少？
+/pathtrove 我想做结直肠癌 MSI 状态预测，推荐 5 个能用的公开 WSI 数据集，最好能分出外部验证队列。
+/pathtrove 有没有现成的、按患者划分好训练/测试的乳腺癌标注文件？
+```
 
 不想装插件，也可以直接在 [Hugging Face](https://huggingface.co/datasets/Dearcat/PathTrove) 上逐个浏览和下载报告、指南与标签文件。插件的完整说明见[下文](#插件详细说明)。
 
@@ -158,13 +168,16 @@ PathTrove 通过一套系统的循证数据库与配套材料，打通从“研�
 | `PATHTROVE_WEB` | `on`、`off`（`on`） | 设为 `off` 时，告知智能体不在 PathTrove 之外检索。 |
 | `PATHTROVE_HOME` | 目录（`~/.cache/pathtrove`） | 数据包的缓存位置。 |
 | `HF_ENDPOINT` | 网址（`https://huggingface.co`） | Hugging Face 地址。在防火墙后可改用镜像，如 `https://hf-mirror.com`。 |
+| `HTTPS_PROXY` | 网址（无） | 下载数据包和标签文件时使用的代理，如 `http://127.0.0.1:7890`。 |
 
 - **离线安装**：在能联网的机器上下载 `plugin/data-manifest.json` 中写明的压缩包（清单里有其文件名、大小和 sha256），拷贝过来后运行 `pathtrove data install --file <压缩包>`。安装前会先按清单校验。
 - **标签文件**体积较大（302 个文件，合计 8.4 GB），不在数据包中。`pathtrove label fetch` 每次从同一仓库下载一个文件，并校验 sha256。
 
 ### Codex 与其他 MCP 客户端
 
-插件本身是一个 stdio MCP 服务器。克隆本仓库后，把 `python3 <克隆目录>/plugin/bin/pathtrove mcp` 注册为服务器即可，例如 `codex mcp add pathtrove -- python3 <克隆目录>/plugin/bin/pathtrove mcp`；其他客户端在 MCP 配置里写 `{"mcpServers": {"pathtrove": {"command": "python3", "args": ["<克隆目录>/plugin/bin/pathtrove", "mcp"]}}}`。非交互的 Codex（`codex exec`）还需要在 `~/.codex/config.toml` 的 `[mcp_servers.pathtrove]` 下设置 `default_tools_approval_mode = "approve"`，否则所有调用都会因“需要审批”被拒绝。同样的命令也可以在 shell 里用 `python3 plugin/bin/pathtrove <domain> <verb>` 运行（`--help` 列出全部命令）。
+- **Codex**：按上面的两条命令安装插件。插件带有 PathTrove 的技能和 MCP 服务器，并已声明放行自己的工具，`codex exec` 也无需额外设置。用 `$pathtrove` 开头提问。
+- **其他 MCP 客户端**：插件本身是一个 stdio MCP 服务器。克隆本仓库后，把 `python3 <克隆目录>/plugin/bin/pathtrove mcp` 注册为服务器（配置见上文）。这些客户端没有 PathTrove 的技能说明，提问时请写明“用 PathTrove”。
+- **命令行**：同样的命令也可以在 shell 里用 `python3 plugin/bin/pathtrove <domain> <verb>` 运行（`--help` 列出全部命令）。
 
 ### 局限
 

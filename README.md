@@ -27,6 +27,8 @@
 
 The PathTrove plugin lets agents such as Claude Code and Codex read the resource table, resource reports, download guides and label files. Describe your need in your own words; the agent finds, compares and prepares data, and shows its evidence.
 
+### 1. Install
+
 **Claude Code**: type these two lines in Claude Code
 
 ```text
@@ -34,11 +36,11 @@ The PathTrove plugin lets agents such as Claude Code and Codex read the resource
 /plugin install pathtrove@pathtrove
 ```
 
-**Codex**: run in a terminal (non-interactive `codex exec` also needs the server approved; see [below](#codex-and-other-mcp-clients))
+**Codex**: run in a terminal, then start a new Codex session
 
 ```bash
-git clone https://github.com/DearCaat/PathTrove.git
-codex mcp add pathtrove -- python3 "$PWD/PathTrove/plugin/bin/pathtrove" mcp
+codex plugin marketplace add DearCaat/PathTrove
+codex plugin add pathtrove@pathtrove
 ```
 
 **Other MCP clients**: clone this repository, then add this to the client's MCP configuration with your clone path
@@ -51,12 +53,20 @@ codex mcp add pathtrove -- python3 "$PWD/PathTrove/plugin/bin/pathtrove" mcp
 - On first use it downloads a data package of about 14 MB from Hugging Face, verifies it and caches it locally. Your questions and searches stay on your machine.
 - Plugin data version 2026.09.28: 352 resources, each with a resource report and a download guide; 108 have label files. Every answer states the data version.
 
-Once installed, start with these:
+### 2. Start your question with `/pathtrove` or `$pathtrove`
 
-1. **Get to know PathTrove**: I work in computational pathology. How can you help me find datasets, and what can you do?
-2. **See the whole picture**: How many datasets are there per organ? How many of the breast ones are H&E?
-3. **Find data for a research need**: I want to predict MSI status in colorectal cancer. Recommend 5 usable public WSI datasets, ideally with an external validation cohort.
-4. **Get the label files**: Are there ready-made breast cancer label files with train/test splits by patient?
+Put `/pathtrove` (Claude Code) or `$pathtrove` (Codex) before your question and the agent answers from PathTrove. Type `/pathtrove` or `$pathtrove` alone and it tells you what PathTrove can do.
+
+Without the prefix, the agent usually uses PathTrove on its own when the question mentions pathology, WSIs or a dataset by name. A question that does not show its field, such as "a small dataset I can download right away to practise classification", may be answered from the model's own knowledge instead. To be sure PathTrove is used, add the prefix. Other MCP clients have no prefix; say "use PathTrove" in the question.
+
+Start with these (in Codex, replace `/pathtrove` with `$pathtrove`):
+
+```text
+/pathtrove I work in computational pathology. How can you help me find datasets, and what can you do?
+/pathtrove How many datasets are there per organ? How many of the breast ones are H&E?
+/pathtrove I want to predict MSI status in colorectal cancer. Recommend 5 usable public WSI datasets, ideally with an external validation cohort.
+/pathtrove Are there ready-made breast cancer label files with train/test splits by patient?
+```
 
 Prefer not to install anything? Browse and download each report, guide and label file on [Hugging Face](https://huggingface.co/datasets/Dearcat/PathTrove). The full plugin guide is [below](#plugin-guide).
 
@@ -159,13 +169,16 @@ Every resource has a permanent PTD id, such as `PTD-000001`. The plugin shows it
 | `PATHTROVE_WEB` | `on`, `off` (`on`) | `off` tells the agent not to search outside PathTrove. |
 | `PATHTROVE_HOME` | a directory (`~/.cache/pathtrove`) | Where the data package is cached. |
 | `HF_ENDPOINT` | a URL (`https://huggingface.co`) | Hugging Face host. Behind a firewall, use a mirror such as `https://hf-mirror.com`. |
+| `HTTPS_PROXY` | a URL (none) | Proxy for downloading the data package and label files, such as `http://127.0.0.1:7890`. |
 
 - **Offline install**: on a machine with access, download the archive named in `plugin/data-manifest.json` (its file name, size and sha256 are listed there), copy it over, and run `pathtrove data install --file <archive>`. The archive is checked against the manifest before it is installed.
 - **Label files** are large (302 files, 8.4 GB in all) and are not in the data package. `pathtrove label fetch` downloads one file at a time from the same repository and checks its sha256.
 
 ### Codex and other MCP clients
 
-The plugin is a stdio MCP server. After cloning this repository, register `python3 <clone>/plugin/bin/pathtrove mcp` as a server, for example `codex mcp add pathtrove -- python3 <clone>/plugin/bin/pathtrove mcp`, or in any client's MCP configuration: `{"mcpServers": {"pathtrove": {"command": "python3", "args": ["<clone>/plugin/bin/pathtrove", "mcp"]}}}`. Non-interactive Codex (`codex exec`) also needs `default_tools_approval_mode = "approve"` under `[mcp_servers.pathtrove]` in `~/.codex/config.toml`; otherwise every call is refused with "MCP tool call requires approval". The same commands work in a shell as `python3 plugin/bin/pathtrove <domain> <verb>` (`--help` lists them).
+- **Codex**: install the plugin with the two commands above. It brings the PathTrove skills and the MCP server, and approves its own tools, so `codex exec` needs no extra setting. Start questions with `$pathtrove`.
+- **Other MCP clients**: the plugin is a stdio MCP server. After cloning this repository, register `python3 <clone>/plugin/bin/pathtrove mcp` as a server (configuration above). These clients do not get the PathTrove skills, so say "use PathTrove" in the question.
+- **Command line**: the same commands work in a shell as `python3 plugin/bin/pathtrove <domain> <verb>` (`--help` lists them).
 
 ### Limits
 

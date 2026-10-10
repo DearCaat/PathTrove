@@ -1,0 +1,29 @@
+{
+  "name": "pathtrove",
+  "version": "0.1.0",
+  "description": "Look up computational-pathology datasets in PathTrove, in Chinese or English: table search and statistics, resource reports with sources, download guides, label files, and recommending datasets for a research need. The data package (~14 MB) is downloaded from the public Hugging Face repo Dearcat/PathTrove on first use and cached locally (no key, no server).",
+  "author": {
+    "name": "PathTrove Team",
+    "url": "https://www.pathtrove.cn"
+  },
+  "homepage": "https://www.pathtrove.cn",
+  "repository": "https://github.com/DearCaat/PathTrove",
+  "license": "CC-BY-4.0",
+  "keywords": ["computational-pathology", "datasets", "pathology", "whole-slide-images", "labels", "mcp"],
+  "skills": "./skills/",
+  "mcpServers": "./.codex-mcp.json",
+  "interface": {
+    "displayName": "PathTrove",
+    "shortDescription": "Find and prepare computational-pathology datasets",
+    "longDescription": "PathTrove gives the agent a curated, versioned database of computational-pathology resources: a resource table, a resource report with sources for every resource, download guides and label files. Ask in plain language, or start with $pathtrove.",
+    "developerName": "PathTrove Team",
+    "category": "Research",
+    "capabilities": ["Read"],
+    "websiteURL": "https://www.pathtrove.cn",
+    "termsOfServiceURL": "https://github.com/DearCaat/PathTrove/blob/main/TERMS_OF_USE.md",
+    "defaultPrompt": [
+      "$pathtrove What can you do for me?",
+      "$pathtrove Recommend 5 public WSI datasets for colorectal MSI prediction, with an external validation cohort."
+    ]
+  }
+}
